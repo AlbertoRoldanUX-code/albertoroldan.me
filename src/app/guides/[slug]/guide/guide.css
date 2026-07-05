@@ -1,0 +1,31 @@
+.guide-document {
+  -webkit-font-smoothing: antialiased;
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.75in;
+  }
+
+  .guide-page {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .guide-document {
+    padding: 0;
+    max-width: 100%;
+    box-shadow: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .guide-document {
+    box-shadow: 0 28px 90px -30px rgba(0, 0, 0, 0.12);
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "field-manual",
+  "brand": "albertoroldan.",
+  "eyebrow": "Guía gratuita",
+  "title": "Las 7 capacidades que el colegio nunca te enseñó para construir por tu cuenta.",
+  "subtitle": "Lo que aprendí pasando de ferrallista en Suiza a programador autodidacta y constructor de negocios desde Georgia.",
+  "coverImage": "/images/guide-cover.svg",
+  "coverAlt": "Portada del manual",
+  "benefitsIntro": "Siete capacidades que he desarrollado a la fuerza mientras construía desde Georgia, Alemania, Suiza, España y Argentina. Cada una incluye un ejercicio y un resultado claro.",
+  "benefits": [
+    {
+      "label": "Capacidad 1",
+      "title": "Moverse antes de sentirse preparado"
+    },
+    {
+      "label": "Capacidad 2",
+      "title": "Validar con datos, no con opiniones"
+    },
+    {
+      "label": "Capacidad 3",
+      "title": "Construir habilidades que nadie puede quitarte"
+    },
+    {
+      "label": "Capacidad 4",
+      "title": "Crear antes de consumir"
+    },
+    {
+      "label": "Capacidad 5",
+      "title": "Convertir el contenido en un activo"
+    },
+    {
+      "label": "Capacidad 6",
+      "title": "Diseñar una vida antes que un negocio"
+    },
+    {
+      "label": "Capacidad 7",
+      "title": "Pensar como un constructor"
+    }
+  ],
+  "author": {
+    "name": "Alberto",
+    "bio": "Construyo negocios desde Georgia. Escribo cada semana sobre lo que aprendo en el camino — sin permiso, sin momento perfecto y sin mapa.",
+    "avatar": "/images/avatar.svg",
+    "signature": "Alberto Roldán",
+    "socialProof": "Escritor · Constructor · Georgia"
+  },
+  "cta": {
+    "headline": "Consigue tu ejemplar gratuito.",
+    "buttonText": "Envíame la guía",
+    "placeholder": "nombre@email.com",
+    "disclaimer": "Te llegará directo a tu bandeja de entrada. También empezarás a recibir mi escritura semanal. Puedes darte de baja cuando quieras."
+  },
+  "downloadUrl": "/guides/field-manual/guide",
+  "seo": {
+    "title": "Guía gratuita: 7 capacidades que el colegio nunca te enseñó",
+    "description": "Un manual de campo sobre las capacidades que se acumulan cuando construyes algo propio — con historias reales desde Georgia, validación con datos y ejercicios concretos."
+  }
+}

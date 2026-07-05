@@ -1,0 +1,35 @@
+import { NextResponse } from "next/server";
+import { createServerEmailProvider } from "@/lib/email/server";
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    const email = typeof body.email === "string" ? body.email.trim() : "";
+    const leadMagnetSlug =
+      typeof body.leadMagnetSlug === "string" ? body.leadMagnetSlug : "";
+    const downloadUrl =
+      typeof body.downloadUrl === "string" ? body.downloadUrl : undefined;
+
+    if (!email || !leadMagnetSlug) {
+      return NextResponse.json(
+        { success: false, message: "El correo y el lead magnet son obligatorios." },
+        { status: 400 },
+      );
+    }
+
+    const result = await createServerEmailProvider().subscribe({
+      email,
+      leadMagnetSlug,
+      downloadUrl,
+    });
+
+    return NextResponse.json(result, {
+      status: result.success ? 200 : 422,
+    });
+  } catch {
+    return NextResponse.json(
+      { success: false, message: "Algo salió mal." },
+      { status: 500 },
+    );
+  }
+}
