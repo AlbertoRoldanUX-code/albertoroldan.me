@@ -22,9 +22,9 @@ export const siteConfig = {
     leadMagnetSlug: "field-manual",
   },
   social: {
-    x: "https://x.com/albertoroldan",
-    linkedin: "https://linkedin.com/in/albertoroldan",
-    instagram: "https://instagram.com/albertoroldan",
+    x: "https://x.com/albertoroldanes",
+    linkedin: "https://www.linkedin.com/in/albertoroldaninfo/",
+    instagram: "https://instagram.com/albertoroldaninfo",
   },
 };
 
