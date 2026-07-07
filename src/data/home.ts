@@ -10,7 +10,7 @@ export interface Testimonial {
 export const siteConfig = {
   brand: "albertoroldan.",
   name: "Alberto Roldán",
-  avatar: "/images/avatar.svg",
+  avatar: "/images/avatar.png",
   tagline:
     "Un ensayo semanal sobre construir y vivir por tu cuenta.",
   subtagline:
@@ -62,7 +62,7 @@ export const featuredGuide = {
 export const aboutPreview = {
   title: "Sobre Alberto",
   bio: "Pasé de ferrallista en Suiza a programador autodidacta y constructor de negocios desde Georgia. Escribo cada semana sobre las decisiones de trabajo, dinero y vida que permiten a personas ambiciosas construir por su cuenta — sin permiso, sin momento perfecto y sin mapa.",
-  avatar: "/images/avatar.svg",
+  avatar: "/images/avatar.png",
   href: "/about",
 };
 
