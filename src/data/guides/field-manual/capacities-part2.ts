@@ -160,15 +160,15 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
       {
         heading: "Qué me costó no tenerla al principio",
         paragraphs: [
-          "Durante años elegí países y trabajos por oportunidad inmediata, no por diseño. Suiza por necesidad: ferrallista, cartero, reparto. Alemania por un trabajo que acabó en despido. España porque era familiar.",
+          "Durante años elegí países y trabajos por oportunidad inmediata, no por diseño. Bruselas, Hong Kong, Roding, Leipzig, Sudamérica. Suiza porque la decidí en un viaje: ferrallista, comida rápida, restaurante mexicano, obra, cartero, reparto en bici y moto. Málaga porque era familiar, y desde ahí soporte SAP HCM para una gran cadena de supermercados. Después volví a Göttingen — SAP HXM Consultant en el contrato, desarrollador en la práctica — de donde me echaron.",
           "En otros países acabé con problemas de visado o usando el voluntariado como vía de escape. Ninguna decisión fue mala. Aprendí en todas. Pero tampoco las tomé con intención. Fueron reacciones.",
         ],
       },
       {
         heading: "Cómo se veía cuando la desarrollé",
         paragraphs: [
-          "Después de Suiza fui a Argentina a aprender UX online, no porque fuera el camino obvio, sino porque encajaba con lo que necesitaba en ese momento.",
-          "En Alemania estuve dos veces con aprendizajes distintos: primero instalando placas solares, después como consultor hasta el despido, y más tarde como desarrollador.",
+          "Después de Suiza fui a Argentina cuando empecé a ordenar mi vida con la matriz de Eisenhower, que descubrí en Los 7 hábitos de la gente altamente efectiva, de Stephen Covey. Estudié diseño UX online, no porque fuera el camino obvio, sino porque encajaba con lo que necesitaba en ese momento. Desde Málaga di soporte SAP HCM antes de volver a Göttingen.",
+          "En Alemania pasé por varias etapas: un ausbildung en Roding, Baviera, que dejé a los seis meses; trabajos manuales en Leipzig — cocinero tras ver un cartel en un restaurante español —; y más tarde en Göttingen, donde el puesto se llamaba SAP HXM Consultant pero en la práctica era desarrollador con SAPUI5 y Vue.js. De ahí me echaron.",
           "Cuando vendí en Málaga y llegué a Tbilisi, fue la primera vez que elegí un país como decisión de vida completa: alojamiento, fiscalidad, proveedores. Todo sobre la marcha.",
           "Ahora evalúo clientes, productos y mercados con ese filtro: ¿encaja con la vida que quiero en Georgia o en el país que toque? Estoy dispuesto a vivir donde tenga sentido. Pero ya no por accidente.",
         ],
@@ -233,7 +233,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
       {
         heading: "Qué me costó no tenerla al principio",
         paragraphs: [
-          "Durante mucho tiempo busqué permiso externo. El título. El contrato. La validación de un jefe. Cuando me despidieron en Alemania, me costó verlo como liberación.",
+          "Durante mucho tiempo busqué permiso externo. El título. El contrato. La validación de un jefe. Cuando me despidieron en Göttingen, me costó verlo como liberación.",
           "Tomé decisiones basadas en lo que se veía bien desde fuera: países con nombre, cargos con nombre. En lugar de lo que quería de verdad.",
         ],
       },
@@ -241,7 +241,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
         heading: "Cómo se veía cuando la desarrollé",
         paragraphs: [
           "Lancé un producto de automatización con IA sin esperar a que el mercado estuviera «maduro». Conseguí clientes reales. Y los perdí uno a uno. Los datos me dijeron que cerrar era la decisión correcta aunque doliera.",
-          "Aprendí UX online desde Argentina después de Suiza. Programación sin bootcamp ni empleador. Llegué a Georgia vendiendo el piso sin tener todo resuelto.",
+          "Fui a Argentina cuando empecé a ordenar mi vida con la matriz de Eisenhower, de Los 7 hábitos de Stephen Covey. Me metí en programación porque los trabajos de diseño UX pedían HTML y CSS. Desde Málaga di soporte SAP HCM; después me echaron de Göttingen, donde el contrato decía SAP HXM Consultant pero el trabajo era desarrollador con SAPUI5 y Vue.js. Llegué a Tbilisi vendiendo el piso sin tener todo resuelto.",
           "Monté la web de vino, contacté bodegueros y distribuidores, mandé emails a clientes en España, y publiqué en LinkedIn mientras la logística seguía rota.",
           "Cada decisión incómoda me dio más claridad sobre qué quiero y qué no. Pensar como constructor no es tener un plan perfecto. Es moverte, leer datos, y ajustar.",
         ],

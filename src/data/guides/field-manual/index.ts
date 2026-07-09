@@ -23,7 +23,8 @@ export const fieldManualGuide: Guide = {
         heading: "Antes de leer esta guía",
         paragraphs: [
           "No escribo esto desde una cima. Lo escribo desde el camino.",
-          "Mi primer mes en Suiza trabajé como ferrallista. Después fui cartero, repartidor de comida e instalador de placas solares en Alemania. Más tarde estudié UX Design, aprendí programación por mi cuenta, viví en varios países y terminé vendiendo mi piso en Málaga para empezar de cero en Tbilisi.",
+          "Dejé la universidad porque no aprendía cosas útiles para la vida real. Me fui a Bruselas como voluntario cuidando personas discapacitadas. Después estuve en Hong Kong enseñando idiomas, trabajando de relaciones públicas y de extra en películas. Empecé un ausbildung de tornero fresador en Roding, un pueblo de Baviera cerca de la República Checa; a los seis meses me mudé a Leipzig. Ahí vi un cartel en un restaurante español y acabé de cocinero. También lavaplatos, montando carpas e instalando placas solares.",
+          "Viajé por Sudamérica y, durante ese viaje, decidí irme a Suiza. Mi primer trabajo allí fue de ferrallista. Después en una cadena de comida rápida, un restaurante mexicano del que me echaron, temporero en una obra — y desde ahí me llamaron para ser cartero —, reparto de comida en bici eléctrica y paquetes en moto. A Argentina fui cuando empecé a ordenar mi vida con la matriz de Eisenhower, que descubrí en Los 7 hábitos de la gente altamente efectiva, de Stephen Covey. Estudié diseño UX online y me metí en programación porque los trabajos pedían HTML y CSS. Desde Málaga di soporte SAP HCM a trabajadores de una gran cadena de supermercados. Volví a Alemania a Göttingen: el puesto se llamaba SAP HXM Consultant, pero en la práctica era desarrollador con SAPUI5 y Vue.js. De ahí me echaron. Terminé vendiendo mi piso en Málaga para empezar de cero en Tbilisi.",
           "Nada de eso siguió un plan perfecto.",
           "De hecho, casi todo lo importante que he aprendido vino de moverme antes de sentirme preparado: perder un trabajo, cambiar de país, aprender una habilidad nueva, publicar antes de tener audiencia, vender vino georgiano antes de tener la logística resuelta. Y descubrir en el camino, con datos reales, qué funcionaba y qué no.",
           "Por eso esta guía no va de copiar mis pasos.",
@@ -87,7 +88,7 @@ export const fieldManualGuide: Guide = {
       "Lo que he aprendido: las tácticas caducan, las capacidades no. Un negocio de automatización con IA me enseñó más sobre ciclos de venta largos y commodity que cualquier curso. Cerrarlo fue una decisión con datos, no un fracaso. El vino georgiano me enseñó que el interés existe, pero la logística mata márgenes si no la lees con honestidad. Publicar antes de tener producto me enseñó más que meses preparando el lanzamiento perfecto.",
       "Lo que todavía no sé: cuál de mis apuestas actuales escalará de verdad. Si Georgia seguirá siendo mi base. No tengo respuestas limpias. Tengo datos parciales y la costumbre de seguir probando.",
       "Lo que estoy construyendo ahora mismo: exportación de vino georgiano, contenido que acumula, y esta misma guía, no como teórico que ya lo resolvió todo, sino como constructor en marcha.",
-      "El camino no fue una línea recta. Fue ferrallista, cartero, consultor, desarrollador, fundador de un producto que tuve que cerrar, vender el piso, mudarme a otro continente, validar vino con cajas rotas en tránsito, y seguir publicando mientras aprendo. Ninguno de esos pasos se repite exactamente. Las capacidades sí.",
+      "El camino no fue una línea recta. Fue dejar la universidad, voluntario en Bruselas, enseñar idiomas y hacer de extra en Hong Kong, ausbildung en Roding, cocinero en Leipzig, ferrallista, comida rápida, restaurante mexicano, obra, cartero, reparto en bici y moto, UX en Argentina, soporte SAP desde Málaga, desarrollador en Göttingen, fundador de un producto que tuve que cerrar, vender el piso, mudarme a Tbilisi, validar vino con cajas rotas en tránsito, y seguir publicando mientras aprendo. Ninguno de esos pasos se repite exactamente. Las capacidades sí.",
       "Al final no tendrás un mapa. Tendrás algo mejor: la capacidad de moverte sin uno.",
     ],
   },
@@ -97,7 +98,7 @@ export const fieldManualGuide: Guide = {
     bio: [
       "Alberto Roldán construye negocios desde Tbilisi, Georgia. Pasó de ferrallista en Suiza a programador autodidacta, fundó y cerró un producto de IA, y ahora exporta vino georgiano a Europa. Escribe cada semana sobre lo que aprende en el camino.",
     ],
-    note: "Nota breve: El marco de capacidades está inspirado en Justin Welsh. Las historias y los errores son míos.",
+    note: "Nota breve: El marco de capacidades está inspirado en creadores independientes que publican sobre construir por tu cuenta. Las historias y los errores son míos.",
   },
   invitation: {
     text: "Si esta guía te ha resultado útil, cada semana comparto lo que voy aprendiendo construyendo negocios desde Georgia.",

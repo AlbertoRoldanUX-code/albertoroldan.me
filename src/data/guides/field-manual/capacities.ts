@@ -10,7 +10,7 @@ const capacities1to3: GuideCapacity[] = [
         heading: "Qué es",
         paragraphs: [
           "La capacidad de actuar antes de tenerlo todo resuelto, y usar la acción como forma de aprender, no como recompensa por haber aprendido.",
-          "La mayoría espera el permiso, el título, el curso terminado, el portfolio perfecto. Yo hice lo contrario: aprendí programación después de mis prácticas de UX Design, sin esperar a saberlo perfectamente. Aprendí haciendo. Eso no es valentía. Es la única forma que conozco de descubrir si algo merece tu tiempo.",
+          "La mayoría espera el permiso, el título, el curso terminado, el portfolio perfecto. Yo hice lo contrario: me metí en programación porque los trabajos de UX pedían HTML y CSS, sin esperar a saberlo perfectamente. Aprendí haciendo. Eso no es valentía. Es la única forma que conozco de descubrir si algo merece tu tiempo.",
           "Moverse antes de sentirse preparado no significa ser imprudente. Significa hacer el coste de equivocarte lo más pequeño posible. Dejar de preguntar «¿estoy listo?» y empezar a preguntar «¿cómo lo descubro en 48 horas?»",
         ],
       },
@@ -18,7 +18,7 @@ const capacities1to3: GuideCapacity[] = [
         heading: "Qué me costó no tenerla al principio",
         paragraphs: [
           "Durante mucho tiempo esperé señales externas. El diploma. El ascenso. La validación de alguien con más experiencia.",
-          "Cuando me despidieron de un trabajo en Alemania, lo vi como veredicto sobre mi valía en lugar de como dato sobre el encaje. Perdí meses buscando la siguiente etiqueta correcta en lugar de probar algo pequeño.",
+          "Cuando me despidieron de un puesto de desarrollador en Göttingen, lo vi como veredicto sobre mi valía en lugar de como dato sobre el encaje. Perdí meses buscando la siguiente etiqueta correcta en lugar de probar algo pequeño.",
           "Antes de eso, en Suiza, ya había hecho lo más duro que he hecho en la vida: ferrallista. Lo más duro no fue solo el cuerpo. Fueron las faltas de respeto. Pero también aprendí que podía entrar en un mercado sin estar «preparado».",
           "Perdí meses preparándome para moverme en lugar de moverme. Leyendo sobre programación en lugar de escribir código malo. Planificando la mudanza en lugar de probar una semana en el nuevo país. El coste no fue solo el tiempo. Fue el feedback que nunca recibí porque nunca lancé nada.",
         ],
@@ -26,8 +26,8 @@ const capacities1to3: GuideCapacity[] = [
       {
         heading: "Cómo se veía cuando la desarrollé",
         paragraphs: [
-          "Mi primer mes en Suiza no fue como consultor. Fue como ferrallista. Luego cartero. Repartí comida. Nada de eso estaba en ningún plan. Todo me enseñó que el permiso llega después, no antes.",
-          "Después de mis prácticas de UX, no esperé a dominar un stack completo. Abrí un editor y empecé a construir cosas rotas. Aprendí haciendo, no esperando el título perfecto.",
+          "Antes de Suiza había dejado la universidad, sido voluntario en Bruselas, enseñado idiomas y trabajado de relaciones públicas y extra en Hong Kong, empezado un ausbildung en Roding y pasado por Leipzig — donde vi un cartel en un restaurante español y acabé de cocinero. Pero mi primer mes en Suiza no fue como consultor. Fue como ferrallista. Después en una cadena de comida rápida, un restaurante mexicano del que me echaron, temporero en una obra. Me llamaron por teléfono para ser cartero mientras estaba en la obra. Repartí comida en bici eléctrica y paquetes en moto. Nada de eso estaba en ningún plan. Todo me enseñó que el permiso llega después, no antes.",
+          "Después de mis prácticas de UX, no esperé a dominar un stack completo. Los trabajos pedían HTML y CSS; abrí un editor y empecé a construir cosas rotas. Aprendí haciendo, no esperando el título perfecto.",
           "Cuando vendí el piso en Málaga, no esperé a tener Georgia resuelta al cien por cien. Llegué a Tbilisi y fui resolviendo fiscalidad, alojamiento y proveedores sobre la marcha.",
           "Con el vino georgiano no monté una operación perfecta. Publiqué, contacté clientes en España, hice un pedido de prueba. Y las cajas llegaron rotas. Eso también son datos: el producto interesa, la logística mata si no la diseñas.",
           "Publiqué en LinkedIn antes de tener producto pulido. La publicación fue la prueba.",
@@ -163,7 +163,7 @@ const capacities1to3: GuideCapacity[] = [
         heading: "Qué es",
         paragraphs: [
           "La capacidad de invertir en competencias que te pertenecen, que no dependen de un empleador, un visado, un algoritmo o un mercado concreto.",
-          "Cuando me despidieron de un trabajo en Alemania, lo que me quedó no fue el puesto. Fueron las habilidades: resolver problemas, comunicar, aprender bajo presión. Nadie me las quitó.",
+          "Cuando me despidieron en Göttingen, lo que me quedó no fue el puesto. Fueron las habilidades: resolver problemas, comunicar, aprender bajo presión. Nadie me las quitó.",
           "Las habilidades transferibles son el único activo que cruzan fronteras contigo.",
         ],
       },
@@ -171,13 +171,13 @@ const capacities1to3: GuideCapacity[] = [
         heading: "Qué me costó no tenerla al principio",
         paragraphs: [
           "Durante años optimicé para títulos y empresas, no para capacidades. Quería estar en la empresa correcta en lugar de ser la persona correcta.",
-          "Cuando perdí el trabajo en Alemania, me di cuenta de que había construido sobre algo frágil: la aprobación de otros. No había invertido lo suficiente en lo mío.",
+          "Cuando me echaron del puesto de desarrollador en Göttingen, me di cuenta de que había construido sobre algo frágil: la aprobación de otros. No había invertido lo suficiente en lo mío.",
         ],
       },
       {
         heading: "Cómo se veía cuando la desarrollé",
         paragraphs: [
-          "Aprendí programación por mi cuenta después del UX. Nadie me dio permiso. Lo hice porque necesitaba otra opción cuando el empleo desapareció.",
+          "Me metí en programación porque los trabajos de UX pedían HTML y CSS. Nadie me dio permiso. Lo hice porque necesitaba otra opción cuando el empleo desapareció.",
           "Viví en varios países no como turista sino trabajando. Cada estancia me dejó algo: un idioma, una red, una forma de resolver problemas en contextos distintos.",
           "Desarrollé ventas haciendo demos reales, propuestas reales, clientes que pagaron y se fueron. Aprendí a escribir publicando cada semana. Los idiomas que hablo no los estudié en abstracto: los necesité para trabajar, vender y vivir.",
         ],
