@@ -4,15 +4,10 @@ import {
   HomeHeroSection,
   TestimonialsSection,
 } from "@/components/home/hero-section";
-import { EssayListSection } from "@/components/home/essay-list-section";
 import { FreeResourceSection } from "@/components/home/free-resource-section";
 import { NewsletterSection } from "@/components/home/newsletter-section";
 import { SiteLayout } from "@/components/site/site-layout";
-import {
-  popularEssays,
-  recentEssays,
-  siteConfig,
-} from "@/data/home";
+import { siteConfig } from "@/data/home";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -25,12 +20,6 @@ export default function HomePage() {
       <HomeHeroSection />
       <TestimonialsSection />
       <FreeResourceSection />
-      <EssayListSection label="Ensayos más populares" essays={popularEssays} />
-      <EssayListSection
-        label="Ensayos recientes"
-        essays={recentEssays}
-        showArchiveLink
-      />
       <AboutPreviewSection />
       <NewsletterSection />
     </SiteLayout>

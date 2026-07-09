@@ -3,7 +3,6 @@ import { siteConfig } from "@/data/home";
 
 const footerLinks = [
   { href: "/about", label: "Sobre mí" },
-  { href: "/essays", label: "Ensayos" },
   { href: "/resources", label: "Recursos" },
   { href: "/privacy", label: "Privacidad" },
 ];

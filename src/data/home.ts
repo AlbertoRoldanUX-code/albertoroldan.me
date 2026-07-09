@@ -1,6 +1,3 @@
-export { popularEssays, recentEssays } from "@/data/essays";
-export type { Essay } from "@/data/essays";
-
 export interface Testimonial {
   quote: string;
   author: string;
