@@ -1,6 +1,6 @@
 import { EmailForm } from "@/components/vault/email-form";
 import { FadeIn } from "@/components/vault/fade-in";
-import { siteConfig, testimonials } from "@/data/home";
+import { siteConfig } from "@/data/home";
 
 export function HomeHeroSection() {
   return (
@@ -26,35 +26,6 @@ export function HomeHeroSection() {
             disclaimer={siteConfig.newsletter.disclaimer}
           />
         </FadeIn>
-      </div>
-    </section>
-  );
-}
-
-export function TestimonialsSection() {
-  return (
-    <section className="border-t border-border/60 px-6 py-14 md:py-20">
-      <div className="mx-auto max-w-[42rem]">
-        <FadeIn>
-          <p className="text-center font-sans text-[11px] font-medium tracking-[0.25em] text-muted-foreground uppercase">
-            Lo que dicen los lectores
-          </p>
-        </FadeIn>
-
-        <div className="mt-10 space-y-10 md:mt-12">
-          {testimonials.map((item, index) => (
-            <FadeIn key={item.author} delay={index * 0.06}>
-              <blockquote className="text-center">
-                <p className="font-serif text-lg leading-relaxed md:text-xl">
-                  &ldquo;{item.quote}&rdquo;
-                </p>
-                <footer className="mt-3 font-sans text-sm text-muted-foreground">
-                  — {item.author}, <cite className="not-italic">{item.title}</cite>
-                </footer>
-              </blockquote>
-            </FadeIn>
-          ))}
-        </div>
       </div>
     </section>
   );

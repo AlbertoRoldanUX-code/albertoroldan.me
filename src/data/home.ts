@@ -1,9 +1,3 @@
-export interface Testimonial {
-  quote: string;
-  author: string;
-  title: string;
-}
-
 export const siteConfig = {
   brand: "albertoroldan.",
   name: "Alberto Roldán",
@@ -24,27 +18,6 @@ export const siteConfig = {
     instagram: "https://instagram.com/albertoroldaninfo",
   },
 };
-
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Uno de los pocos newsletters que leo cada semana sin falta.",
-    author: "Lector habitual",
-    title: "Constructor independiente",
-  },
-  {
-    quote:
-      "Nadie destila mejor la experiencia de construir por tu cuenta en acciones concretas.",
-    author: "Suscriptor",
-    title: "Emprendedor en remoto",
-  },
-  {
-    quote:
-      "En una era de consejos genéricos, Alberto es la alternativa refrescante.",
-    author: "Lector",
-    title: "Autodidacta y builder",
-  },
-];
 
 export const featuredGuide = {
   slug: "field-manual",
