@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/vault/theme-provider";
 import "./globals.css";
 
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <body className={`${newsreader.variable} ${inter.variable} font-sans`}>
         <ThemeProvider>{children}</ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
