@@ -17,12 +17,6 @@ export interface GuideCapacity {
   subsections: GuideSubsection[];
 }
 
-export interface GuideOverviewRow {
-  capacity: string;
-  length: string;
-  output: string;
-}
-
 export interface GuideAuthor {
   name: string;
   bio: string[];
@@ -31,7 +25,9 @@ export interface GuideAuthor {
 }
 
 export interface GuideInvitation {
-  text: string;
+  title?: string;
+  paragraphs?: string[];
+  text?: string;
   buttonText: string;
   buttonUrl: string;
 }
@@ -50,11 +46,6 @@ export interface Guide {
     subtitle: string;
     byline: string;
     sections: GuideSubsection[];
-  };
-  overview: {
-    title: string;
-    intro?: string[];
-    rows: GuideOverviewRow[];
   };
   capacities: GuideCapacity[];
   closing: {

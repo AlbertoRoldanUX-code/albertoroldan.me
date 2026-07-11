@@ -2,11 +2,11 @@
   "slug": "field-manual",
   "brand": "albertoroldan.",
   "eyebrow": "Guía gratuita",
-  "title": "Las 7 capacidades que el colegio nunca te enseñó para construir por tu cuenta.",
-  "subtitle": "Lo que aprendí pasando de ferrallista en Suiza a programador autodidacta y constructor de negocios desde Georgia.",
+  "title": "Las 7 capacidades que el colegio no te enseñó para construir algo propio",
+  "subtitle": "Lo que aprendí pasando de trabajos manuales a programador autodidacta y creador de negocios desde Georgia.",
   "coverImage": "/images/guide-cover.svg",
   "coverAlt": "Portada del manual",
-  "benefitsIntro": "Siete capacidades que he desarrollado a la fuerza mientras construía desde Bruselas, Hong Kong, Alemania, Sudamérica, Suiza, Argentina, España y Georgia. Cada una incluye un ejercicio y un resultado claro.",
+  "benefitsIntro": "Siete capacidades que he desarrollado a la fuerza mientras construía algo propio. Cada una incluye un ejercicio y un resultado claro.",
   "benefits": [
     {
       "label": "Capacidad 1",
@@ -34,12 +34,12 @@
     },
     {
       "label": "Capacidad 7",
-      "title": "Pensar como un constructor"
+      "title": "Pensar como quien construye"
     }
   ],
   "author": {
     "name": "Alberto",
-    "bio": "Construyo negocios desde Georgia. Escribo cada semana sobre lo que aprendo en el camino — sin permiso, sin momento perfecto y sin mapa.",
+    "bio": "Construyo negocios desde Georgia. Escribo cada semana sobre lo que aprendo en el camino, sin permiso, sin momento perfecto y sin mapa.",
     "avatar": "/images/avatar.png",
     "signature": "Alberto Roldán",
     "socialProof": "Escritor · Constructor · Georgia"
@@ -52,7 +52,7 @@
   },
   "downloadUrl": "/guides/field-manual/guide",
   "seo": {
-    "title": "Guía gratuita: 7 capacidades que el colegio nunca te enseñó",
-    "description": "Un manual de campo sobre las capacidades que se acumulan cuando construyes algo propio — con historias reales desde Georgia, validación con datos y ejercicios concretos."
+    "title": "Guía gratuita: 7 capacidades que el colegio no te enseñó",
+    "description": "Un manual de campo sobre las capacidades que se acumulan cuando construyes algo propio, con historias reales desde Georgia, validación con datos y ejercicios concretos."
   }
 }

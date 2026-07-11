@@ -9,7 +9,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
         heading: "Qué es",
         paragraphs: [
           "La capacidad de producir (escribir, publicar, construir) antes de consumir contenido sobre cómo producir.",
-          "Hay una industria entera de vídeos de productividad, podcasts de emprendimiento y hilos de «cómo lo hice» que te hacen sentir que avanzas mientras no mueves nada. Crear antes de consumir es el antídoto.",
+          "Hay una industria entera de vídeos de productividad, podcasts de emprendimiento y publicaciones sobre «cómo lo hice» que te hacen sentir que avanzas mientras no mueves nada. Crear antes de consumir es el antídoto.",
         ],
       },
       {
@@ -24,7 +24,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
         paragraphs: [
           "Cambié la regla: escribir antes de leer. Publicar antes de consumir. Construir antes de buscar la herramienta perfecta.",
           "Empecé a publicar en LinkedIn sin tener respuestas a todo. Escribí esta guía mientras sigo aprendiendo, no después de haberlo resuelto.",
-          "Dejé de ver vídeos de productividad y empecé a medir mi ratio creación/consumo. Si un día solo consumí, al día siguiente creo primero.",
+          "Dejé de ver vídeos de productividad y empecé a medir la proporción entre creación y consumo. Si un día solo consumí, al día siguiente creo primero.",
         ],
       },
       {
@@ -37,7 +37,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
       {
         heading: "Cómo se ve en la práctica",
         paragraphs: [
-          "Alguien con esta capacidad empieza el día creando, aunque sea 30 minutos, antes de abrir redes, email o YouTube.",
+          "Alguien con esta capacidad empieza el día creando, aunque sea 30 minutos, antes de abrir redes, el correo electrónico o YouTube.",
           "Alguien sin ella llega al final del día habiendo consumido ocho horas de contenido y creado cero.",
         ],
       },
@@ -49,19 +49,20 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
       },
       {
         heading: "El ejercicio",
-        intro: "Qué vas a hacer: Medir y cambiar tu ratio creación/consumo durante una semana.",
+        intro:
+          "Qué vas a hacer: Medir y cambiar la proporción entre creación y consumo durante una semana.",
         steps: [
           {
             label: "Paso 1:",
-            text: "Durante tres días, anota cuánto tiempo creas (escribir, codear, vender, construir) vs. cuánto consumes (vídeos, podcasts, redes, cursos).",
+            text: "Durante tres días, anota cuánto tiempo creas (escribir, programar, vender, construir) vs. cuánto consumes (vídeos, podcasts, redes, cursos).",
           },
           {
             label: "Paso 2:",
-            text: "Calcula el ratio. Si consumes más de lo que creas, ahí está el problema.",
+            text: "Calcula la proporción. Si consumes más de lo que creas, ahí está el problema.",
           },
           {
             label: "Paso 3:",
-            text: "Los cuatro días siguientes, invierte los primeros 60 minutos del día en crear. Sin excepciones. Antes de email, antes de redes.",
+            text: "Los cuatro días siguientes, invierte los primeros 60 minutos del día en crear. Sin excepciones. Antes del correo electrónico, antes de redes.",
           },
           {
             label: "Paso 4:",
@@ -80,15 +81,15 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
       {
         heading: "Qué es",
         paragraphs: [
-          "La capacidad de construir cosas que siguen trabajando cuando dejas de trabajar en ellas, y de crear contenido que acumula valor, no que persigue likes.",
-          "Un post viral desaparece en 48 horas. Un ensayo bien posicionado en SEO, una newsletter con suscriptores, un PDF descargable, un perfil de LinkedIn optimizado: eso sigue generando oportunidades meses después.",
+          "La capacidad de construir cosas que siguen generando valor cuando dejas de trabajar en ellas, y de crear contenido que acumula valor, no que persigue likes.",
+          "Una publicación viral suele perder casi toda su visibilidad en pocos días. Un ensayo bien posicionado en SEO, un boletín con suscriptores, un PDF descargable, un perfil de LinkedIn optimizado: eso sigue generando oportunidades meses después.",
         ],
       },
       {
         heading: "Qué me costó no tenerla al principio",
         paragraphs: [
-          "Durante mucho tiempo publiqué por likes. Medía éxito en engagement, no en mensajes de compra, suscriptores o ventas.",
-          "Cada post era empezar de cero. No construía nada que durara.",
+          "Durante mucho tiempo publiqué por likes. Medía éxito en interacción, no en mensajes de compra, suscriptores o ventas.",
+          "Cada publicación era empezar de cero. No construía nada que durara.",
         ],
       },
       {
@@ -103,7 +104,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
       {
         heading: "Qué te cuesta si nunca la desarrollas",
         paragraphs: [
-          "Tus ingresos dependen de tu esfuerzo diario. Paras de publicar y el pipeline se seca.",
+          "Tus ingresos dependen de tu esfuerzo diario. Paras de publicar y el flujo de oportunidades se seca.",
           "Nunca construyes nada que dure más allá de tu implicación activa.",
         ],
       },
@@ -117,7 +118,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
       {
         heading: "El error común",
         paragraphs: [
-          "Tratar la newsletter o el blog como «mantenimiento» en lugar de construcción. Una lista de 5.000 suscriptores es uno de los activos más valiosos que puedes tener.",
+          "Tratar el boletín o el blog como «mantenimiento» en lugar de construcción. Una lista de 5.000 suscriptores que confían en ti puede convertirse en uno de los activos más valiosos de un negocio independiente.",
         ],
       },
       {
@@ -126,7 +127,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
         steps: [
           {
             label: "Paso 1:",
-            text: "Lista A: todo lo que genera ingresos solo cuando lo haces activamente (consultoría, llamadas, outreach manual). Lista B: todo lo que genera valor mientras duermes (email list, contenido SEO, PDFs, afiliados, suscripciones).",
+            text: "Lista A: todo lo que genera ingresos solo cuando lo haces activamente (consultoría, llamadas, captación manual). Lista B: todo lo que genera valor mientras duermes (lista de correo, contenido SEO, PDFs, afiliados, suscripciones).",
           },
           {
             label: "Paso 2:",
@@ -134,7 +135,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
           },
           {
             label: "Paso 3:",
-            text: "Elige una cosa de la lista A que podrías convertir en lista B. Una consultoría → curso. Una serie de posts → PDF. Un Q&A → biblioteca de contenido.",
+            text: "Elige una cosa de la lista A que podrías convertir en lista B. Una consultoría → curso. Una serie de publicaciones → PDF. Unas preguntas y respuestas → biblioteca de contenido.",
           },
           {
             label: "Paso 4:",
@@ -153,24 +154,23 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
       {
         heading: "Qué es",
         paragraphs: [
-          "La capacidad de tomar decisiones de negocio basadas en la vida que quieres vivir: dónde, cómo, con qué costes fiscales. No solo en lo que maximiza ingresos.",
-          "No elegí Georgia por accidente. Vendí el piso en Málaga, comparé opciones, pensé en fiscalidad, coste de vida, zona horaria y calidad de vida. El negocio tuvo que caber dentro de esa decisión, no al revés.",
+          "La capacidad de tomar decisiones de negocio basadas en la vida que quieres vivir: dónde, cómo, con qué ritmo. No solo en lo que maximiza ingresos.",
+          "No elegí Georgia por accidente. Vendí el piso en Málaga, comparé opciones, pensé en coste de vida, zona horaria y calidad de vida. El negocio tuvo que caber dentro de esa decisión, no al revés.",
         ],
       },
       {
         heading: "Qué me costó no tenerla al principio",
         paragraphs: [
-          "Durante años elegí países y trabajos por oportunidad inmediata, no por diseño. Bruselas, Hong Kong, Roding, Leipzig, Sudamérica. Suiza porque la decidí en un viaje: ferrallista, comida rápida, restaurante mexicano, obra, cartero, reparto en bici y moto. Málaga porque era familiar, y desde ahí soporte SAP HCM para una gran cadena de supermercados. Después volví a Göttingen — SAP HXM Consultant en el contrato, desarrollador en la práctica — de donde me echaron.",
-          "En otros países acabé con problemas de visado o usando el voluntariado como vía de escape. Ninguna decisión fue mala. Aprendí en todas. Pero tampoco las tomé con intención. Fueron reacciones.",
+          "Durante años elegí países y trabajos por oportunidad inmediata, no por diseño. Cada mudanza resolvía el siguiente problema, no la vida que quería construir.",
+          "Ninguna de esas decisiones fue mala. Aprendí en todas. Pero tampoco las tomé con intención. Fueron reacciones.",
         ],
       },
       {
         heading: "Cómo se veía cuando la desarrollé",
         paragraphs: [
-          "Después de Suiza fui a Argentina cuando empecé a ordenar mi vida con la matriz de Eisenhower, que descubrí en Los 7 hábitos de la gente altamente efectiva, de Stephen Covey. Estudié diseño UX online, no porque fuera el camino obvio, sino porque encajaba con lo que necesitaba en ese momento. Desde Málaga di soporte SAP HCM antes de volver a Göttingen.",
-          "En Alemania pasé por varias etapas: un ausbildung en Roding, Baviera, que dejé a los seis meses; trabajos manuales en Leipzig — cocinero tras ver un cartel en un restaurante español —; y más tarde en Göttingen, donde el puesto se llamaba SAP HXM Consultant pero en la práctica era desarrollador con SAPUI5 y Vue.js. De ahí me echaron.",
-          "Cuando vendí en Málaga y llegué a Tbilisi, fue la primera vez que elegí un país como decisión de vida completa: alojamiento, fiscalidad, proveedores. Todo sobre la marcha.",
-          "Ahora evalúo clientes, productos y mercados con ese filtro: ¿encaja con la vida que quiero en Georgia o en el país que toque? Estoy dispuesto a vivir donde tenga sentido. Pero ya no por accidente.",
+          "En Suiza empecé a ordenar mi vida con la matriz de Eisenhower, que descubrí en Los 7 hábitos de la gente altamente efectiva, de Stephen Covey. Eso me llevó a dejar trabajos que ya no encajaban conmigo y a mudarme a Argentina para estudiar diseño UX online.",
+          "Desde Málaga trabajé como desarrollador a distancia y, más tarde, volví a Alemania. Cuando me echaron, la pregunta dejó de ser «¿cuál es el siguiente puesto?» y pasó a ser «¿qué vida quiero diseñar?»",
+          "Cuando vendí en Málaga y llegué a Tbilisi, fue la primera vez que elegí un país como decisión de vida completa. Ahora evalúo clientes, productos y mercados con ese filtro: ¿encaja con la vida que quiero? Estoy dispuesto a vivir donde tenga sentido. Pero ya no por accidente.",
         ],
       },
       {
@@ -211,7 +211,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
           },
           {
             label: "Paso 4:",
-            text: "Toma una decisión concreta: eliminar algo, cambiar de mercado, investigar fiscalidad de un país, rechazar un cliente que no encaja.",
+            text: "Toma una decisión concreta: eliminar algo, cambiar de mercado, investigar las implicaciones reales de vivir en otro país, rechazar un cliente que no encaja.",
           },
         ],
         outcome:
@@ -221,7 +221,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
   },
   {
     number: 7,
-    title: "Pensar como un constructor",
+    title: "Pensar como quien construye",
     subsections: [
       {
         heading: "Qué es",
@@ -233,7 +233,7 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
       {
         heading: "Qué me costó no tenerla al principio",
         paragraphs: [
-          "Durante mucho tiempo busqué permiso externo. El título. El contrato. La validación de un jefe. Cuando me despidieron en Göttingen, me costó verlo como liberación.",
+          "Durante mucho tiempo busqué permiso externo. El título. El contrato. La validación de un jefe. Cuando me despidieron, me costó verlo como una liberación.",
           "Tomé decisiones basadas en lo que se veía bien desde fuera: países con nombre, cargos con nombre. En lugar de lo que quería de verdad.",
         ],
       },
@@ -241,9 +241,8 @@ export const fieldManualCapacitiesPart2: GuideCapacity[] = [
         heading: "Cómo se veía cuando la desarrollé",
         paragraphs: [
           "Lancé un producto de automatización con IA sin esperar a que el mercado estuviera «maduro». Conseguí clientes reales. Y los perdí uno a uno. Los datos me dijeron que cerrar era la decisión correcta aunque doliera.",
-          "Fui a Argentina cuando empecé a ordenar mi vida con la matriz de Eisenhower, de Los 7 hábitos de Stephen Covey. Me metí en programación porque los trabajos de diseño UX pedían HTML y CSS. Desde Málaga di soporte SAP HCM; después me echaron de Göttingen, donde el contrato decía SAP HXM Consultant pero el trabajo era desarrollador con SAPUI5 y Vue.js. Llegué a Tbilisi vendiendo el piso sin tener todo resuelto.",
-          "Monté la web de vino, contacté bodegueros y distribuidores, mandé emails a clientes en España, y publiqué en LinkedIn mientras la logística seguía rota.",
-          "Cada decisión incómoda me dio más claridad sobre qué quiero y qué no. Pensar como constructor no es tener un plan perfecto. Es moverte, leer datos, y ajustar.",
+          "Vendí el piso en Málaga y llegué a Tbilisi sin tenerlo todo resuelto. Monté la web de vino, contacté bodegueros y distribuidores, y publiqué en LinkedIn mientras la logística seguía rota.",
+          "Cada decisión incómoda me dio más claridad sobre qué quiero y qué no. Pensar como quien construye no es tener un plan perfecto. Es moverte, leer datos, y ajustar.",
         ],
       },
       {

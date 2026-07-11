@@ -22,16 +22,16 @@ export const siteConfig = {
 export const featuredGuide = {
   slug: "field-manual",
   eyebrow: "Recurso gratuito",
-  title: "Las 7 capacidades que el colegio nunca te enseñó",
-  subtitle: "para construir por tu cuenta.",
+  title: "Las 7 capacidades que el colegio no te enseñó",
+  subtitle: "para construir algo propio",
   tagline: "Las 7 capacidades que realmente se acumulan",
-  cta: "Descarga la guía gratuita de 30 páginas",
+  cta: "Descarga la guía gratuita de 24 páginas",
   coverImage: "/images/guide-cover.svg",
 };
 
 export const aboutPreview = {
   title: "Sobre Alberto",
-  bio: "Pasé de ferrallista en Suiza a programador autodidacta y constructor de negocios desde Georgia. Escribo cada semana sobre las decisiones de trabajo, dinero y vida que permiten a personas ambiciosas construir por su cuenta — sin permiso, sin momento perfecto y sin mapa.",
+  bio: "Pasé de trabajos manuales a programador autodidacta y creador de negocios desde Georgia. Escribo cada semana sobre las decisiones de trabajo, dinero y vida que permiten a personas ambiciosas construir por su cuenta, sin permiso, sin momento perfecto y sin mapa.",
   avatar: "/images/avatar.png",
   href: "/about",
 };

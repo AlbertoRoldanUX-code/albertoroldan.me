@@ -69,58 +69,6 @@ export function GuideDocument({ guide }: GuideDocumentProps) {
         ))}
       </section>
 
-      {/* Tabla 90 días */}
-      <section className="guide-page mb-24">
-        <h2 className="mb-8 font-serif text-[1.75rem] leading-[1.2] md:text-[2rem]">
-          {guide.overview.title}
-        </h2>
-
-        {guide.overview.intro?.map((paragraph, index) => (
-          <p
-            key={index}
-            className="mb-4 font-serif text-[17px] leading-[1.65] text-[#111]"
-          >
-            {paragraph}
-          </p>
-        ))}
-
-        <div className="mt-10 overflow-x-auto">
-          <table className="w-full min-w-[540px] border-collapse font-sans text-sm">
-            <thead>
-              <tr className="bg-[#f0ede8]">
-                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.15em] text-[#111]">
-                  Capacidad
-                </th>
-                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.15em] text-[#111]">
-                  Plazo orientativo
-                </th>
-                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.15em] text-[#111]">
-                  Resultado
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {guide.overview.rows.map((row, index) => (
-                <tr
-                  key={index}
-                  className={index % 2 === 0 ? "bg-white" : "bg-[#faf8f5]"}
-                >
-                  <td className="border-t border-[#e8e6e1] px-4 py-3 font-medium text-[#111]">
-                    {row.capacity}
-                  </td>
-                  <td className="border-t border-[#e8e6e1] px-4 py-3 text-[#6b6b6b]">
-                    {row.length}
-                  </td>
-                  <td className="border-t border-[#e8e6e1] px-4 py-3 text-[#111]">
-                    {row.output}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
       {/* Capacidades */}
       {guide.capacities.map((capacity) => (
         <section key={capacity.number} className="guide-page mb-24">

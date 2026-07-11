@@ -22,10 +22,10 @@ export const guides: Resource[] = [
     slug: "field-manual",
     category: "Trabajo",
     title:
-      "Las 7 capacidades que el colegio nunca te enseñó para construir por tu cuenta.",
+      "Las 7 capacidades que el colegio no te enseñó para construir algo propio",
     subtitle: "Las 7 capacidades que realmente se acumulan",
     description:
-      "Un manual de campo sobre las capacidades que se acumulan cuando construyes algo propio — con historias reales desde Georgia, validación con datos y ejercicios concretos.",
+      "Un manual de campo sobre las capacidades que se acumulan cuando construyes algo propio, con historias reales desde Georgia, validación con datos y ejercicios concretos.",
     coverImage: "/images/guide-cover.svg",
     href: "/guides/field-manual",
     featured: true,
