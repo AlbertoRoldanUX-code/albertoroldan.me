@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  outputFileTracingIncludes: {
+    "/api/guides/[slug]/pdf": ["./src/assets/fonts/**/*"],
+  },
   async redirects() {
     return [
       {

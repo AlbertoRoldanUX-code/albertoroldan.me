@@ -50,7 +50,7 @@
     "placeholder": "nombre@email.com",
     "disclaimer": "Te llegará directo a tu bandeja de entrada. También empezarás a recibir mi escritura semanal. Puedes darte de baja cuando quieras."
   },
-  "downloadUrl": "/guides/field-manual/guide",
+  "downloadUrl": "/api/guides/field-manual/pdf",
   "seo": {
     "title": "Guía gratuita: 7 capacidades que el colegio no te enseñó",
     "description": "Un manual de campo sobre las capacidades que se acumulan cuando construyes algo propio, con historias reales desde Georgia, validación con datos y ejercicios concretos."

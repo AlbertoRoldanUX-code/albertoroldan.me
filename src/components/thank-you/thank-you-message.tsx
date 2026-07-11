@@ -1,16 +1,17 @@
 import Image from "next/image";
-import Link from "next/link";
 import { thankYouContent } from "@/data/thank-you";
 import { siteConfig } from "@/data/home";
 
 interface ThankYouMessageProps {
   guideTitle: string;
   downloadUrl?: string;
+  downloadFilename?: string;
 }
 
 export function ThankYouMessage({
   guideTitle,
   downloadUrl,
+  downloadFilename,
 }: ThankYouMessageProps) {
   return (
     <div className="max-w-[30rem]">
@@ -33,12 +34,13 @@ export function ThankYouMessage({
 
         {downloadUrl ? (
           <p>
-            <Link
+            <a
               href={downloadUrl}
+              download={downloadFilename}
               className="underline decoration-foreground/30 underline-offset-[5px] transition-colors hover:decoration-foreground"
             >
               {thankYouContent.pdfLinkLabel}
-            </Link>
+            </a>
           </p>
         ) : null}
 

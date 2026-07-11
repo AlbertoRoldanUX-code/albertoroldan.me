@@ -31,6 +31,7 @@ export default async function ThankYouPage({ searchParams }: ThankYouPageProps) 
           <ThankYouMessage
             guideTitle={guideTitle}
             downloadUrl={downloadUrl}
+            downloadFilename={downloadUrl ? `${leadMagnet.slug}.pdf` : undefined}
           />
           <OnboardingSurvey />
         </div>
