@@ -60,9 +60,20 @@ Añade un archivo, por ejemplo `mi-guia.json`, y estará disponible en `/guides/
 }
 ```
 
-## Email provider
+## Newsletter (Supabase)
 
-El formulario usa una interfaz `EmailProvider` en `src/lib/email/`. Por defecto, un noop provider registra los envíos. Para producción, configura Beehiiv, ConvertKit o tu API en `src/lib/email/server.ts`.
+Los emails se guardan en Supabase (`newsletter_subscribers`).
+
+1. Crea un proyecto en [Supabase](https://supabase.com) (o usa uno existente).
+2. Ejecuta el SQL de `supabase/migrations/001_newsletter_subscribers.sql` en el SQL Editor.
+3. Añade en `.env.local` (y en Vercel):
+
+```bash
+SUPABASE_URL=https://xxxx.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=eyJ...
+```
+
+Sin esas variables, el formulario sigue respondiendo OK pero solo hace log (noop). Beehiiv/Kit son opcionales y solo harían falta si quieres enviar el boletín desde esas plataformas.
 
 ## LinkedIn
 

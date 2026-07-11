@@ -7,6 +7,7 @@ export interface EmailSubscribePayload {
 export interface EmailSubscribeResult {
   success: boolean;
   message?: string;
+  redirectUrl?: string;
 }
 
 export interface EmailProvider {

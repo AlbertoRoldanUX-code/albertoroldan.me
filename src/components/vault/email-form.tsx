@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { getEmailProvider } from "@/lib/email";
@@ -23,6 +24,7 @@ export function EmailForm({
   downloadUrl,
   className,
 }: EmailFormProps) {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle",
@@ -43,12 +45,12 @@ export function EmailForm({
 
       if (result.success) {
         setStatus("success");
-        setMessage(result.message ?? "Revisa tu bandeja de entrada.");
-        setEmail("");
-      } else {
-        setStatus("error");
-        setMessage(result.message ?? "Algo salió mal. Inténtalo de nuevo.");
+        router.push(`/thank-you?slug=${encodeURIComponent(slug)}`);
+        return;
       }
+
+      setStatus("error");
+      setMessage(result.message ?? "Algo salió mal. Inténtalo de nuevo.");
     } catch {
       setStatus("error");
       setMessage("Algo salió mal. Inténtalo de nuevo.");
@@ -84,7 +86,7 @@ export function EmailForm({
       </form>
 
       <p className="mx-auto mt-4 max-w-[30rem] text-center text-xs leading-relaxed text-muted-foreground md:text-[13px]">
-        {status === "success" ? message : disclaimer}
+        {disclaimer}
       </p>
 
       {status === "error" && (
