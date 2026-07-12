@@ -5,7 +5,7 @@ import { SiteLayout } from "@/components/site/site-layout";
 export const metadata: Metadata = {
   title: "Recursos",
   description:
-    "Guías gratuitas y recursos para construir algo propio.",
+    "Guías gratuitas para construir algo propio y ganar autonomía.",
 };
 
 export default function ResourcesPage() {

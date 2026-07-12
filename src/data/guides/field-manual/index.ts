@@ -29,7 +29,7 @@ export const fieldManualGuide: Guide = {
           "De hecho, casi todo lo importante que he aprendido vino de moverme antes de sentirme preparado: perder un trabajo, cambiar de país, aprender una habilidad nueva, publicar antes de tener audiencia, vender vino georgiano antes de tener la logística resuelta. Así fui descubriendo, con datos reales, qué funcionaba y qué no.",
           "Por eso esta guía no va de copiar mis pasos.",
           "Mis pasos no se pueden copiar. Tus circunstancias serán otras. Tu país será otro. Tu mercado será otro. Tu timing será otro.",
-          "Lo que sí puedes desarrollar son las capacidades que se repiten cuando construyes algo propio: moverte rápido, leer señales reales, crear activos, diseñar tu vida antes que tu negocio y tomar decisiones sin esperar permiso.",
+          "Lo que sí puedes desarrollar son las capacidades que se repiten cuando trabajas por tu cuenta: moverte rápido, leer señales reales, crear activos, diseñar tu vida antes que tu negocio y tomar decisiones sin esperar permiso.",
           "Esta guía recoge siete capacidades que he ido desarrollando a la fuerza. Cada una tiene la misma estructura: qué es, qué me costó, cómo se veía cuando la desarrollé, qué te cuesta si nunca la desarrollas, cómo se ve en la práctica, el error común y un ejercicio concreto.",
           "No necesitas leerla como un plan cerrado. Léela como un manual de campo.",
           "Al final no tendrás una fórmula. Tendrás algo más útil: criterio.",

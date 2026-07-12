@@ -42,7 +42,7 @@ export function FreeResourceSection() {
           <FadeIn delay={0.12} className="flex justify-center md:justify-end">
             <Link
               href={`/guides/${featuredGuide.slug}`}
-              className="block w-full max-w-[17.5rem] transition-transform hover:scale-[1.02] md:max-w-[19rem]"
+              className="block w-full max-w-[22rem] transition-transform hover:scale-[1.02] md:max-w-[24rem]"
             >
               <div className="overflow-hidden rounded-sm border border-border/60 bg-card shadow-[0_28px_90px_-30px_rgba(0,0,0,0.22)] dark:shadow-[0_28px_90px_-30px_rgba(0,0,0,0.65)]">
                 <div className="relative aspect-[3/4] w-full">
@@ -51,7 +51,7 @@ export function FreeResourceSection() {
                     alt={featuredGuide.title}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 280px, 304px"
+                    sizes="(max-width: 768px) 352px, 384px"
                   />
                 </div>
               </div>

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | albertoroldan.me",
   },
   description:
-    "Un ensayo semanal sobre construir y vivir por tu cuenta.",
+    "Un ensayo semanal para personas que quieren construir una vida más libre sin esperar permiso.",
 };
 
 export default function RootLayout({

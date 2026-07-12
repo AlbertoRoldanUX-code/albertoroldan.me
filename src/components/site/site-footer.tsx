@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Instagram, Linkedin, X } from "lucide-react";
 import { siteConfig } from "@/data/home";
 
 const footerLinks = [
@@ -6,6 +7,24 @@ const footerLinks = [
   { href: "/resources", label: "Recursos" },
   { href: "/privacy", label: "Privacidad" },
 ];
+
+const socialLinks = [
+  {
+    href: siteConfig.social.x,
+    label: "X",
+    icon: X,
+  },
+  {
+    href: siteConfig.social.linkedin,
+    label: "LinkedIn",
+    icon: Linkedin,
+  },
+  {
+    href: siteConfig.social.instagram,
+    label: "Instagram",
+    icon: Instagram,
+  },
+] as const;
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -29,31 +48,19 @@ export function SiteFooter() {
           ))}
         </nav>
 
-        <div className="mt-4 flex items-center justify-center gap-5">
-          <a
-            href={siteConfig.social.x}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-sans text-xs text-muted-foreground transition-colors hover:text-foreground"
-          >
-            X
-          </a>
-          <a
-            href={siteConfig.social.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-sans text-xs text-muted-foreground transition-colors hover:text-foreground"
-          >
-            LinkedIn
-          </a>
-          <a
-            href={siteConfig.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-sans text-xs text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Instagram
-          </a>
+        <div className="mt-5 flex items-center justify-center gap-4">
+          {socialLinks.map(({ href, label, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <Icon className="size-4" strokeWidth={1.75} />
+            </a>
+          ))}
         </div>
       </div>
     </footer>

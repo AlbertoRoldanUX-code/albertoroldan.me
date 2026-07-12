@@ -8,16 +8,7 @@ export function NewsletterSection() {
       <div className="mx-auto max-w-[42rem] text-center">
         <FadeIn>
           <h2 className="font-serif text-[2rem] leading-tight tracking-[-0.02em] md:text-[2.75rem]">
-            {footerCta.headline.split("sábado").map((part, i, arr) =>
-              i < arr.length - 1 ? (
-                <span key={i}>
-                  {part}
-                  <em>sábado</em>
-                </span>
-              ) : (
-                <span key={i}>{part}</span>
-              ),
-            )}
+            {footerCta.headline}
           </h2>
         </FadeIn>
 

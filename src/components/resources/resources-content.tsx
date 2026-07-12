@@ -1,15 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import type { ResourceFilter } from "@/data/resources";
-import {
-  comingSoonMessages,
-  guides,
-  resourceFilters,
-} from "@/data/resources";
-import { cn } from "@/lib/utils";
+import { guides } from "@/data/resources";
 
 function FeaturedGuide({ guide }: { guide: (typeof guides)[0] }) {
   return (
@@ -96,7 +87,6 @@ function GuideCard({ guide }: { guide: (typeof guides)[0] }) {
 }
 
 export function ResourcesContent() {
-  const [filter, setFilter] = useState<ResourceFilter>("guides");
   const featured = guides.find((g) => g.featured);
   const otherGuides = guides.filter((g) => !g.featured);
 
@@ -107,48 +97,14 @@ export function ResourcesContent() {
           Recursos
         </h1>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-2 md:mt-10">
-          {resourceFilters.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => setFilter(item.id)}
-              className={cn(
-                "rounded-full px-4 py-2 font-sans text-[13px] transition-colors md:text-sm",
-                filter === item.id
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-foreground hover:bg-secondary/80",
-              )}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="mt-10 md:mt-14">
-          {filter === "guides" && (
-            <div className="space-y-12 md:space-y-16">
-              {featured && <FeaturedGuide guide={featured} />}
-              {otherGuides.length > 0 && (
-                <div className="grid gap-12 md:grid-cols-2 md:gap-10">
-                  {otherGuides.map((guide) => (
-                    <GuideCard key={guide.slug} guide={guide} />
-                  ))}
-                </div>
-              )}
+        <div className="mt-10 space-y-12 md:mt-14 md:space-y-16">
+          {featured && <FeaturedGuide guide={featured} />}
+          {otherGuides.length > 0 && (
+            <div className="grid gap-12 md:grid-cols-2 md:gap-10">
+              {otherGuides.map((guide) => (
+                <GuideCard key={guide.slug} guide={guide} />
+              ))}
             </div>
-          )}
-
-          {filter === "tools" && (
-            <p className="mx-auto max-w-[32rem] text-center font-serif text-lg leading-relaxed text-muted-foreground md:text-xl">
-              {comingSoonMessages.tools}
-            </p>
-          )}
-
-          {filter === "masterclass" && (
-            <p className="mx-auto max-w-[32rem] text-center font-serif text-lg leading-relaxed text-muted-foreground md:text-xl">
-              {comingSoonMessages.masterclass}
-            </p>
           )}
         </div>
       </div>

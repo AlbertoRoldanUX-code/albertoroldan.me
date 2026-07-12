@@ -6,7 +6,7 @@ export const thankYouContent = {
     "Mientras tanto, tómate 15 segundos en responder unas preguntas rápidas para que pueda crear mejor contenido para ti.",
   pdfLinkLabel: "O descarga el PDF ahora.",
   newsletterNote:
-    "También te he añadido a mi ensayo semanal. Cada sábado por la mañana recibirás una pieza sobre construir y vivir por tu cuenta.",
+    "También te he añadido a mi ensayo semanal. Cada sábado por la mañana recibirás una pieza sobre trabajo, dinero y libertad.",
   signature: "Alberto Roldán",
 };
 

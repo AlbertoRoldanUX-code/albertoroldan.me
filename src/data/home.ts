@@ -3,9 +3,9 @@ export const siteConfig = {
   name: "Alberto Roldán",
   avatar: "/images/avatar.png",
   tagline:
-    "Un ensayo semanal sobre construir y vivir por tu cuenta.",
+    "Un ensayo semanal para personas que quieren construir una vida más libre sin esperar permiso.",
   subtagline:
-    "Conversación real sobre trabajo, libertad y decisiones que encajan con tu vida.",
+    "Escribo sobre trabajo, dinero y libertad para quienes quieren trabajar por su cuenta.",
   newsletter: {
     placeholder: "nombre@email.com",
     buttonText: "Suscríbete gratis",
@@ -24,20 +24,20 @@ export const featuredGuide = {
   eyebrow: "Recurso gratuito",
   title: "Las 7 capacidades que el colegio no te enseñó",
   subtitle: "para construir algo propio",
-  tagline: "Las 7 capacidades que realmente se acumulan",
+  tagline: "Las siete capacidades que más impacto han tenido en mi vida.",
   cta: "Descarga la guía gratuita de 24 páginas",
   coverImage: "/images/guide-cover.svg",
 };
 
 export const aboutPreview = {
   title: "Sobre Alberto",
-  bio: "Pasé de trabajos manuales a programador autodidacta y creador de negocios desde Georgia. Escribo cada semana sobre las decisiones de trabajo, dinero y vida que permiten a personas ambiciosas construir por su cuenta, sin permiso, sin momento perfecto y sin mapa.",
+  bio: "Pasé de trabajos manuales a programador autodidacta. Hoy construyo negocios desde Georgia y escribo sobre trabajo, dinero y libertad.",
   avatar: "/images/avatar.png",
   href: "/about",
 };
 
 export const footerCta = {
-  headline: "Un ensayo, cada sábado por la mañana.",
+  headline: "Si has llegado hasta aquí, probablemente esta newsletter es para ti.",
   subheadline:
-    "Únete a quienes construyen y viven por su cuenta.",
+    "Cada sábado, una idea práctica sobre trabajo, dinero y libertad.",
 };
