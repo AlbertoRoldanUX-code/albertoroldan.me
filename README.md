@@ -48,7 +48,7 @@ Añade un archivo, por ejemplo `mi-guia.json`, y estará disponible en `/guides/
 ```json
 {
   "slug": "mi-guia",
-  "brand": "albertoroldan.",
+  "brand": "albertoroldán.",
   "eyebrow": "Guía gratuita",
   "title": "...",
   "subtitle": "...",

@@ -1,5 +1,5 @@
 export const siteConfig = {
-  brand: "albertoroldan.",
+  brand: "albertoroldán.",
   name: "Alberto Roldán",
   avatar: "/images/avatar.png",
   tagline:
