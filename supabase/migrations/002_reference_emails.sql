@@ -28,3 +28,4 @@ create index if not exists reference_emails_message_id_idx
 alter table public.reference_emails enable row level security;
 
 -- No public policies: only the service role (server) can read/write.
+grant select, insert, update, delete on table public.reference_emails to service_role;

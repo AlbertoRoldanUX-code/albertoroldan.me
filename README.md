@@ -65,15 +65,25 @@ Añade un archivo, por ejemplo `mi-guia.json`, y estará disponible en `/guides/
 Los emails se guardan en Supabase (`newsletter_subscribers`).
 
 1. Crea un proyecto en [Supabase](https://supabase.com) (o usa uno existente).
-2. Ejecuta el SQL de `supabase/migrations/001_newsletter_subscribers.sql` en el SQL Editor.
-3. Añade en `.env.local` (y en Vercel):
+2. Añade en `.env.local` (y en Vercel):
 
 ```bash
 SUPABASE_URL=https://xxxx.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=eyJ...
+# Solo para migrar desde la terminal:
+SUPABASE_DB_PASSWORD=tu-password-de-postgres
 ```
 
-Sin esas variables, el formulario sigue respondiendo OK pero solo hace log (noop). Beehiiv/Kit son opcionales y solo harían falta si quieres enviar el boletín desde esas plataformas.
+3. Aplica las migraciones (elige una):
+
+```bash
+npm install -D pg   # una vez
+npm run db:migrate
+```
+
+O pega el SQL de `supabase/migrations/*.sql` en el SQL Editor del dashboard.
+
+Sin `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY`, el formulario sigue respondiendo OK pero solo hace log (noop). Beehiiv/Kit son opcionales y solo harían falta si quieres enviar el boletín desde esas plataformas.
 
 ## Archivo de emails de Justin Welsh (Resend → Supabase)
 

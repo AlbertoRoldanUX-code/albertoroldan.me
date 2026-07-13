@@ -15,3 +15,5 @@ create index if not exists newsletter_subscribers_created_at_idx
 alter table public.newsletter_subscribers enable row level security;
 
 -- No public policies: only the service role (server) can read/write.
+-- Needed when "Automatically expose new tables" is disabled at project creation.
+grant select, insert, update, delete on table public.newsletter_subscribers to service_role;
