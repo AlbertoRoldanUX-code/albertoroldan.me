@@ -1,0 +1,58 @@
+{
+  "slug": "field-manual",
+  "brand": "albertoroldán.",
+  "eyebrow": "Free guide",
+  "title": "The 7 capabilities school never taught you to build something of your own",
+  "subtitle": "What I learned going from manual jobs to self-taught programmer and business builder from Georgia.",
+  "coverImage": "/images/guide-cover.svg",
+  "coverAlt": "Guide cover",
+  "benefitsIntro": "Seven capabilities I've developed the hard way while building something of my own. Each one includes an exercise and a clear outcome.",
+  "benefits": [
+    {
+      "label": "Capacity 1",
+      "title": "Move before you feel ready"
+    },
+    {
+      "label": "Capacity 2",
+      "title": "Validate with data, not opinions"
+    },
+    {
+      "label": "Capacity 3",
+      "title": "Build skills nobody can take from you"
+    },
+    {
+      "label": "Capacity 4",
+      "title": "Create before you consume"
+    },
+    {
+      "label": "Capacity 5",
+      "title": "Turn content into an asset"
+    },
+    {
+      "label": "Capacity 6",
+      "title": "Design a life before a business"
+    },
+    {
+      "label": "Capacity 7",
+      "title": "Think like someone who builds"
+    }
+  ],
+  "author": {
+    "name": "Alberto",
+    "bio": "I build businesses from Georgia. I write every week about what I learn along the way — without permission, without the perfect moment, and without a map.",
+    "avatar": "/images/avatar.png",
+    "signature": "Alberto Roldán",
+    "socialProof": "Writer · Builder · Georgia"
+  },
+  "cta": {
+    "headline": "Get your free copy.",
+    "buttonText": "Send me the guide",
+    "placeholder": "name@email.com",
+    "disclaimer": "It will land straight in your inbox. You'll also start receiving my weekly writing. You can unsubscribe anytime."
+  },
+  "downloadUrl": "/api/guides/field-manual/pdf?locale=en",
+  "seo": {
+    "title": "Free guide: 7 capabilities school never taught you",
+    "description": "A field manual on the capabilities that compound when you build something of your own — with real stories from Georgia, data-driven validation, and concrete exercises."
+  }
+}

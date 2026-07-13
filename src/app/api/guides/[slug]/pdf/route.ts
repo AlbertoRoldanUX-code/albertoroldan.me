@@ -1,16 +1,23 @@
 import { getGuide } from "@/lib/guides";
 import { renderGuidePdf } from "@/lib/guides/render-guide-pdf";
+import { isValidLocale } from "@/lib/i18n/config";
 
 interface RouteContext {
   params: Promise<{ slug: string }>;
 }
 
-export async function GET(_request: Request, context: RouteContext) {
+export async function GET(request: Request, context: RouteContext) {
   const { slug } = await context.params;
-  const guide = getGuide(slug);
+  const { searchParams } = new URL(request.url);
+  const localeParam = searchParams.get("locale") ?? "es";
+  const locale = isValidLocale(localeParam) ? localeParam : "es";
+  const guide = getGuide(slug, locale);
 
   if (!guide) {
-    return new Response("Guía no encontrada", { status: 404 });
+    return new Response(
+      locale === "en" ? "Guide not found" : "Guía no encontrada",
+      { status: 404 },
+    );
   }
 
   const buffer = await renderGuidePdf(guide);

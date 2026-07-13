@@ -4,20 +4,20 @@ import { HomeHeroSection } from "@/components/home/hero-section";
 import { FreeResourceSection } from "@/components/home/free-resource-section";
 import { NewsletterSection } from "@/components/home/newsletter-section";
 import { SiteLayout } from "@/components/site/site-layout";
-import { siteConfig } from "@/data/home";
+import { getSiteConfig } from "@/lib/i18n/content";
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
-  description: siteConfig.subtagline,
+  title: getSiteConfig("es").name,
+  description: getSiteConfig("es").subtagline,
 };
 
 export default function HomePage() {
   return (
-    <SiteLayout>
-      <HomeHeroSection />
-      <FreeResourceSection />
-      <AboutPreviewSection />
-      <NewsletterSection />
+    <SiteLayout locale="es">
+      <HomeHeroSection locale="es" />
+      <FreeResourceSection locale="es" />
+      <AboutPreviewSection locale="es" />
+      <NewsletterSection locale="es" />
     </SiteLayout>
   );
 }

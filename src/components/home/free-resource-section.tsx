@@ -1,9 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/vault/fade-in";
-import { featuredGuide } from "@/data/home";
+import { getFeaturedGuide } from "@/lib/i18n/content";
+import { localizedPath } from "@/lib/i18n/paths";
+import type { Locale } from "@/lib/i18n/config";
 
-export function FreeResourceSection() {
+interface FreeResourceSectionProps {
+  locale?: Locale;
+}
+
+export function FreeResourceSection({ locale = "es" }: FreeResourceSectionProps) {
+  const featuredGuide = getFeaturedGuide(locale);
+  const guideHref = localizedPath(`/guides/${featuredGuide.slug}`, locale);
+
   return (
     <section className="border-t border-border/60 px-6 py-14 md:py-20">
       <div className="mx-auto max-w-[52rem]">
@@ -31,7 +40,7 @@ export function FreeResourceSection() {
 
             <FadeIn delay={0.15}>
               <Link
-                href={`/guides/${featuredGuide.slug}`}
+                href={guideHref}
                 className="mt-8 inline-flex h-12 items-center rounded-full bg-primary px-7 font-sans text-[15px] font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
                 {featuredGuide.cta}
@@ -41,7 +50,7 @@ export function FreeResourceSection() {
 
           <FadeIn delay={0.12} className="flex justify-center md:justify-end">
             <Link
-              href={`/guides/${featuredGuide.slug}`}
+              href={guideHref}
               className="block w-full max-w-[22rem] transition-transform hover:scale-[1.02] md:max-w-[24rem]"
             >
               <div className="overflow-hidden rounded-sm border border-border/60 bg-card shadow-[0_28px_90px_-30px_rgba(0,0,0,0.22)] dark:shadow-[0_28px_90px_-30px_rgba(0,0,0,0.65)]">

@@ -2,12 +2,14 @@ import type { LeadMagnet } from "@/types/lead-magnet";
 import { EmailForm } from "@/components/vault/email-form";
 import { FadeIn } from "@/components/vault/fade-in";
 import { GuideCover } from "@/components/vault/guide-cover";
+import type { Locale } from "@/lib/i18n/config";
 
 interface HeroSectionProps {
   data: LeadMagnet;
+  locale?: Locale;
 }
 
-export function HeroSection({ data }: HeroSectionProps) {
+export function HeroSection({ data, locale = "es" }: HeroSectionProps) {
   return (
     <section className="px-6 pt-8 pb-16 md:pt-10 md:pb-24">
       <div className="mx-auto max-w-[42rem] text-center">
@@ -36,6 +38,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             buttonText={data.cta.buttonText}
             disclaimer={data.cta.disclaimer}
             downloadUrl={data.downloadUrl}
+            locale={locale}
           />
         </FadeIn>
       </div>

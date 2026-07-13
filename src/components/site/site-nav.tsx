@@ -2,23 +2,25 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLocale } from "@/components/site/locale-provider";
+import { getUi } from "@/lib/i18n/content";
+import { localizedPath } from "@/lib/i18n/paths";
 import { cn } from "@/lib/utils";
-
-const navLinks = [
-  { href: "/about", label: "Sobre mí" },
-  { href: "/resources", label: "Recursos" },
-];
 
 export function SiteNav() {
   const pathname = usePathname();
+  const locale = useLocale();
+  const ui = getUi(locale);
+
+  const navLinks = [
+    { href: localizedPath("/about", locale), label: ui.nav.about },
+    { href: localizedPath("/resources", locale), label: ui.nav.resources },
+  ];
 
   return (
     <div className="flex items-center gap-3 sm:gap-5">
       {navLinks.map((link) => {
-        const isActive =
-          link.href === "/"
-            ? pathname === "/"
-            : pathname.startsWith(link.href);
+        const isActive = pathname === link.href;
 
         return (
           <Link

@@ -1,8 +1,15 @@
 import { EmailForm } from "@/components/vault/email-form";
 import { FadeIn } from "@/components/vault/fade-in";
-import { siteConfig } from "@/data/home";
+import { getSiteConfig } from "@/lib/i18n/content";
+import type { Locale } from "@/lib/i18n/config";
 
-export function HomeHeroSection() {
+interface HomeHeroSectionProps {
+  locale?: Locale;
+}
+
+export function HomeHeroSection({ locale = "es" }: HomeHeroSectionProps) {
+  const siteConfig = getSiteConfig(locale);
+
   return (
     <section className="px-6 pt-14 pb-16 md:pt-20 md:pb-24">
       <div className="mx-auto max-w-[42rem] text-center">
@@ -24,6 +31,7 @@ export function HomeHeroSection() {
             placeholder={siteConfig.newsletter.placeholder}
             buttonText={siteConfig.newsletter.buttonText}
             disclaimer={siteConfig.newsletter.disclaimer}
+            locale={locale}
           />
         </FadeIn>
       </div>

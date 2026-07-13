@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocale } from "@/components/site/locale-provider";
+import { getUi } from "@/lib/i18n/content";
 
 /** Área útil de una página carta (11in − márgenes) escalada al ancho del documento. */
 function getContentPageHeight(articleWidth: number): number {
@@ -84,18 +86,24 @@ function useGuidePages() {
 
 export function GuidePageCount() {
   const { total } = useGuidePages();
+  const locale = useLocale();
+  const ui = getUi(locale);
 
   return (
-    <span className="font-sans text-sm text-[#6b6b6b]">{total} páginas</span>
+    <span className="font-sans text-sm text-[#6b6b6b]">
+      {total} {ui.guide.pages}
+    </span>
   );
 }
 
 export function GuidePageIndicator() {
   const { current, total } = useGuidePages();
+  const locale = useLocale();
+  const ui = getUi(locale);
 
   return (
     <div className="no-print fixed bottom-5 left-1/2 z-50 -translate-x-1/2 rounded-full border border-[#e8e6e1] bg-[#faf9f6]/95 px-4 py-2 font-sans text-xs text-[#6b6b6b] shadow-sm backdrop-blur-sm">
-      Página {current} de {total}
+      {ui.guide.pageOf(current, total)}
     </div>
   );
 }

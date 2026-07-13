@@ -5,6 +5,9 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { getEmailProvider } from "@/lib/email";
+import { getUi } from "@/lib/i18n/content";
+import { localizedPath } from "@/lib/i18n/paths";
+import type { Locale } from "@/lib/i18n/config";
 import { cn } from "@/lib/utils";
 
 interface EmailFormProps {
@@ -13,6 +16,7 @@ interface EmailFormProps {
   buttonText: string;
   disclaimer: string;
   downloadUrl?: string;
+  locale?: Locale;
   className?: string;
 }
 
@@ -22,9 +26,11 @@ export function EmailForm({
   buttonText,
   disclaimer,
   downloadUrl,
+  locale = "es",
   className,
 }: EmailFormProps) {
   const router = useRouter();
+  const ui = getUi(locale);
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle",
@@ -45,15 +51,19 @@ export function EmailForm({
 
       if (result.success) {
         setStatus("success");
-        router.push(`/thank-you?slug=${encodeURIComponent(slug)}`);
+        const thankYouPath = localizedPath(
+          `/thank-you?slug=${encodeURIComponent(slug)}`,
+          locale,
+        );
+        router.push(thankYouPath);
         return;
       }
 
       setStatus("error");
-      setMessage(result.message ?? "Algo salió mal. Inténtalo de nuevo.");
+      setMessage(result.message ?? ui.email.error);
     } catch {
       setStatus("error");
-      setMessage("Algo salió mal. Inténtalo de nuevo.");
+      setMessage(ui.email.error);
     }
   }
 
@@ -72,7 +82,7 @@ export function EmailForm({
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           disabled={status === "loading" || status === "success"}
-          aria-label="Dirección de correo electrónico"
+          aria-label={ui.email.ariaLabel}
           className="h-12 flex-1 rounded-full px-5 text-[15px] shadow-none"
         />
         <Button
@@ -81,7 +91,7 @@ export function EmailForm({
           disabled={status === "loading" || status === "success"}
           className="h-12 shrink-0 rounded-full px-7 text-[15px] font-medium"
         >
-          {status === "loading" ? "Enviando…" : buttonText}
+          {status === "loading" ? ui.email.loading : buttonText}
         </Button>
       </form>
 

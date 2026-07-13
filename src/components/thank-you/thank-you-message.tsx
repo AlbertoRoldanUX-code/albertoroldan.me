@@ -1,18 +1,24 @@
 import Image from "next/image";
-import { thankYouContent } from "@/data/thank-you";
-import { siteConfig } from "@/data/home";
+import { getSiteConfig, getThankYouContent, getUi } from "@/lib/i18n/content";
+import type { Locale } from "@/lib/i18n/config";
 
 interface ThankYouMessageProps {
   guideTitle: string;
   downloadUrl?: string;
   downloadFilename?: string;
+  locale?: Locale;
 }
 
 export function ThankYouMessage({
   guideTitle,
   downloadUrl,
   downloadFilename,
+  locale = "es",
 }: ThankYouMessageProps) {
+  const thankYouContent = getThankYouContent(locale);
+  const siteConfig = getSiteConfig(locale);
+  const ui = getUi(locale);
+
   return (
     <div className="max-w-[30rem]">
       <p className="font-sans text-[11px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
@@ -25,8 +31,8 @@ export function ThankYouMessage({
 
       <div className="mt-7 space-y-5 font-serif text-[1.05rem] leading-[1.75] text-foreground/90 md:text-[1.1rem] md:leading-[1.7]">
         <p>
-          En {thankYouContent.emailArrival} recibirás un ejemplar gratuito de{" "}
-          <em>{guideTitle}</em> en tu bandeja de entrada.{" "}
+          {ui.thankYou.emailPrefix(thankYouContent.emailArrival)}{" "}
+          <em>{guideTitle}</em> {ui.thankYou.emailSuffix}{" "}
           <mark className="rounded-sm bg-[#f5efd6] px-1 py-0.5 text-foreground dark:bg-amber-900/45 dark:text-foreground">
             {thankYouContent.highlight}
           </mark>

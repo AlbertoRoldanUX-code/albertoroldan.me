@@ -10,7 +10,18 @@ export const thankYouContent = {
   signature: "Alberto Roldán",
 };
 
-export const surveyQuestions = [
+export interface SurveyOption {
+  id: string;
+  label: string;
+}
+
+export interface SurveyQuestion {
+  id: string;
+  question: string;
+  options: SurveyOption[];
+}
+
+export const surveyQuestions: SurveyQuestion[] = [
   {
     id: "working-for-yourself",
     question: "¿Trabajas por tu cuenta?",
@@ -49,7 +60,7 @@ export const surveyQuestions = [
       { id: "all", label: "Un poco de todo" },
     ],
   },
-] as const;
+];
 
 export const surveyComplete = {
   eyebrow: "LISTO",

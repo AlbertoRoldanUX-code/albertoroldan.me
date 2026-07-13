@@ -1,15 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiteNav } from "@/components/site/site-nav";
+import { LanguageSwitcher } from "@/components/site/language-switcher";
 import { ThemeToggle } from "@/components/vault/theme-toggle";
-import { siteConfig } from "@/data/home";
+import { getSiteConfig } from "@/lib/i18n/content";
+import type { Locale } from "@/lib/i18n/config";
+import { localizedPath } from "@/lib/i18n/paths";
 import { cn } from "@/lib/utils";
 
 interface SiteHeaderProps {
   className?: string;
+  locale?: Locale;
 }
 
-export function SiteHeader({ className }: SiteHeaderProps) {
+export function SiteHeader({ className, locale = "es" }: SiteHeaderProps) {
+  const siteConfig = getSiteConfig(locale);
+
   return (
     <header
       className={cn(
@@ -19,7 +25,7 @@ export function SiteHeader({ className }: SiteHeaderProps) {
     >
       <div className="mx-auto flex max-w-[52rem] items-center justify-between px-6 py-4 md:py-5">
         <Link
-          href="/"
+          href={localizedPath("/", locale)}
           className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
         >
           <div className="relative size-7 overflow-hidden rounded-full bg-muted md:size-8">
@@ -38,6 +44,7 @@ export function SiteHeader({ className }: SiteHeaderProps) {
 
         <nav className="flex items-center gap-1 md:gap-2">
           <SiteNav />
+          <LanguageSwitcher />
           <ThemeToggle className="ml-1 md:ml-2" />
         </nav>
       </div>

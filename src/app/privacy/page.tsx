@@ -1,34 +1,27 @@
 import type { Metadata } from "next";
 import { SiteLayout } from "@/components/site/site-layout";
+import { getUi } from "@/lib/i18n/content";
+
+const ui = getUi("es");
 
 export const metadata: Metadata = {
-  title: "Privacidad",
-  description: "Política de privacidad de albertoroldan.me",
+  title: ui.privacy.title,
+  description: ui.privacy.description,
 };
 
 export default function PrivacyPage() {
   return (
-    <SiteLayout>
+    <SiteLayout locale="es">
       <section className="px-6 py-14 md:py-20">
         <div className="mx-auto max-w-[42rem]">
           <h1 className="font-serif text-[2.25rem] leading-tight tracking-[-0.02em] md:text-[2.75rem]">
-            Privacidad
+            {ui.privacy.title}
           </h1>
 
           <div className="mt-8 space-y-5 font-sans text-base leading-relaxed text-muted-foreground md:text-[17px]">
-            <p>
-              Recopilo tu dirección de correo electrónico cuando te suscribes
-              al newsletter o descargas una guía gratuita. La uso únicamente
-              para enviarte contenido relacionado con albertoroldan.me.
-            </p>
-            <p>
-              No vendo ni comparto tu información con terceros. Puedes darte de
-              baja en cualquier momento usando el enlace incluido en cada email.
-            </p>
-            <p>
-              Si tienes preguntas sobre tus datos, escríbeme a través de las
-              redes sociales enlazadas en el pie de página.
-            </p>
+            {ui.privacy.paragraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </section>

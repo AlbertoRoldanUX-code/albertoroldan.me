@@ -1,9 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { aboutPreview } from "@/data/home";
 import { FadeIn } from "@/components/vault/fade-in";
+import { getAboutPreview, getUi } from "@/lib/i18n/content";
+import type { Locale } from "@/lib/i18n/config";
 
-export function AboutPreviewSection() {
+interface AboutPreviewSectionProps {
+  locale?: Locale;
+}
+
+export function AboutPreviewSection({ locale = "es" }: AboutPreviewSectionProps) {
+  const aboutPreview = getAboutPreview(locale);
+  const ui = getUi(locale);
+
   return (
     <section className="border-t border-border/60 px-6 py-14 md:py-20">
       <div className="mx-auto max-w-[52rem]">
@@ -38,7 +46,7 @@ export function AboutPreviewSection() {
                 href={aboutPreview.href}
                 className="mt-6 inline-block font-serif text-base underline-offset-4 hover:underline md:text-lg"
               >
-                Leer más →
+                {ui.about.readMore}
               </Link>
             </FadeIn>
           </div>

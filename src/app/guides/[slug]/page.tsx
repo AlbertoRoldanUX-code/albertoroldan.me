@@ -1,37 +1,25 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { LeadMagnetPage } from "@/components/vault/lead-magnet-page";
-import { getAllLeadMagnetSlugs, getLeadMagnet } from "@/lib/lead-magnets";
-import { buildLeadMagnetMetadata } from "@/lib/metadata";
+import {
+  GuideSlugPage,
+  generateGuideSlugMetadata,
+  getGuideStaticParams,
+} from "@/components/vault/guide-slug-page";
 
 interface GuideSlugPageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return getAllLeadMagnetSlugs().map((slug) => ({ slug }));
+  return getGuideStaticParams();
 }
 
 export async function generateMetadata({
   params,
 }: GuideSlugPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const data = getLeadMagnet(slug);
-
-  if (!data) {
-    return { title: "No encontrado" };
-  }
-
-  return buildLeadMagnetMetadata(data);
+  return generateGuideSlugMetadata(slug, "es");
 }
 
-export default async function GuideSlugPage({ params }: GuideSlugPageProps) {
-  const { slug } = await params;
-  const data = getLeadMagnet(slug);
-
-  if (!data) {
-    notFound();
-  }
-
-  return <LeadMagnetPage data={data} />;
+export default function Page({ params }: GuideSlugPageProps) {
+  return <GuideSlugPage params={params} locale="es" />;
 }

@@ -1,9 +1,15 @@
 import Image from "next/image";
 import { NewsletterSection } from "@/components/home/newsletter-section";
-import { aboutContent } from "@/data/about";
+import { getAboutContent } from "@/lib/i18n/content";
+import type { Locale } from "@/lib/i18n/config";
 
-export function AboutContent() {
-  const { greeting, avatar, signature, intro, writingHelp } = aboutContent;
+interface AboutContentProps {
+  locale?: Locale;
+}
+
+export function AboutContent({ locale = "es" }: AboutContentProps) {
+  const { greeting, avatar, signature, intro, writingHelp } =
+    getAboutContent(locale);
 
   return (
     <>
@@ -72,7 +78,7 @@ export function AboutContent() {
         </div>
       </section>
 
-      <NewsletterSection />
+      <NewsletterSection locale={locale} />
     </>
   );
 }

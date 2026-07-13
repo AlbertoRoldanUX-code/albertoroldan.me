@@ -1,8 +1,16 @@
 import { EmailForm } from "@/components/vault/email-form";
 import { FadeIn } from "@/components/vault/fade-in";
-import { footerCta, siteConfig } from "@/data/home";
+import { getFooterCta, getSiteConfig } from "@/lib/i18n/content";
+import type { Locale } from "@/lib/i18n/config";
 
-export function NewsletterSection() {
+interface NewsletterSectionProps {
+  locale?: Locale;
+}
+
+export function NewsletterSection({ locale = "es" }: NewsletterSectionProps) {
+  const footerCta = getFooterCta(locale);
+  const siteConfig = getSiteConfig(locale);
+
   return (
     <section className="border-t border-border/60 px-6 py-16 md:py-24">
       <div className="mx-auto max-w-[42rem] text-center">
@@ -24,6 +32,7 @@ export function NewsletterSection() {
             placeholder={siteConfig.newsletter.placeholder}
             buttonText={siteConfig.newsletter.buttonText}
             disclaimer={siteConfig.newsletter.disclaimer}
+            locale={locale}
           />
         </FadeIn>
       </div>

@@ -2,15 +2,20 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  surveyComplete,
-  surveyQuestions,
-} from "@/data/thank-you";
+import { getSurveyComplete, getSurveyQuestions, getUi } from "@/lib/i18n/content";
+import type { Locale } from "@/lib/i18n/config";
 import { cn } from "@/lib/utils";
 
 type Answers = Record<string, string>;
 
-export function OnboardingSurvey() {
+interface OnboardingSurveyProps {
+  locale?: Locale;
+}
+
+export function OnboardingSurvey({ locale = "es" }: OnboardingSurveyProps) {
+  const surveyQuestions = getSurveyQuestions(locale);
+  const surveyComplete = getSurveyComplete(locale);
+  const ui = getUi(locale);
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
   const [done, setDone] = useState(false);
@@ -84,7 +89,7 @@ export function OnboardingSurvey() {
             transition={{ duration: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
             <p className="font-sans text-[11px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
-              Pregunta {step + 1} de {total}
+              {ui.survey.questionOf(step, total)}
             </p>
             <h2 className="mt-4 font-serif text-[1.65rem] leading-snug tracking-tight text-balance md:text-[1.85rem]">
               {current.question}

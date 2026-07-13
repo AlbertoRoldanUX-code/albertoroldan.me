@@ -1,33 +1,28 @@
+"use client";
+
 import Link from "next/link";
 import { Instagram, Linkedin, X } from "lucide-react";
-import { siteConfig } from "@/data/home";
-
-const footerLinks = [
-  { href: "/about", label: "Sobre mí" },
-  { href: "/resources", label: "Recursos" },
-  { href: "/privacy", label: "Privacidad" },
-];
+import { useLocale } from "@/components/site/locale-provider";
+import { getSiteConfig, getUi } from "@/lib/i18n/content";
+import { localizedPath } from "@/lib/i18n/paths";
 
 const socialLinks = [
-  {
-    href: siteConfig.social.x,
-    label: "X",
-    icon: X,
-  },
-  {
-    href: siteConfig.social.linkedin,
-    label: "LinkedIn",
-    icon: Linkedin,
-  },
-  {
-    href: siteConfig.social.instagram,
-    label: "Instagram",
-    icon: Instagram,
-  },
+  { key: "x" as const, label: "X", icon: X },
+  { key: "linkedin" as const, label: "LinkedIn", icon: Linkedin },
+  { key: "instagram" as const, label: "Instagram", icon: Instagram },
 ] as const;
 
 export function SiteFooter() {
+  const locale = useLocale();
+  const siteConfig = getSiteConfig(locale);
+  const ui = getUi(locale);
   const year = new Date().getFullYear();
+
+  const footerLinks = [
+    { href: localizedPath("/about", locale), label: ui.nav.about },
+    { href: localizedPath("/resources", locale), label: ui.nav.resources },
+    { href: localizedPath("/privacy", locale), label: ui.footer.privacy },
+  ];
 
   return (
     <footer className="border-t border-border/60 px-6 py-12 md:py-16">
@@ -49,10 +44,10 @@ export function SiteFooter() {
         </nav>
 
         <div className="mt-5 flex items-center justify-center gap-4">
-          {socialLinks.map(({ href, label, icon: Icon }) => (
+          {socialLinks.map(({ key, label, icon: Icon }) => (
             <a
               key={label}
-              href={href}
+              href={siteConfig.social[key]}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}

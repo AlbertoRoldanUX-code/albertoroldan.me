@@ -1,40 +1,58 @@
 import { readdirSync, readFileSync } from "fs";
 import { join } from "path";
 import type { LeadMagnet } from "@/types/lead-magnet";
+import type { Locale } from "@/lib/i18n/config";
 
-const LEAD_MAGNETS_DIR = join(process.cwd(), "src/data/lead-magnets");
+const LEAD_MAGNETS_BASE = join(process.cwd(), "src/data/lead-magnets");
 
-function loadLeadMagnets(): Record<string, LeadMagnet> {
-  const files = readdirSync(LEAD_MAGNETS_DIR).filter((file) =>
-    file.endsWith(".json"),
-  );
+function loadLeadMagnetsFromDir(dir: string): Record<string, LeadMagnet> {
+  let files: string[];
+  try {
+    files = readdirSync(dir).filter((file) => file.endsWith(".json"));
+  } catch {
+    return {};
+  }
 
   return Object.fromEntries(
     files.map((file) => {
-      const raw = readFileSync(join(LEAD_MAGNETS_DIR, file), "utf-8");
+      const raw = readFileSync(join(dir, file), "utf-8");
       const data = JSON.parse(raw) as LeadMagnet;
       return [data.slug, data];
     }),
   );
 }
 
-const leadMagnets = loadLeadMagnets();
+function loadAllLeadMagnets(): Record<Locale, Record<string, LeadMagnet>> {
+  return {
+    es: loadLeadMagnetsFromDir(LEAD_MAGNETS_BASE),
+    en: loadLeadMagnetsFromDir(join(LEAD_MAGNETS_BASE, "en")),
+  };
+}
 
-export function getLeadMagnet(slug: string): LeadMagnet | undefined {
-  return leadMagnets[slug];
+const leadMagnetsByLocale = loadAllLeadMagnets();
+
+export function getLeadMagnet(
+  slug: string,
+  locale: Locale = "es",
+): LeadMagnet | undefined {
+  return leadMagnetsByLocale[locale]?.[slug];
 }
 
 export function getAllLeadMagnetSlugs(): string[] {
-  return Object.keys(leadMagnets);
+  return Object.keys(leadMagnetsByLocale.es);
 }
 
-export function getDefaultLeadMagnet(): LeadMagnet {
-  const slugs = getAllLeadMagnetSlugs();
+export function getDefaultLeadMagnet(locale: Locale = "es"): LeadMagnet {
+  const slugs = Object.keys(leadMagnetsByLocale[locale]);
   const first = slugs[0];
 
   if (!first) {
-    throw new Error("No lead magnets found in src/data/lead-magnets/");
+    const fallback = Object.keys(leadMagnetsByLocale.es)[0];
+    if (!fallback) {
+      throw new Error("No lead magnets found in src/data/lead-magnets/");
+    }
+    return leadMagnetsByLocale.es[fallback];
   }
 
-  return leadMagnets[first];
+  return leadMagnetsByLocale[locale][first];
 }
