@@ -6,15 +6,21 @@ import type { Locale } from "@/lib/i18n/config";
 interface SiteLayoutProps {
   children: React.ReactNode;
   locale?: Locale;
+  /** Landing CTA: sin enlaces de nav en header/footer. */
+  minimal?: boolean;
 }
 
-export function SiteLayout({ children, locale = "es" }: SiteLayoutProps) {
+export function SiteLayout({
+  children,
+  locale = "es",
+  minimal = false,
+}: SiteLayoutProps) {
   return (
     <LocaleProvider locale={locale}>
       <div className="flex min-h-screen flex-col">
-        <SiteHeader />
+        <SiteHeader locale={locale} minimal={minimal} />
         <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <SiteFooter minimal={minimal} />
       </div>
     </LocaleProvider>
   );

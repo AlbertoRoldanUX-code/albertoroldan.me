@@ -11,10 +11,33 @@ import { cn } from "@/lib/utils";
 interface SiteHeaderProps {
   className?: string;
   locale?: Locale;
+  /** Landing CTA: solo nombre centrado, sin navegación ni controles. */
+  minimal?: boolean;
 }
 
-export function SiteHeader({ className, locale = "es" }: SiteHeaderProps) {
+export function SiteHeader({
+  className,
+  locale = "es",
+  minimal = false,
+}: SiteHeaderProps) {
   const siteConfig = getSiteConfig(locale);
+
+  if (minimal) {
+    return (
+      <header
+        className={cn(
+          "sticky top-0 z-40 border-b border-border/60 bg-background/95 backdrop-blur-sm",
+          className,
+        )}
+      >
+        <div className="mx-auto max-w-[52rem] px-6 py-4 text-center md:py-5">
+          <span className="font-serif text-[15px] font-semibold tracking-tight md:text-base">
+            {siteConfig.brand}
+          </span>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header

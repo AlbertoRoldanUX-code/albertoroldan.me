@@ -16,7 +16,7 @@ export function LeadMagnetPage({ data, locale = "es" }: LeadMagnetPageProps) {
   const ui = getUi(locale);
 
   return (
-    <SiteLayout locale={locale}>
+    <SiteLayout locale={locale} minimal>
       <HeroSection data={data} locale={locale} />
       <BenefitsSection
         title={ui.guide.benefitsTitle}

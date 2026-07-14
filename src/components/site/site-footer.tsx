@@ -12,11 +12,20 @@ const socialLinks = [
   { key: "instagram" as const, label: "Instagram", icon: Instagram },
 ] as const;
 
-export function SiteFooter() {
+interface SiteFooterProps {
+  /** Landing CTA: sin footer. */
+  minimal?: boolean;
+}
+
+export function SiteFooter({ minimal = false }: SiteFooterProps) {
   const locale = useLocale();
   const siteConfig = getSiteConfig(locale);
   const ui = getUi(locale);
   const year = new Date().getFullYear();
+
+  if (minimal) {
+    return null;
+  }
 
   const footerLinks = [
     { href: localizedPath("/about", locale), label: ui.nav.about },
