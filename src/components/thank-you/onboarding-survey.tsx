@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { getSurveyComplete, getSurveyQuestions, getUi } from "@/lib/i18n/content";
 import type { Locale } from "@/lib/i18n/config";
+import { SUBSCRIBER_EMAIL_KEY } from "@/lib/newsletter/subscriber-session";
 import { cn } from "@/lib/utils";
 
 type Answers = Record<string, string>;
@@ -19,32 +22,76 @@ export function OnboardingSurvey({ locale = "es" }: OnboardingSurveyProps) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
   const [done, setDone] = useState(false);
+  const [customOptionId, setCustomOptionId] = useState<string | null>(null);
+  const [customText, setCustomText] = useState("");
 
   const total = surveyQuestions.length;
   const current = surveyQuestions[step];
 
-  async function handleAnswer(optionId: string) {
-    if (!current) return;
-
-    const nextAnswers = { ...answers, [current.id]: optionId };
-    setAnswers(nextAnswers);
-
-    if (step < total - 1) {
-      setStep((value) => value + 1);
-      return;
+  function resolveEmail(): string | undefined {
+    try {
+      return sessionStorage.getItem(SUBSCRIBER_EMAIL_KEY) ?? undefined;
+    } catch {
+      return undefined;
     }
+  }
 
-    setDone(true);
-
+  async function persistAnswers(nextAnswers: Answers) {
     try {
       await fetch("/api/survey", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ answers: nextAnswers }),
+        body: JSON.stringify({
+          email: resolveEmail(),
+          answers: nextAnswers,
+        }),
       });
     } catch {
       // Local UX should not fail if persistence is unavailable.
     }
+  }
+
+  async function advance(nextAnswers: Answers) {
+    if (step < total - 1) {
+      setAnswers(nextAnswers);
+      setCustomOptionId(null);
+      setCustomText("");
+      setStep((value) => value + 1);
+      return;
+    }
+
+    setAnswers(nextAnswers);
+    setDone(true);
+    await persistAnswers(nextAnswers);
+  }
+
+  async function handleAnswer(optionId: string, allowCustom?: boolean) {
+    if (!current) return;
+
+    if (allowCustom) {
+      setCustomOptionId(optionId);
+      setCustomText(answers[`${current.id}-other`] ?? "");
+      return;
+    }
+
+    const nextAnswers = { ...answers, [current.id]: optionId };
+    delete nextAnswers[`${current.id}-other`];
+    await advance(nextAnswers);
+  }
+
+  async function handleCustomSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!current || !customOptionId) return;
+
+    const trimmed = customText.trim();
+    if (!trimmed) return;
+
+    const nextAnswers = {
+      ...answers,
+      [current.id]: customOptionId,
+      [`${current.id}-other`]: trimmed,
+    };
+    await advance(nextAnswers);
   }
 
   return (
@@ -95,18 +142,57 @@ export function OnboardingSurvey({ locale = "es" }: OnboardingSurveyProps) {
               {current.question}
             </h2>
 
-            <div className="mt-8 flex flex-col gap-3">
-              {current.options.map((option) => (
-                <button
-                  key={option.id}
-                  type="button"
-                  onClick={() => handleAnswer(option.id)}
-                  className="rounded-xl border border-border bg-card px-5 py-4 text-left font-sans text-[15px] text-foreground transition-colors hover:border-foreground/25 hover:bg-muted/60 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-[0.99]"
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
+            {customOptionId ? (
+              <form
+                onSubmit={handleCustomSubmit}
+                className="mt-8 flex flex-col gap-3"
+              >
+                <Input
+                  type="text"
+                  name="other"
+                  required
+                  autoFocus
+                  value={customText}
+                  onChange={(event) => setCustomText(event.target.value)}
+                  placeholder={ui.survey.otherPlaceholder}
+                  className="h-12 rounded-xl px-5 text-[15px] shadow-none"
+                  aria-label={ui.survey.otherPlaceholder}
+                />
+                <div className="flex gap-3">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => {
+                      setCustomOptionId(null);
+                      setCustomText("");
+                    }}
+                    className="h-12 flex-1 rounded-xl"
+                  >
+                    {ui.survey.back}
+                  </Button>
+                  <Button
+                    type="submit"
+                    disabled={!customText.trim()}
+                    className="h-12 flex-[2] rounded-xl"
+                  >
+                    {ui.survey.continue}
+                  </Button>
+                </div>
+              </form>
+            ) : (
+              <div className="mt-8 flex flex-col gap-3">
+                {current.options.map((option) => (
+                  <button
+                    key={option.id}
+                    type="button"
+                    onClick={() => handleAnswer(option.id, option.allowCustom)}
+                    className="cursor-pointer rounded-xl border border-border bg-card px-5 py-4 text-left font-sans text-[15px] text-foreground transition-colors hover:border-foreground/25 hover:bg-muted/60 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:scale-[0.99]"
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </motion.div>
         ) : null}
       </AnimatePresence>

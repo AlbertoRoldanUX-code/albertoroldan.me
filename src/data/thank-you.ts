@@ -13,6 +13,8 @@ export const thankYouContent = {
 export interface SurveyOption {
   id: string;
   label: string;
+  /** When true, selecting this option requires free-text input. */
+  allowCustom?: boolean;
 }
 
 export interface SurveyQuestion {
@@ -31,33 +33,25 @@ export const surveyQuestions: SurveyQuestion[] = [
     ],
   },
   {
-    id: "stage",
-    question: "¿En qué fase estás?",
+    id: "current-goal",
+    question: "¿Qué estás intentando conseguir ahora mismo?",
     options: [
-      { id: "exploring", label: "Explorando ideas" },
-      { id: "building", label: "Construyendo algo" },
-      { id: "earning", label: "Ya facturo por mi cuenta" },
-      { id: "stuck", label: "Atascado en el empleo" },
+      { id: "better-job", label: "Conseguir un trabajo mejor." },
+      { id: "start-business", label: "Montar un negocio." },
+      { id: "grow-business", label: "Hacer crecer un negocio que ya tengo." },
+      { id: "unclear", label: "Todavía no lo tengo claro." },
+      { id: "other", label: "Otro", allowCustom: true },
     ],
   },
   {
-    id: "priority",
-    question: "¿Qué te importa más ahora mismo?",
+    id: "topic-interest",
+    question: "¿Qué tema te interesa más?",
     options: [
-      { id: "freedom", label: "Más libertad en el día a día" },
-      { id: "skills", label: "Desarrollar capacidades propias" },
-      { id: "income", label: "Generar ingresos por mi cuenta" },
-      { id: "clarity", label: "Claridad sobre qué construir" },
-    ],
-  },
-  {
-    id: "content",
-    question: "¿Qué tipo de contenido te ayuda más?",
-    options: [
-      { id: "stories", label: "Historias reales y lecciones" },
-      { id: "frameworks", label: "Marcos y ejercicios prácticos" },
-      { id: "mindset", label: "Mentalidad y decisiones" },
-      { id: "all", label: "Un poco de todo" },
+      { id: "business", label: "Negocios." },
+      { id: "programming-ai", label: "Programación e IA." },
+      { id: "living-abroad", label: "Vivir en el extranjero." },
+      { id: "productivity", label: "Productividad." },
+      { id: "other", label: "Otro", allowCustom: true },
     ],
   },
 ];

@@ -40,6 +40,9 @@ export const ui = {
   survey: {
     questionOf: (step: number, total: number) =>
       `Question ${step + 1} of ${total}`,
+    otherPlaceholder: "Tell me a bit more…",
+    continue: "Continue",
+    back: "Back",
   },
   privacy: {
     title: "Privacy",

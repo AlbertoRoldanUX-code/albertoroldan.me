@@ -41,21 +41,37 @@ function projectRef(supabaseUrl) {
   }
 }
 
+/**
+ * pg 8.22 / pg-connection-string treat sslmode=require as verify-full, which
+ * rejects Supabase's chain and also overwrites ssl: { rejectUnauthorized: false }.
+ * Use no-verify for local migration scripts.
+ */
+function withNoVerifySsl(dsn) {
+  try {
+    const url = new URL(dsn);
+    url.searchParams.set("sslmode", "no-verify");
+    return url.toString();
+  } catch {
+    const sep = dsn.includes("?") ? "&" : "?";
+    return `${dsn.replace(/([?&])sslmode=[^&]*/g, "$1").replace(/[?&]$/, "")}${sep}sslmode=no-verify`;
+  }
+}
+
 function connectionCandidates(supabaseUrl, dbPassword) {
   const explicit = (process.env.SUPABASE_DB_URL || "").trim();
-  if (explicit) return [explicit];
+  if (explicit) return [withNoVerifySsl(explicit)];
 
   const ref = projectRef(supabaseUrl);
   const encoded = encodeURIComponent(dbPassword);
   return [
-    `postgresql://postgres:${encoded}@db.${ref}.supabase.co:5432/postgres?sslmode=require`,
-    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-central-1.pooler.supabase.com:5432/postgres?sslmode=require`,
-    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-central-1.pooler.supabase.com:6543/postgres?sslmode=require`,
-    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-west-1.pooler.supabase.com:5432/postgres?sslmode=require`,
-    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-west-1.pooler.supabase.com:6543/postgres?sslmode=require`,
-    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require`,
-    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-west-3.pooler.supabase.com:6543/postgres?sslmode=require`,
-  ];
+    `postgresql://postgres:${encoded}@db.${ref}.supabase.co:5432/postgres`,
+    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-central-1.pooler.supabase.com:5432/postgres`,
+    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-central-1.pooler.supabase.com:6543/postgres`,
+    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-west-1.pooler.supabase.com:5432/postgres`,
+    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-west-1.pooler.supabase.com:6543/postgres`,
+    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-west-3.pooler.supabase.com:5432/postgres`,
+    `postgresql://postgres.${ref}:${encoded}@aws-0-eu-west-3.pooler.supabase.com:6543/postgres`,
+  ].map(withNoVerifySsl);
 }
 
 async function main() {

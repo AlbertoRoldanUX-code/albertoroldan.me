@@ -8,6 +8,7 @@ import { getEmailProvider } from "@/lib/email";
 import { getUi } from "@/lib/i18n/content";
 import { localizedPath } from "@/lib/i18n/paths";
 import type { Locale } from "@/lib/i18n/config";
+import { SUBSCRIBER_EMAIL_KEY } from "@/lib/newsletter/subscriber-session";
 import { cn } from "@/lib/utils";
 
 interface EmailFormProps {
@@ -51,6 +52,14 @@ export function EmailForm({
 
       if (result.success) {
         setStatus("success");
+        try {
+          sessionStorage.setItem(
+            SUBSCRIBER_EMAIL_KEY,
+            email.trim().toLowerCase(),
+          );
+        } catch {
+          // Ignore storage failures (private mode, etc.).
+        }
         const thankYouPath = localizedPath(
           `/thank-you?slug=${encodeURIComponent(slug)}`,
           locale,
