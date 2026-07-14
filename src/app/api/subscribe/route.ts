@@ -1,5 +1,11 @@
 import { NextResponse } from "next/server";
 import { createServerEmailProvider } from "@/lib/email/server";
+import {
+  GUIDE_ACCESS_COOKIE,
+  createGuideAccessToken,
+  guideAccessCookieOptions,
+} from "@/lib/guides/access";
+import { getGuide } from "@/lib/guides";
 
 export async function POST(request: Request) {
   try {
@@ -23,9 +29,19 @@ export async function POST(request: Request) {
       downloadUrl,
     });
 
-    return NextResponse.json(result, {
+    const response = NextResponse.json(result, {
       status: result.success ? 200 : 422,
     });
+
+    if (result.success && getGuide(leadMagnetSlug)) {
+      response.cookies.set(
+        GUIDE_ACCESS_COOKIE,
+        createGuideAccessToken(leadMagnetSlug),
+        guideAccessCookieOptions(),
+      );
+    }
+
+    return response;
   } catch {
     return NextResponse.json(
       { success: false, message: "Algo salió mal." },

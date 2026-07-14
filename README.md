@@ -35,7 +35,8 @@ npm run setup:https
 | `/essays` | Archivo de ensayos |
 | `/resources` | Recursos gratuitos |
 | `/guides/[slug]` | Landing de una guía (lead magnet) |
-| `/guides/[slug]/guide` | Lector web de la guía completa |
+
+La guía completa no es accesible sin opt-in: el PDF en `/api/guides/[slug]/pdf` exige una cookie firmada que solo se emite al suscribirse.
 
 Guía actual: `/guides/field-manual`
 
@@ -56,7 +57,7 @@ Añade un archivo, por ejemplo `mi-guia.json`, y estará disponible en `/guides/
   "benefits": [{ "label": "Capacidad 1", "title": "..." }],
   "author": { "name": "...", "bio": "...", "avatar": "..." },
   "cta": { "headline": "...", "buttonText": "...", "placeholder": "...", "disclaimer": "..." },
-  "downloadUrl": "/guides/mi-guia/guide"
+  "downloadUrl": "/api/guides/mi-guia/pdf"
 }
 ```
 

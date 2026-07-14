@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { OnboardingSurvey } from "@/components/thank-you/onboarding-survey";
 import { ThankYouMessage } from "@/components/thank-you/thank-you-message";
 import { SiteLayout } from "@/components/site/site-layout";
+import { hasGuideAccess } from "@/lib/guides/access";
 import { getFeaturedGuide, getSiteConfig, getUi } from "@/lib/i18n/content";
 import { getDefaultLeadMagnet, getLeadMagnet } from "@/lib/lead-magnets";
 
@@ -24,7 +25,8 @@ export default async function ThankYouPage({ searchParams }: ThankYouPageProps) 
     (slug ? getLeadMagnet(slug, "es") : undefined) ?? getDefaultLeadMagnet("es");
 
   const guideTitle = leadMagnet.title || getFeaturedGuide("es").title;
-  const downloadUrl = leadMagnet.downloadUrl;
+  const canDownload = await hasGuideAccess(leadMagnet.slug);
+  const downloadUrl = canDownload ? leadMagnet.downloadUrl : undefined;
 
   return (
     <SiteLayout locale="es">

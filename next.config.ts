@@ -21,7 +21,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/vault/:slug/guide",
-        destination: "/guides/:slug/guide",
+        destination: "/guides/:slug",
+        permanent: true,
+      },
+      {
+        source: "/guides/:slug/guide",
+        destination: "/guides/:slug",
+        permanent: true,
+      },
+      {
+        source: "/en/guides/:slug/guide",
+        destination: "/en/guides/:slug",
         permanent: true,
       },
     ];

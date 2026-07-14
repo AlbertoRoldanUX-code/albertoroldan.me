@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { getAllLeadMagnetSlugs } from "@/lib/lead-magnets";
-import { getGuideSlugs } from "@/lib/guides";
 import { localizedPath } from "@/lib/i18n/paths";
 
 const siteUrl =
@@ -43,22 +42,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ],
   );
 
-  const guideReaderPages: MetadataRoute.Sitemap = getGuideSlugs().flatMap(
-    (slug) => [
-      {
-        url: `${siteUrl}/guides/${slug}/guide`,
-        lastModified,
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-      },
-      {
-        url: `${siteUrl}${localizedPath(`/guides/${slug}/guide`, "en")}`,
-        lastModified,
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-      },
-    ],
-  );
-
-  return [...staticPages, ...guideLandingPages, ...guideReaderPages];
+  return [...staticPages, ...guideLandingPages];
 }

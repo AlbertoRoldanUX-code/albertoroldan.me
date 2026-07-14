@@ -1,20 +1,11 @@
-import type { Metadata } from "next";
-import {
-  GuideReaderPage,
-  generateGuideMetadata,
-} from "@/components/guide/guide-reader-page";
+import { permanentRedirect } from "next/navigation";
 
 interface GuideReaderPageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: GuideReaderPageProps): Promise<Metadata> {
+/** El contenido completo solo se entrega por PDF tras el opt-in; no hay lector web. */
+export default async function Page({ params }: GuideReaderPageProps) {
   const { slug } = await params;
-  return generateGuideMetadata(slug, "es");
-}
-
-export default function Page({ params }: GuideReaderPageProps) {
-  return <GuideReaderPage params={params} locale="es" />;
+  permanentRedirect(`/guides/${slug}`);
 }
