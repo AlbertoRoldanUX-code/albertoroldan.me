@@ -1,3 +1,4 @@
+import React from "react";
 import { renderToBuffer } from "@react-pdf/renderer";
 import type { Guide } from "@/types/guide";
 import { GuidePdfDocument } from "./guide-pdf";
