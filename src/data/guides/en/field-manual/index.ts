@@ -61,7 +61,5 @@ export const fieldManualGuide: Guide = {
       "Start with one capacity: the one that makes you most uncomfortable.",
       "Every week I share what I'm learning while building businesses from Georgia.",
     ],
-    buttonText: "Subscribe at albertoroldan.me",
-    buttonUrl: "https://albertoroldan.me/en",
   },
 };

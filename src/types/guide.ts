@@ -28,8 +28,8 @@ export interface GuideInvitation {
   title?: string;
   paragraphs?: string[];
   text?: string;
-  buttonText: string;
-  buttonUrl: string;
+  buttonText?: string;
+  buttonUrl?: string;
 }
 
 export interface Guide {

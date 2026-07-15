@@ -374,9 +374,11 @@ export function GuidePdfDocument({ guide }: GuidePdfDocumentProps) {
             {sanitizePdfText(guide.invitation.text)}
           </Text>
         ) : null}
-        <Text style={styles.paragraph}>
-          {guide.invitation.buttonText}: {guide.invitation.buttonUrl}
-        </Text>
+        {guide.invitation.buttonText && guide.invitation.buttonUrl ? (
+          <Text style={styles.paragraph}>
+            {guide.invitation.buttonText}: {guide.invitation.buttonUrl}
+          </Text>
+        ) : null}
       </Page>
     </Document>
   );

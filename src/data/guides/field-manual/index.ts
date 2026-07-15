@@ -61,7 +61,5 @@ export const fieldManualGuide: Guide = {
       "Empieza por una sola capacidad: la que más te incomode.",
       "Cada semana comparto lo que voy aprendiendo mientras construyo negocios desde Georgia.",
     ],
-    buttonText: "Suscríbete en albertoroldan.me",
-    buttonUrl: "https://albertoroldan.me",
   },
 };

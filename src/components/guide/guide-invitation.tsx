@@ -31,12 +31,14 @@ export function GuideInvitationSection({
         </p>
       )}
 
-      <Link
-        href={invitation.buttonUrl}
-        className="mt-8 inline-block rounded-sm bg-[#111] px-6 py-3 font-sans text-sm font-medium text-[#faf9f6] transition-opacity hover:opacity-90"
-      >
-        {invitation.buttonText}
-      </Link>
+      {invitation.buttonText && invitation.buttonUrl && (
+        <Link
+          href={invitation.buttonUrl}
+          className="mt-8 inline-block rounded-sm bg-[#111] px-6 py-3 font-sans text-sm font-medium text-[#faf9f6] transition-opacity hover:opacity-90"
+        >
+          {invitation.buttonText}
+        </Link>
+      )}
     </section>
   );
 }
