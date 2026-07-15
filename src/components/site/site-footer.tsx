@@ -30,6 +30,10 @@ export function SiteFooter({ minimal = false }: SiteFooterProps) {
   const footerLinks = [
     { href: localizedPath("/about", locale), label: ui.nav.about },
     { href: localizedPath("/resources", locale), label: ui.nav.resources },
+    {
+      href: localizedPath("/consulting", locale),
+      label: ui.nav.consulting,
+    },
     { href: localizedPath("/privacy", locale), label: ui.footer.privacy },
   ];
 
