@@ -25,7 +25,7 @@ export const featuredGuide = {
   title: "Las 7 capacidades que el colegio no te enseñó",
   subtitle: "para construir algo propio",
   tagline: "Las siete capacidades que más impacto han tenido en mi vida.",
-  cta: "Descarga la guía gratuita de 24 páginas",
+  cta: "Descarga la guía gratuita de 20 páginas",
   coverImage: "/images/guide-cover.svg",
 };
 
