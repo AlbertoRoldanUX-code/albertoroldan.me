@@ -14,7 +14,7 @@ interface BookCallButtonProps {
   emailSubject: string;
   bookingUrl?: string;
   locale?: Locale;
-  /** Home section: go to consulting page #book instead of opening calendar directly. */
+  /** Home section: go to consulting page #book. */
   linkToConsultingPage?: boolean;
   className?: string;
 }

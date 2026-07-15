@@ -157,6 +157,10 @@ export const ui = {
                 label: "Resend",
                 text: "— handles sending emails related to the Services, including transactional messages and the newsletter.",
               },
+              {
+                label: "Cal.com",
+                text: "— manages scheduling for consulting sessions.",
+              },
             ],
             closingParagraphs: [
               "These providers only receive the information they need to perform their specific function. They process data solely to provide the contracted services and in accordance with any applicable data processing agreements.",

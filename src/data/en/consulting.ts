@@ -15,10 +15,15 @@ export const consultingContent = {
     "AI automation",
   ],
   price: "250 €",
-  priceDetails: ["One-on-one session.", "60 minutes.", "Google Meet."],
+  priceDetails: [
+    "One-on-one session.",
+    "60 minutes.",
+    "Google Meet.",
+    "Payment by bank transfer.",
+  ],
   cta: "Book a session",
   bookingIntro:
-    "Pick the day and time that works best for you. After booking, you'll automatically receive the Google Meet link.",
+    "Pick a day and time. After booking, you'll receive the bank-transfer details. The session is confirmed once payment is received.",
   emailSubject: "Book a session — 60 min",
   metadata: {
     title: "Consulting",

@@ -156,6 +156,10 @@ export const ui = {
                 label: "Resend",
                 text: "— gestiona el envío de correos electrónicos relacionados con los Servicios, incluidos mensajes transaccionales y el newsletter.",
               },
+              {
+                label: "Cal.com",
+                text: "— gestiona la reserva de horario de las sesiones de consultoría.",
+              },
             ],
             closingParagraphs: [
               "Estos proveedores solo reciben la información que necesitan para su función concreta. Tratan los datos únicamente para prestar los servicios contratados y conforme a los acuerdos de tratamiento de datos que resulten aplicables.",

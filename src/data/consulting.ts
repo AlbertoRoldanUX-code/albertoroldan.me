@@ -15,10 +15,15 @@ export const consultingContent = {
     "Automatización con IA",
   ],
   price: "250 €",
-  priceDetails: ["Sesión individual.", "60 minutos.", "Google Meet."],
+  priceDetails: [
+    "Sesión individual.",
+    "60 minutos.",
+    "Google Meet.",
+    "Pago mediante transferencia bancaria.",
+  ],
   cta: "Reservar una sesión",
   bookingIntro:
-    "Selecciona el día y la hora que mejor te venga. Tras reservar recibirás automáticamente el enlace de Google Meet.",
+    "Elige día y hora. Tras la reserva recibirás los datos para realizar el pago por transferencia bancaria. La sesión quedará confirmada una vez recibido el pago.",
   emailSubject: "Reserva de sesión — 60 min",
   metadata: {
     title: "Consultoría",
