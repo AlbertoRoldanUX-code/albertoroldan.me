@@ -15,6 +15,10 @@ export function SiteNav() {
   const navLinks = [
     { href: localizedPath("/about", locale), label: ui.nav.about },
     { href: localizedPath("/resources", locale), label: ui.nav.resources },
+    {
+      href: localizedPath("/consulting", locale),
+      label: ui.nav.consulting,
+    },
   ];
 
   return (

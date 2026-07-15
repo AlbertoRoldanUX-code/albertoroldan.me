@@ -4,6 +4,7 @@ export const ui = {
   nav: {
     about: "About",
     resources: "Resources",
+    consulting: "Consulting",
   },
   footer: {
     privacy: "Privacy",

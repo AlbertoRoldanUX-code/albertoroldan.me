@@ -5,7 +5,7 @@ import { localizedPath } from "@/lib/i18n/paths";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://albertoroldan.me";
 
-const staticPaths = ["/", "/about", "/resources", "/privacy"];
+const staticPaths = ["/", "/about", "/resources", "/consulting", "/privacy"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

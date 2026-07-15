@@ -1,9 +1,11 @@
 import { aboutContent as aboutContentEs } from "@/data/about";
+import { consultingContent as consultingContentEs } from "@/data/consulting";
 import { siteConfig as siteConfigEs, featuredGuide as featuredGuideEs, aboutPreview as aboutPreviewEs, footerCta as footerCtaEs } from "@/data/home";
 import { guides as guidesEs } from "@/data/resources";
 import { thankYouContent as thankYouContentEs, surveyQuestions as surveyQuestionsEs, surveyComplete as surveyCompleteEs } from "@/data/thank-you";
 import { ui as uiEs } from "@/data/ui";
 import { aboutContent as aboutContentEn } from "@/data/en/about";
+import { consultingContent as consultingContentEn } from "@/data/en/consulting";
 import { siteConfig as siteConfigEn, featuredGuide as featuredGuideEn, aboutPreview as aboutPreviewEn, footerCta as footerCtaEn } from "@/data/en/home";
 import { guides as guidesEn } from "@/data/en/resources";
 import { thankYouContent as thankYouContentEn, surveyQuestions as surveyQuestionsEn, surveyComplete as surveyCompleteEn } from "@/data/en/thank-you";
@@ -32,6 +34,10 @@ export function getFooterCta(locale: Locale) {
 
 export function getAboutContent(locale: Locale) {
   return pick(locale, aboutContentEs, aboutContentEn);
+}
+
+export function getConsultingContent(locale: Locale) {
+  return pick(locale, consultingContentEs, consultingContentEn);
 }
 
 export function getGuides(locale: Locale) {
