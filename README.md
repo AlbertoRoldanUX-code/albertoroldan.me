@@ -107,13 +107,13 @@ Variables:
 RESEND_API_KEY=re_...
 # Remitente verificado en Resend, p. ej.:
 RESEND_FROM_EMAIL="Alberto Roldán <alberto@iberiancaucasus.com>"
-# Protege el cron de drip en Vercel:
+# Protege el cron de drip (cron-job.org / curl):
 CRON_SECRET=un-secreto-largo
 ```
 
 También ejecuta las migraciones `005` (`welcome_sent_at`, `unsubscribed_at`) y `006` (locale + progreso del drip). Los emails incluyen enlace de baja en `/unsubscribe`.
 
-El cron está en `vercel.json` (`GET /api/cron/drip` cada día a las 12:00 UTC). En local:
+El drip lo dispara [cron-job.org](https://cron-job.org) una vez al día contra `GET https://albertoroldan.me/api/cron/drip` con header `Authorization: Bearer $CRON_SECRET`. En local:
 
 ```bash
 curl -H "Authorization: Bearer $CRON_SECRET" https://localhost:3000/api/cron/drip
