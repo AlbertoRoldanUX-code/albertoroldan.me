@@ -22,7 +22,7 @@ export async function generateGuideSlugMetadata(
     return { title: ui.metadata.notFound };
   }
 
-  return buildLeadMagnetMetadata(data);
+  return buildLeadMagnetMetadata(data, locale);
 }
 
 export async function GuideSlugPage({

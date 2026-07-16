@@ -6,11 +6,16 @@ import { FreeResourceSection } from "@/components/home/free-resource-section";
 import { NewsletterSection } from "@/components/home/newsletter-section";
 import { SiteLayout } from "@/components/site/site-layout";
 import { getSiteConfig } from "@/lib/i18n/content";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: getSiteConfig("es").name,
-  description: getSiteConfig("es").subtagline,
-};
+const siteConfig = getSiteConfig("es");
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Alberto Roldán - Trabajo, dinero y libertad",
+  description: siteConfig.subtagline,
+  path: "/",
+  locale: "es",
+});
 
 export default function HomePage() {
   return (

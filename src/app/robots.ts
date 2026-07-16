@@ -1,7 +1,5 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://albertoroldan.me";
+import { siteUrl } from "@/lib/metadata";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,7 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
       disallow: [
-        "/thank-you",
         "/api/",
         "/guides/*/guide",
         "/en/guides/*/guide",
