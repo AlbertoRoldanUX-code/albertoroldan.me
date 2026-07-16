@@ -23,8 +23,83 @@ export const consultingContent = {
   ],
   cta: "Reserve a time",
   bookingIntro:
-    "Pick a time. After that, you can complete payment to confirm the session.",
+    "Pick the time that works best for you. Payment comes after to confirm the booking.",
   emailSubject: "Book a session — 60 min",
+  profile: {
+    tagline: "Founder in Georgia. I write about work, money, and freedom.",
+    bio: [
+      "I help founders get clients, create content, and build online businesses.",
+      "From manual labor to self-taught programmer and founder.",
+    ],
+    valueProp:
+      "I went from manual labor to building online businesses while living in Georgia. Now I help other founders take that path faster.",
+    location: "Tbilisi, Georgia",
+    category: "Entrepreneurship & independent work",
+    servicesHeading: "Services",
+    linksHeading: "Links",
+    availabilityCta: "View availability",
+  },
+  services: [
+    {
+      id: "strategy-60",
+      title: "60-minute strategy session",
+      summary: [
+        "We'll solve one concrete business problem.",
+        "You'll leave with a clear action plan.",
+      ],
+      idealForLabel: "Ideal for:",
+      idealFor: [
+        "Validating an idea",
+        "Getting clients",
+        "Creating content",
+        "Automating processes",
+        "Internationalizing your business",
+      ],
+      outcomesLabel: "By the end of the session you'll have:",
+      outcomes: [
+        "a clear action plan",
+        "defined priorities",
+        "concrete next steps",
+      ],
+      duration: "60 min",
+      price: "€250.00",
+    },
+  ],
+  links: [
+    {
+      title: "Free guide: the 7 capacities school never taught you",
+      href: "/guides/field-manual",
+    },
+    {
+      title: "About me — from Málaga to Tbilisi",
+      href: "/about",
+    },
+  ],
+  faq: {
+    heading: "FAQ",
+    items: [
+      {
+        question: "Is the session recorded?",
+        answer:
+          "Not by default. If you want us to record it so you can review it later, tell me at the start of the call.",
+      },
+      {
+        question: "What if I need to change the date?",
+        answer:
+          "You can reschedule with at least 24 hours' notice. The new date is subject to availability.",
+      },
+      {
+        question: "How does payment work?",
+        answer:
+          "You pick a time on the calendar, then pay by bank transfer (Wise or SEPA). The session is only confirmed once I receive payment.",
+      },
+      {
+        question: "Is this for me?",
+        answer:
+          "Yes, if you run your own business (or are building one) and want to solve a concrete bottleneck: clients, content, automation, or internationalization. It's not generic coaching or long-term mentoring.",
+      },
+    ],
+  },
   payment: {
     title: "Payment",
     headline: "Just one step left to confirm your session.",

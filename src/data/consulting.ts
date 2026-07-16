@@ -23,8 +23,84 @@ export const consultingContent = {
   ],
   cta: "Reservar horario",
   bookingIntro:
-    "Elige un horario. Después podrás completar el pago para confirmar la sesión.",
+    "Elige el horario que mejor te venga. El pago se realiza después para confirmar la reserva.",
   emailSubject: "Reserva de sesión — 60 min",
+  profile: {
+    tagline:
+      "Emprendedor en Georgia. Escribo sobre trabajo, dinero y libertad.",
+    bio: [
+      "Ayudo a emprendedores a conseguir clientes, crear contenido y construir negocios online.",
+      "De trabajos manuales a programador autodidacta y fundador.",
+    ],
+    valueProp:
+      "He pasado de trabajos manuales a construir negocios online viviendo en Georgia. Ahora ayudo a otros emprendedores a recorrer ese camino más rápido.",
+    location: "Tbilisi, Georgia",
+    category: "Emprendimiento & trabajo independiente",
+    servicesHeading: "Servicios",
+    linksHeading: "Enlaces",
+    availabilityCta: "Ver disponibilidad",
+  },
+  services: [
+    {
+      id: "strategy-60",
+      title: "Sesión estratégica de 60 minutos",
+      summary: [
+        "Resolveremos un problema concreto de tu negocio.",
+        "Saldrás con un plan de acción claro.",
+      ],
+      idealForLabel: "Ideal para:",
+      idealFor: [
+        "Validar una idea",
+        "Conseguir clientes",
+        "Crear contenido",
+        "Automatizar procesos",
+        "Internacionalizar tu negocio",
+      ],
+      outcomesLabel: "Al terminar la sesión tendrás:",
+      outcomes: [
+        "un plan de acción claro",
+        "prioridades definidas",
+        "siguientes pasos concretos",
+      ],
+      duration: "60 min",
+      price: "250,00 €",
+    },
+  ],
+  links: [
+    {
+      title: "Guía gratuita: las 7 capacidades que el colegio no te enseñó",
+      href: "/guides/field-manual",
+    },
+    {
+      title: "Sobre mí — de Málaga a Tbilisi",
+      href: "/about",
+    },
+  ],
+  faq: {
+    heading: "Preguntas frecuentes",
+    items: [
+      {
+        question: "¿La sesión queda grabada?",
+        answer:
+          "Por defecto no. Si quieres que la grabemos para que puedas revisarla después, dímelo al inicio de la llamada.",
+      },
+      {
+        question: "¿Qué pasa si necesito cambiar la fecha?",
+        answer:
+          "Puedes reprogramar avisando con al menos 24 horas de antelación. La nueva fecha estará sujeta a disponibilidad.",
+      },
+      {
+        question: "¿Cómo se realiza el pago?",
+        answer:
+          "Eliges un horario en el calendario y después pagas por transferencia (Wise o SEPA). La sesión solo se confirma cuando recibo el pago.",
+      },
+      {
+        question: "¿Es para mí?",
+        answer:
+          "Sí, si tienes un negocio propio o estás montándolo y quieres resolver un bloqueo concreto: clientes, contenido, automatización o internacionalización. No es coaching genérico ni mentoring a largo plazo.",
+      },
+    ],
+  },
   payment: {
     title: "Pago",
     headline: "Solo falta confirmar tu sesión.",

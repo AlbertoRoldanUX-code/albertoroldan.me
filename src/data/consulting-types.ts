@@ -37,6 +37,31 @@ export interface ConsultingPaymentCopy {
   };
 }
 
+export interface ConsultingService {
+  id: string;
+  title: string;
+  /** Short paragraphs shown under the title */
+  summary: string[];
+  idealForLabel: string;
+  idealFor: string[];
+  /** What you leave the session with */
+  outcomesLabel: string;
+  outcomes: string[];
+  duration: string;
+  price: string;
+}
+
+export interface ConsultingLink {
+  title: string;
+  href: string;
+  external?: boolean;
+}
+
+export interface ConsultingFaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface ConsultingContentData {
   title: string;
   headline: string;
@@ -49,6 +74,24 @@ export interface ConsultingContentData {
   cta: string;
   bookingIntro: string;
   emailSubject: string;
+  /** Profile layout (EveryExpert-style) */
+  profile: {
+    tagline: string;
+    bio: string[];
+    /** One sentence: why book with you */
+    valueProp: string;
+    location: string;
+    category: string;
+    servicesHeading: string;
+    linksHeading: string;
+    availabilityCta: string;
+  };
+  services: ConsultingService[];
+  links: ConsultingLink[];
+  faq: {
+    heading: string;
+    items: ConsultingFaqItem[];
+  };
   payment: ConsultingPaymentCopy;
   metadata: {
     title: string;
