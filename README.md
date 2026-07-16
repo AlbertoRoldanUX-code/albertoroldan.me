@@ -32,7 +32,7 @@ npm run setup:https
 |------|-------------|
 | `/` | Homepage con newsletter, ensayos y recursos |
 | `/about` | Sobre mí |
-| `/essays` | Archivo de ensayos |
+| `/essays/[slug]` | Ensayo individual (drip + archivo) |
 | `/resources` | Recursos gratuitos |
 | `/guides/[slug]` | Landing de una guía (lead magnet) |
 
@@ -94,10 +94,12 @@ Sin `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY`, el formulario sigue respondien
 
 ## Emails al suscribirse (Resend outbound)
 
-Al optar por una guía, el servidor envía dos emails estilo Justin Welsh:
+Al optar por una guía, el servidor envía la secuencia estilo Justin Welsh:
 
 1. **Entrega de la guía** — enlace firmado al PDF (válido 7 días).
 2. **Welcome al ensayo semanal** — solo la primera vez (o tras re-suscribirse).
+3. **Ensayo de muestra** (~24 h después) — vía cron diario.
+4. **5 mejores ensayos** (~48 h después) — vía cron diario.
 
 Variables:
 
@@ -105,9 +107,17 @@ Variables:
 RESEND_API_KEY=re_...
 # Remitente verificado en Resend, p. ej.:
 RESEND_FROM_EMAIL="Alberto Roldán <alberto@iberiancaucasus.com>"
+# Protege el cron de drip en Vercel:
+CRON_SECRET=un-secreto-largo
 ```
 
-También ejecuta la migración `005_newsletter_email_tracking.sql` (`welcome_sent_at`, `unsubscribed_at`). Los emails incluyen enlace de baja en `/unsubscribe`.
+También ejecuta las migraciones `005` (`welcome_sent_at`, `unsubscribed_at`) y `006` (locale + progreso del drip). Los emails incluyen enlace de baja en `/unsubscribe`.
+
+El cron está en `vercel.json` (`GET /api/cron/drip` cada día a las 12:00 UTC). En local:
+
+```bash
+curl -H "Authorization: Bearer $CRON_SECRET" https://localhost:3000/api/cron/drip
+```
 
 ## Archivo de emails de Justin Welsh (Resend → Supabase)
 
@@ -149,7 +159,7 @@ La primera vez Gmail pedirá confirmar la dirección de reenvío.
 
 El webhook solo persiste mensajes que mencionan `justinwelsh.me` (sirve también si Gmail cambia el From al reenviar). Los reintentos son idempotentes por `resend_email_id`.
 
-Más adelante: drip post-suscripción (mejores ensayos) y borradores del newsletter semanal.
+Más adelante: borradores del newsletter semanal (sábados).
 
 ## LinkedIn
 

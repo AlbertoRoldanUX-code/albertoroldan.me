@@ -3,9 +3,9 @@ import type {
   EmailSubscribePayload,
   EmailSubscribeResult,
 } from "../types";
-import { createClient } from "@supabase/supabase-js";
 import { sendSubscriptionEmails } from "../subscription-emails";
 import { isValidLocale } from "@/lib/i18n/config";
+import { createServiceSupabaseClient } from "@/lib/supabase/server";
 
 /**
  * Persists newsletter subscriptions in Supabase and sends opt-in emails.
@@ -15,16 +15,10 @@ export class SupabaseEmailProvider implements EmailProvider {
   async subscribe(
     payload: EmailSubscribePayload,
   ): Promise<EmailSubscribeResult> {
-    const url = process.env.SUPABASE_URL;
-    const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-    if (!url || !serviceRoleKey) {
+    const supabase = createServiceSupabaseClient();
+    if (!supabase) {
       throw new Error("Supabase credentials are not configured.");
     }
-
-    const supabase = createClient(url, serviceRoleKey, {
-      auth: { persistSession: false, autoRefreshToken: false },
-    });
 
     const email = payload.email.trim().toLowerCase();
     const locale =
@@ -34,7 +28,7 @@ export class SupabaseEmailProvider implements EmailProvider {
 
     const { data: existing, error: selectError } = await supabase
       .from("newsletter_subscribers")
-      .select("email, welcome_sent_at, unsubscribed_at")
+      .select("email, welcome_sent_at, unsubscribed_at, drip_step")
       .eq("email", email)
       .maybeSingle();
 
@@ -57,9 +51,17 @@ export class SupabaseEmailProvider implements EmailProvider {
         email,
         lead_magnet_slug: payload.leadMagnetSlug,
         source: "website",
+        locale,
         updated_at: now,
-        // Re-subscribe clears prior unsubscribe.
+        // Re-subscribe clears prior unsubscribe and restarts the drip.
         unsubscribed_at: null,
+        ...(needsWelcome
+          ? {
+              drip_step: 0,
+              drip_1_sent_at: null,
+              drip_2_sent_at: null,
+            }
+          : {}),
       },
       { onConflict: "email" },
     );

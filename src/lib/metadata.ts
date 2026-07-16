@@ -8,7 +8,7 @@ const configuredSiteUrl =
 export const siteUrl = configuredSiteUrl.replace(/\/$/, "");
 
 const siteName = "Alberto Roldán";
-const defaultImage = "/images/avatar.png";
+const twitterHandle = "@albertoroldanes";
 
 function normalizePath(path: string): string {
   const normalized = path.startsWith("/") ? path : `/${path}`;
@@ -42,9 +42,29 @@ interface PageMetadataInput {
   description: string;
   path: string;
   locale?: Locale;
+  /** Custom OG/Twitter image. When omitted, Next.js uses opengraph-image.tsx */
   image?: string;
   type?: "website" | "article";
   robots?: Metadata["robots"];
+}
+
+function buildSocialImages(image: string | undefined, title: string) {
+  if (!image) {
+    return undefined;
+  }
+
+  const imageUrl = absoluteUrl(image);
+  return {
+    openGraph: [
+      {
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+    twitter: [imageUrl],
+  };
 }
 
 export function buildPageMetadata({
@@ -52,12 +72,12 @@ export function buildPageMetadata({
   description,
   path,
   locale = "es",
-  image = defaultImage,
+  image,
   type = "website",
   robots = { index: true, follow: true },
 }: PageMetadataInput): Metadata {
   const url = absoluteUrl(localizedPath(path, locale));
-  const imageUrl = absoluteUrl(image);
+  const socialImages = buildSocialImages(image, title);
 
   return {
     title,
@@ -71,13 +91,15 @@ export function buildPageMetadata({
       locale: locale === "en" ? "en_US" : "es_ES",
       alternateLocale: locale === "en" ? ["es_ES"] : ["en_US"],
       type,
-      images: [{ url: imageUrl, alt: title }],
+      ...(socialImages ? { images: socialImages.openGraph } : {}),
     },
     twitter: {
       card: "summary_large_image",
+      site: twitterHandle,
+      creator: twitterHandle,
       title,
       description,
-      images: [imageUrl],
+      ...(socialImages ? { images: socialImages.twitter } : {}),
     },
     robots,
   };
@@ -89,7 +111,8 @@ export function buildLeadMagnetMetadata(
 ): Metadata {
   const title = data.seo?.title ?? data.title;
   const description = data.seo?.description ?? data.subtitle;
-  const image = data.seo?.ogImage ?? data.coverImage;
+  // Prefer a dedicated OG asset; skip SVG covers (poor social previews).
+  const image = data.seo?.ogImage;
 
   return buildPageMetadata({
     title,

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getEssays } from "@/lib/essays";
 import { getAllLeadMagnetSlugs } from "@/lib/lead-magnets";
 import { localizedPath } from "@/lib/i18n/paths";
 import { absoluteUrl } from "@/lib/metadata";
@@ -13,78 +14,71 @@ const staticPaths = [
   "/service-policy",
 ];
 
+function bilingualEntry(
+  path: string,
+  options: {
+    changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+    priority: number;
+    lastModified: Date;
+  },
+): MetadataRoute.Sitemap {
+  const { changeFrequency, priority, lastModified } = options;
+  const languages = {
+    es: absoluteUrl(localizedPath(path, "es")),
+    en: absoluteUrl(localizedPath(path, "en")),
+    "x-default": absoluteUrl(localizedPath(path, "es")),
+  };
+
+  return [
+    {
+      url: languages.es,
+      lastModified,
+      changeFrequency,
+      priority,
+      alternates: { languages },
+    },
+    {
+      url: languages.en,
+      lastModified,
+      changeFrequency,
+      priority,
+      alternates: { languages },
+    },
+  ];
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  const staticPages: MetadataRoute.Sitemap = staticPaths.flatMap((path) => [
-    {
-      url: absoluteUrl(path),
+  const staticPages = staticPaths.flatMap((path) =>
+    bilingualEntry(path, {
       lastModified,
-      changeFrequency: path === "/" || path === "/resources" ? "weekly" : "monthly",
+      changeFrequency:
+        path === "/" || path === "/resources" ? "weekly" : "monthly",
       priority:
         path === "/"
           ? 1
           : path === "/privacy" || path === "/terms" || path === "/service-policy"
             ? 0.3
             : 0.8,
-      alternates: {
-        languages: {
-          es: absoluteUrl(localizedPath(path, "es")),
-          en: absoluteUrl(localizedPath(path, "en")),
-          "x-default": absoluteUrl(localizedPath(path, "es")),
-        },
-      },
-    },
-    {
-      url: absoluteUrl(localizedPath(path, "en")),
-      lastModified,
-      changeFrequency: path === "/" || path === "/resources" ? "weekly" : "monthly",
-      priority:
-        path === "/"
-          ? 1
-          : path === "/privacy" || path === "/terms" || path === "/service-policy"
-            ? 0.3
-            : 0.8,
-      alternates: {
-        languages: {
-          es: absoluteUrl(localizedPath(path, "es")),
-          en: absoluteUrl(localizedPath(path, "en")),
-          "x-default": absoluteUrl(localizedPath(path, "es")),
-        },
-      },
-    },
-  ]);
-
-  const guideLandingPages: MetadataRoute.Sitemap = getAllLeadMagnetSlugs().flatMap(
-    (slug) => [
-      {
-        url: absoluteUrl(`/guides/${slug}`),
-        lastModified,
-        changeFrequency: "monthly" as const,
-        priority: 0.9,
-        alternates: {
-          languages: {
-            es: absoluteUrl(`/guides/${slug}`),
-            en: absoluteUrl(localizedPath(`/guides/${slug}`, "en")),
-            "x-default": absoluteUrl(`/guides/${slug}`),
-          },
-        },
-      },
-      {
-        url: absoluteUrl(localizedPath(`/guides/${slug}`, "en")),
-        lastModified,
-        changeFrequency: "monthly" as const,
-        priority: 0.9,
-        alternates: {
-          languages: {
-            es: absoluteUrl(`/guides/${slug}`),
-            en: absoluteUrl(localizedPath(`/guides/${slug}`, "en")),
-            "x-default": absoluteUrl(`/guides/${slug}`),
-          },
-        },
-      },
-    ],
+    }),
   );
 
-  return [...staticPages, ...guideLandingPages];
+  const guideLandingPages = getAllLeadMagnetSlugs().flatMap((slug) =>
+    bilingualEntry(`/guides/${slug}`, {
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    }),
+  );
+
+  const essayPages = getEssays("es").flatMap((essay) =>
+    bilingualEntry(`/essays/${essay.slug}`, {
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }),
+  );
+
+  return [...staticPages, ...guideLandingPages, ...essayPages];
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LeadMagnetPage } from "@/components/vault/lead-magnet-page";
+import { GuideStructuredData } from "@/components/vault/guide-structured-data";
 import { getAllLeadMagnetSlugs, getLeadMagnet } from "@/lib/lead-magnets";
 import { buildLeadMagnetMetadata } from "@/lib/metadata";
 import { getUi } from "@/lib/i18n/content";
@@ -36,7 +37,12 @@ export async function GuideSlugPage({
     notFound();
   }
 
-  return <LeadMagnetPage data={data} locale={locale} />;
+  return (
+    <>
+      <GuideStructuredData data={data} locale={locale} />
+      <LeadMagnetPage data={data} locale={locale} />
+    </>
+  );
 }
 
 export function getGuideStaticParams() {

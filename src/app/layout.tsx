@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Newsreader, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SiteStructuredData } from "@/components/site/site-structured-data";
@@ -45,6 +46,13 @@ export const metadata: Metadata = {
     siteName: "Alberto Roldán",
     type: "website",
     url: siteUrl,
+    locale: "es_ES",
+    alternateLocale: ["en_US"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@albertoroldanes",
+    creator: "@albertoroldanes",
   },
   robots: {
     index: true,
@@ -59,13 +67,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const locale = headersList.get("x-locale") === "en" ? "en" : "es";
+
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${newsreader.variable} ${inter.variable} font-sans`}>
         <ThemeProvider>{children}</ThemeProvider>
         <SiteStructuredData />

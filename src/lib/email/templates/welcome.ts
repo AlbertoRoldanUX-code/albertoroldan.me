@@ -39,8 +39,8 @@ export function buildWelcomeEmail(input: WelcomeEmailInput): {
     : "Algunas personas que leen esto están empezando a construir algo con sentido. Quieren un éxito que sostenga su vida en lugar de consumirla. Otras ya han construido bastante y empiezan a hacerse otro tipo de preguntas. Ambos perfiles son bienvenidos. Escribo para los dos, a menudo en el mismo ensayo.";
 
   const p4 = isEn
-    ? "From here on, you’ll only hear from me on Saturdays."
-    : "A partir de ahora, solo recibirás algo los sábados.";
+    ? "One small housekeeping note before I let you go. I’ll send one more short email this week with some of my best writing, and then you’ll only hear from me on Saturdays."
+    : "Una nota rápida antes de dejarte. Esta semana te enviaré un email corto más con parte de lo mejor que he escrito, y a partir de entonces solo recibirás algo los sábados.";
 
   const p5 = isEn
     ? "I hope you enjoy the weekly essay."

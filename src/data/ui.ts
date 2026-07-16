@@ -50,7 +50,8 @@ export const ui = {
   },
   privacy: {
     title: "Política de privacidad",
-    description: "Política de privacidad de albertoroldan.me",
+    description:
+      "Cómo recopilo, uso y protejo tus datos personales en albertoroldan.me: newsletter, guías gratuitas y consultoría.",
     effectiveLabel: "Vigente",
     updatedLabel: "Última actualización",
     effectiveDate: "15 de julio de 2026",
@@ -331,7 +332,8 @@ export const ui = {
 
   terms: {
     title: "Términos del servicio",
-    description: "Términos del servicio de albertoroldan.me",
+    description:
+      "Condiciones de uso de albertoroldan.me: newsletter, contenido gratuito, consultoría y responsabilidades.",
     effectiveLabel: "Vigente",
     updatedLabel: "Última actualización",
     effectiveDate: "16 de julio de 2026",
@@ -527,7 +529,11 @@ export const ui = {
 
   metadata: {
     notFound: "No encontrado",
+    notFoundDescription:
+      "La página que buscas no existe o se ha movido. Vuelve al inicio de albertoroldan.me.",
     aboutTitle: "Sobre mí",
+    aboutDescription:
+      "De Málaga a Tbilisi: construyo negocios desde Georgia y escribo cada semana sobre trabajo, dinero y libertad.",
     resourcesTitle: "Recursos",
     resourcesDescription:
       "Guías gratuitas para construir algo propio y ganar autonomía.",

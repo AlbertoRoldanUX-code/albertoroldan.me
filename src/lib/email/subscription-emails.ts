@@ -21,6 +21,7 @@ export interface SubscriptionEmailResult {
 
 /**
  * Sends Justin-style opt-in emails: guide delivery (+ welcome for new subs).
+ * Drip follow-ups (sample essay + best pieces) are sent by /api/cron/drip.
  * Never throws — subscribe must succeed even if delivery fails.
  */
 export async function sendSubscriptionEmails(

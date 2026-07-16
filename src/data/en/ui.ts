@@ -51,7 +51,8 @@ export const ui = {
   },
   privacy: {
     title: "Privacy Policy",
-    description: "Privacy policy for albertoroldan.me",
+    description:
+      "How I collect, use, and protect your personal data on albertoroldan.me: newsletter, free guides, and consulting.",
     effectiveLabel: "Effective",
     updatedLabel: "Last updated",
     effectiveDate: "July 15, 2026",
@@ -332,7 +333,8 @@ export const ui = {
 
   terms: {
     title: "Terms of Service",
-    description: "Terms of Service for albertoroldan.me",
+    description:
+      "Terms of use for albertoroldan.me: newsletter, free content, consulting, and responsibilities.",
     effectiveLabel: "Effective",
     updatedLabel: "Last updated",
     effectiveDate: "July 16, 2026",
@@ -528,7 +530,11 @@ export const ui = {
 
   metadata: {
     notFound: "Not found",
+    notFoundDescription:
+      "The page you're looking for doesn't exist or has moved. Head back to the albertoroldan.me home page.",
     aboutTitle: "About",
+    aboutDescription:
+      "From Málaga to Tbilisi: I build businesses from Georgia and write every week about work, money, and freedom.",
     resourcesTitle: "Resources",
     resourcesDescription:
       "Free guides to build something of your own and gain autonomy.",

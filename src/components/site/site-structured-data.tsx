@@ -9,12 +9,12 @@ export function SiteStructuredData() {
     "@type": "Person",
     "@id": `${siteUrl}/#person`,
     name: "Alberto Roldán",
-    alternateName: "Alberto Roldan",
+    alternateName: ["Alberto Roldan", "Alberto Fernández Roldán"],
     url: siteUrl,
     image: absoluteUrl(siteConfig.avatar),
     jobTitle: "Writer and business builder",
     description:
-      "Alberto Roldán writes about work, money, freedom, self-employment, and building a more independent life.",
+      "Alberto Roldán writes about work, money, freedom, self-employment, and building a more independent life from Tbilisi, Georgia.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Tbilisi",
@@ -32,6 +32,7 @@ export function SiteStructuredData() {
       "personal freedom",
       "Georgia relocation",
       "AI automation",
+      "online businesses",
     ],
   };
 
@@ -42,8 +43,12 @@ export function SiteStructuredData() {
     name: "Alberto Roldán",
     alternateName: "albertoroldan.me",
     url: siteUrl,
+    description: siteConfig.tagline,
     inLanguage: ["es", "en"],
     publisher: {
+      "@id": `${siteUrl}/#person`,
+    },
+    author: {
       "@id": `${siteUrl}/#person`,
     },
   };

@@ -8,6 +8,12 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [
         "/api/",
+        "/thank-you",
+        "/en/thank-you",
+        "/unsubscribe",
+        "/en/unsubscribe",
+        "/consulting/pay",
+        "/en/consulting/pay",
         "/guides/*/guide",
         "/en/guides/*/guide",
       ],

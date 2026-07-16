@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ConsultingContent } from "@/components/consulting/consulting-content";
+import { ConsultingStructuredData } from "@/components/consulting/consulting-structured-data";
 import { SiteLayout } from "@/components/site/site-layout";
 import { getConsultingContent } from "@/lib/i18n/content";
 import { buildPageMetadata } from "@/lib/metadata";
@@ -16,6 +17,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function ConsultingPage() {
   return (
     <SiteLayout locale="es">
+      <ConsultingStructuredData locale="es" />
       <ConsultingContent locale="es" />
     </SiteLayout>
   );
