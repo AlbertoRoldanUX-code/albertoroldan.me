@@ -15,6 +15,7 @@ export async function POST(request: Request) {
       typeof body.leadMagnetSlug === "string" ? body.leadMagnetSlug : "";
     const downloadUrl =
       typeof body.downloadUrl === "string" ? body.downloadUrl : undefined;
+    const locale = typeof body.locale === "string" ? body.locale : undefined;
 
     if (!email || !leadMagnetSlug) {
       return NextResponse.json(
@@ -27,6 +28,7 @@ export async function POST(request: Request) {
       email,
       leadMagnetSlug,
       downloadUrl,
+      locale,
     });
 
     const response = NextResponse.json(result, {

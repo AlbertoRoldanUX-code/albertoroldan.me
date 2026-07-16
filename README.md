@@ -92,6 +92,23 @@ O pega el SQL de `supabase/migrations/*.sql` en el SQL Editor del dashboard.
 
 Sin `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY`, el formulario sigue respondiendo OK pero solo hace log (noop). Beehiiv/Kit son opcionales y solo harían falta si quieres enviar el boletín desde esas plataformas.
 
+## Emails al suscribirse (Resend outbound)
+
+Al optar por una guía, el servidor envía dos emails estilo Justin Welsh:
+
+1. **Entrega de la guía** — enlace firmado al PDF (válido 7 días).
+2. **Welcome al ensayo semanal** — solo la primera vez (o tras re-suscribirse).
+
+Variables:
+
+```bash
+RESEND_API_KEY=re_...
+# Remitente verificado en Resend, p. ej.:
+RESEND_FROM_EMAIL="Alberto Roldán <alberto@iberiancaucasus.com>"
+```
+
+También ejecuta la migración `005_newsletter_email_tracking.sql` (`welcome_sent_at`, `unsubscribed_at`). Los emails incluyen enlace de baja en `/unsubscribe`.
+
 ## Archivo de emails de Justin Welsh (Resend → Supabase)
 
 Los emails de `hello@justinwelsh.me` se reenvían desde Gmail a Resend Inbound y se guardan en `reference_emails` (asunto, cuerpo, fecha, headers).
@@ -117,6 +134,7 @@ SUPABASE_URL=https://xxxx.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=eyJ...
 RESEND_API_KEY=re_...
 RESEND_WEBHOOK_SECRET=whsec_...
+RESEND_FROM_EMAIL="Alberto Roldán <alberto@iberiancaucasus.com>"
 ```
 
 ### 4. Filtro en Gmail
@@ -131,7 +149,7 @@ La primera vez Gmail pedirá confirmar la dirección de reenvío.
 
 El webhook solo persiste mensajes que mencionan `justinwelsh.me` (sirve también si Gmail cambia el From al reenviar). Los reintentos son idempotentes por `resend_email_id`.
 
-Más adelante: generar borradores con IA y enviar a tus suscriptores.
+Más adelante: drip post-suscripción (mejores ensayos) y borradores del newsletter semanal.
 
 ## LinkedIn
 

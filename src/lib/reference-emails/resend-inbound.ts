@@ -1,4 +1,4 @@
-import { Resend } from "resend";
+import { getResendClient } from "@/lib/email/resend-client";
 import {
   isJustinWelshEmail,
   storeReferenceEmail,
@@ -17,14 +17,6 @@ type ResendReceivedEvent = {
     message_id?: string;
   };
 };
-
-function createResendClient(): Resend {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    throw new Error("RESEND_API_KEY is not configured.");
-  }
-  return new Resend(apiKey);
-}
 
 function normalizeHeaders(
   headers: Record<string, string> | null | undefined,
@@ -58,7 +50,7 @@ export function verifyResendWebhook(input: {
     return event;
   }
 
-  const resend = createResendClient();
+  const resend = getResendClient();
   const id = input.headers.get("svix-id");
   const timestamp = input.headers.get("svix-timestamp");
   const signature = input.headers.get("svix-signature");
@@ -89,7 +81,7 @@ export async function processResendReceivedEmail(
     return { stored: false, reason: "missing_email_id" };
   }
 
-  const resend = createResendClient();
+  const resend = getResendClient();
   const { data: received, error } = await resend.emails.receiving.get(emailId);
 
   if (error || !received) {

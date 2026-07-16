@@ -1,5 +1,5 @@
 import { getGuide } from "@/lib/guides";
-import { hasGuideAccess } from "@/lib/guides/access";
+import { hasGuideAccessFromRequest } from "@/lib/guides/access";
 import { renderGuidePdf } from "@/lib/guides/render-guide-pdf";
 import { isValidLocale } from "@/lib/i18n/config";
 
@@ -13,7 +13,7 @@ export async function GET(request: Request, context: RouteContext) {
   const localeParam = searchParams.get("locale") ?? "es";
   const locale = isValidLocale(localeParam) ? localeParam : "es";
 
-  const allowed = await hasGuideAccess(slug);
+  const allowed = await hasGuideAccessFromRequest(request, slug);
   if (!allowed) {
     return new Response(locale === "en" ? "Not found" : "No encontrado", {
       status: 404,

@@ -87,3 +87,17 @@ export async function hasGuideAccess(slug: string): Promise<boolean> {
   }
   return verifyGuideAccessToken(token, slug);
 }
+
+/**
+ * Cookie access or a signed `token` query param (for emailed download links).
+ */
+export async function hasGuideAccessFromRequest(
+  request: Request,
+  slug: string,
+): Promise<boolean> {
+  const tokenParam = new URL(request.url).searchParams.get("token");
+  if (tokenParam && verifyGuideAccessToken(tokenParam, slug)) {
+    return true;
+  }
+  return hasGuideAccess(slug);
+}

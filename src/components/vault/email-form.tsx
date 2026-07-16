@@ -48,6 +48,7 @@ export function EmailForm({
         email,
         leadMagnetSlug: slug,
         downloadUrl,
+        locale,
       });
 
       if (result.success) {
