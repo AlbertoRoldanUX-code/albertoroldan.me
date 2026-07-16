@@ -8,6 +8,7 @@ export const ui = {
   },
   footer: {
     privacy: "Privacy",
+    terms: "Terms",
     servicePolicy: "Service policy",
   },
   language: {
@@ -324,6 +325,133 @@ export const ui = {
           "If you have any questions about this Privacy Policy or wish to exercise any of your rights, you can write to:",
           "Email: privacidad@albertoroldan.me",
           "Mail: Alberto Fernández Roldán, 47 Ketevan Tsamebuli Avenue 14, Tbilisi 0101, Georgia",
+        ],
+      },
+    ],
+  } as PrivacyContentData,
+
+  terms: {
+    title: "Terms of Service",
+    description: "Terms of Service for albertoroldan.me",
+    effectiveLabel: "Effective",
+    updatedLabel: "Last updated",
+    effectiveDate: "July 16, 2026",
+    updatedDate: "July 16, 2026",
+    intro:
+      "These Terms of Service (“Terms”) govern your access to and use of albertoroldan.me (the “Site”) and related services, including the newsletter, free guides, and consulting (collectively, the “Services”), offered by Alberto Fernández Roldán (“I,” “me,” or “my”). By using the Site or the Services, you agree to these Terms.",
+    sections: [
+      {
+        title: "1. Acceptance",
+        paragraphs: [
+          "If you do not agree to these Terms, do not use the Site or the Services. If you use the Site on behalf of an organization, you confirm that you have authority to bind it to these Terms.",
+        ],
+      },
+      {
+        title: "2. Description of the Services",
+        paragraphs: [
+          "The Site offers editorial content, a newsletter, downloadable guides and resources, and the option to book a one-to-one consulting session.",
+          "The Services are provided as described on the Site from time to time. I may modify, suspend, or discontinue any part of the Services with or without notice.",
+        ],
+      },
+      {
+        title: "3. Acceptable use",
+        paragraphs: [
+          "You may use the Site and the Services only for personal, lawful purposes and in a manner consistent with these Terms and applicable law.",
+          "The following is prohibited:",
+        ],
+        bullets: [
+          {
+            text: "attempting to access unauthorized areas or automating access in an abusive way;",
+          },
+          {
+            text: "interfering with the Site’s operation;",
+          },
+          {
+            text: "distributing malware, spam, or other unlawful or deceptive content;",
+          },
+          {
+            text: "copying, reselling, or commercially exploiting the content or the Services without my prior written permission.",
+          },
+        ],
+      },
+      {
+        title: "4. Subscriptions and communications",
+        paragraphs: [
+          "When you subscribe to the newsletter or request a guide, you provide a valid email address and agree to receive communications related to the Services. You may unsubscribe at any time using the link in every email.",
+          "You are responsible for the accuracy of the information you provide. If you provide false information or someone else’s details without authorization, I may suspend access to the Services.",
+        ],
+      },
+      {
+        title: "5. Consulting",
+        paragraphs: [
+          "Specific terms for booking, payment, rescheduling, cancellation, and refunds for the consulting session are governed by the Service delivery policy published on the Site. If there is a conflict between those operational details and these Terms, the Service delivery policy prevails for that session.",
+          "Consulting is a strategic guidance service. It does not constitute legal, tax, or regulated financial advice, and it does not guarantee any particular results.",
+          "Any decisions you make based on the consulting session are your sole responsibility.",
+        ],
+      },
+      {
+        title: "6. Intellectual property",
+        paragraphs: [
+          "The Site, its design, text, guides, and other content are owned by me or my licensors and are protected by applicable intellectual property laws.",
+          "You are granted a limited, non-exclusive, non-transferable license to access and use the content for your personal use. Any other use requires prior written permission.",
+        ],
+      },
+      {
+        title: "7. Third-party content and links",
+        paragraphs: [
+          "The Site may include links to third-party websites or services. I do not control those sites and am not responsible for their content, policies, or practices. Your use of third parties is governed by their own terms.",
+        ],
+      },
+      {
+        title: "8. Privacy",
+        paragraphs: [
+          "How personal data is processed is described in the Site’s Privacy Policy. By using the Services, you also agree to that policy to the extent it applies.",
+        ],
+      },
+      {
+        title: "9. Disclaimer of warranties",
+        paragraphs: [
+          "The Site and the Services are provided “as is” and “as available,” without warranties of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement.",
+          "I do not warrant that the Site will be uninterrupted, error-free, or fully secure, or that the content is complete or up to date at all times.",
+        ],
+      },
+      {
+        title: "10. Limitation of liability",
+        paragraphs: [
+          "To the fullest extent permitted by law, I will not be liable for indirect, incidental, special, consequential, or punitive damages, or for loss of profits, data, or business opportunities arising from your use of or inability to use the Site or the Services.",
+          "Total aggregate liability for claims related to these Terms or the Services will not exceed the amount you paid for the Services in the twelve (12) months before the claim or, if you have made no payment, €0.",
+          "Nothing in these Terms excludes or limits liability that cannot be excluded or limited by law.",
+        ],
+      },
+      {
+        title: "11. Indemnification",
+        paragraphs: [
+          "You agree to hold me harmless from claims, damages, losses, and expenses (including reasonable attorneys’ fees) arising from your misuse of the Site or the Services, or from your breach of these Terms.",
+        ],
+      },
+      {
+        title: "12. Governing law and disputes",
+        paragraphs: [
+          "These Terms are governed by the laws of Georgia, without regard to conflict-of-law rules. The courts of Tbilisi, Georgia, have exclusive jurisdiction, except where mandatory consumer-protection law gives you a different forum.",
+        ],
+      },
+      {
+        title: "13. Changes",
+        paragraphs: [
+          "I may update these Terms at any time. The version published on this page, with its “Last updated” date, will be in force. Continued use of the Site or the Services after a change will constitute acceptance of the updated Terms.",
+        ],
+      },
+      {
+        title: "14. Severability",
+        paragraphs: [
+          "If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect.",
+        ],
+      },
+      {
+        title: "15. Contact",
+        paragraphs: [
+          "If you have questions about these Terms, you can write to:",
+          "Email: hola@albertoroldan.me",
         ],
       },
     ],

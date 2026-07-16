@@ -8,6 +8,7 @@ export const ui = {
   },
   footer: {
     privacy: "Privacidad",
+    terms: "Términos",
     servicePolicy: "Prestación del servicio",
   },
   language: {
@@ -323,6 +324,133 @@ export const ui = {
           "Si tienes cualquier consulta relacionada con esta Política de privacidad o deseas ejercer alguno de tus derechos, puedes escribir a:",
           "Email: privacidad@albertoroldan.me",
           "Correo: Alberto Fernández Roldán, 47 Ketevan Tsamebuli Avenue 14, Tbilisi 0101, Georgia",
+        ],
+      },
+    ],
+  } as PrivacyContentData,
+
+  terms: {
+    title: "Términos del servicio",
+    description: "Términos del servicio de albertoroldan.me",
+    effectiveLabel: "Vigente",
+    updatedLabel: "Última actualización",
+    effectiveDate: "16 de julio de 2026",
+    updatedDate: "16 de julio de 2026",
+    intro:
+      "Estos Términos del servicio (“Términos”) regulan el acceso a y el uso de albertoroldan.me (el “Sitio”) y de los servicios asociados, como el newsletter, las guías gratuitas y la consultoría (conjuntamente, los “Servicios”), ofrecidos por Alberto Fernández Roldán (“yo”, “me” o “mi”). Al usar el Sitio o los Servicios, aceptas estos Términos.",
+    sections: [
+      {
+        title: "1. Aceptación",
+        paragraphs: [
+          "Si no estás de acuerdo con estos Términos, no uses el Sitio ni los Servicios. Si usas el Sitio en nombre de una organización, confirmas que tienes autoridad para vincularla a estos Términos.",
+        ],
+      },
+      {
+        title: "2. Descripción de los Servicios",
+        paragraphs: [
+          "El Sitio ofrece contenido editorial, un newsletter, guías y recursos descargables, y la posibilidad de reservar una sesión de consultoría individual.",
+          "Los Servicios se ofrecen tal como se describen en el Sitio en cada momento. Puedo modificar, suspender o interrumpir cualquier parte de los Servicios con o sin previo aviso.",
+        ],
+      },
+      {
+        title: "3. Uso permitido",
+        paragraphs: [
+          "Puedes usar el Sitio y los Servicios solo para fines personales y legítimos, y de forma compatible con estos Términos y con la ley aplicable.",
+          "Queda prohibido:",
+        ],
+        bullets: [
+          {
+            text: "intentar acceder a áreas no autorizadas o automatizar el acceso de forma abusiva;",
+          },
+          {
+            text: "interferir con el funcionamiento del Sitio;",
+          },
+          {
+            text: "distribuir malware, spam u otro contenido ilícito o engañoso;",
+          },
+          {
+            text: "copiar, revender o explotar comercialmente el contenido o los Servicios sin mi autorización previa por escrito.",
+          },
+        ],
+      },
+      {
+        title: "4. Cuentas, suscripciones y comunicaciones",
+        paragraphs: [
+          "Al suscribirte al newsletter o solicitar una guía, facilitas un email válido y aceptas recibir comunicaciones relacionadas con los Servicios. Puedes darte de baja en cualquier momento mediante el enlace de cada email.",
+          "Eres responsable de la exactitud de la información que me facilitas. Si facilitas datos falsos o de terceros sin autorización, puedo suspender el acceso a los Servicios.",
+        ],
+      },
+      {
+        title: "5. Consultoría",
+        paragraphs: [
+          "Las condiciones específicas de reserva, pago, reprogramación, cancelación y devoluciones de la sesión de consultoría se rigen por la Política de prestación del servicio publicada en el Sitio. En caso de conflicto entre esos detalles operativos y estos Términos, prevalece la Política de prestación del servicio para esa sesión.",
+          "La consultoría es un servicio de orientación estratégica. No constituye asesoramiento jurídico, fiscal, financiero regulado ni garantía de resultados concretos.",
+          "Las decisiones que adopte el cliente a partir de la consultoría son de su exclusiva responsabilidad.",
+        ],
+      },
+      {
+        title: "6. Propiedad intelectual",
+        paragraphs: [
+          "El Sitio, su diseño, textos, guías y demás contenidos son de mi propiedad o de terceros licenciantes, y están protegidos por la legislación aplicable sobre propiedad intelectual.",
+          "Se te concede una licencia limitada, no exclusiva y no transferible para acceder y usar el contenido para tu uso personal. Cualquier otro uso requiere autorización previa por escrito.",
+        ],
+      },
+      {
+        title: "7. Contenido de terceros y enlaces",
+        paragraphs: [
+          "El Sitio puede incluir enlaces a sitios o servicios de terceros. No controlo esos sitios y no asumo responsabilidad por su contenido, políticas o prácticas. Tu uso de terceros se rige por sus propios términos.",
+        ],
+      },
+      {
+        title: "8. Privacidad",
+        paragraphs: [
+          "El tratamiento de datos personales se describe en la Política de privacidad del Sitio. Al usar los Servicios, también aceptas esa política en la medida en que resulte aplicable.",
+        ],
+      },
+      {
+        title: "9. Exención de garantías",
+        paragraphs: [
+          "El Sitio y los Servicios se ofrecen “tal cual” y “según disponibilidad”, sin garantías de ningún tipo, expresas o implícitas, incluidas las de comerciabilidad, idoneidad para un fin concreto o ausencia de errores.",
+          "No garantizo que el Sitio esté ininterrumpido, libre de errores o completamente seguro, ni que el contenido sea exhaustivo o esté actualizado en todo momento.",
+        ],
+      },
+      {
+        title: "10. Limitación de responsabilidad",
+        paragraphs: [
+          "En la máxima medida permitida por la ley, no seré responsable de daños indirectos, incidentales, especiales, consecuentes o punitivos, ni de pérdida de beneficios, datos o oportunidades de negocio derivados del uso o la imposibilidad de usar el Sitio o los Servicios.",
+          "La responsabilidad total acumulada por reclamaciones relacionadas con estos Términos o con los Servicios no excederá, en conjunto, el importe que hayas pagado por los Servicios en los doce (12) meses anteriores a la reclamación o, si no has realizado ningún pago, 0 €.",
+          "Nada en estos Términos excluye o limita la responsabilidad que no pueda excluirse o limitarse por ley.",
+        ],
+      },
+      {
+        title: "11. Indemnización",
+        paragraphs: [
+          "Aceptas mantenerme indemne frente a reclamaciones, daños, pérdidas y gastos (incluidos honorarios razonables de abogados) derivados de tu uso indebido del Sitio o de los Servicios, o del incumplimiento de estos Términos.",
+        ],
+      },
+      {
+        title: "12. Ley aplicable y disputas",
+        paragraphs: [
+          "Estos Términos se rigen por las leyes de Georgia, sin perjuicio de las normas de conflicto de leyes. Los tribunales competentes de Tbilisi, Georgia, tendrán jurisdicción exclusiva, salvo que la ley aplicable de protección al consumidor te otorgue un fuero distinto e imperativo.",
+        ],
+      },
+      {
+        title: "13. Cambios",
+        paragraphs: [
+          "Puedo actualizar estos Términos en cualquier momento. La versión publicada en esta página, con su fecha de “Última actualización”, será la vigente. El uso continuado del Sitio o de los Servicios tras un cambio implicará la aceptación de los Términos actualizados.",
+        ],
+      },
+      {
+        title: "14. Divisibilidad",
+        paragraphs: [
+          "Si alguna disposición de estos Términos fuese declarada nula o inaplicable, las restantes seguirán siendo plenamente válidas y eficaces.",
+        ],
+      },
+      {
+        title: "15. Contacto",
+        paragraphs: [
+          "Si tienes preguntas sobre estos Términos, puedes escribir a:",
+          "Correo electrónico: hola@albertoroldan.me",
         ],
       },
     ],

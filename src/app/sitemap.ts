@@ -9,6 +9,7 @@ const staticPaths = [
   "/resources",
   "/consulting",
   "/privacy",
+  "/terms",
   "/service-policy",
 ];
 
@@ -23,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority:
         path === "/"
           ? 1
-          : path === "/privacy" || path === "/service-policy"
+          : path === "/privacy" || path === "/terms" || path === "/service-policy"
             ? 0.3
             : 0.8,
       alternates: {
@@ -41,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority:
         path === "/"
           ? 1
-          : path === "/privacy" || path === "/service-policy"
+          : path === "/privacy" || path === "/terms" || path === "/service-policy"
             ? 0.3
             : 0.8,
       alternates: {

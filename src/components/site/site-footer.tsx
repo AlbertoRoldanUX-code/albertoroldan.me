@@ -35,6 +35,7 @@ export function SiteFooter({ minimal = false }: SiteFooterProps) {
       label: ui.nav.consulting,
     },
     { href: localizedPath("/privacy", locale), label: ui.footer.privacy },
+    { href: localizedPath("/terms", locale), label: ui.footer.terms },
     {
       href: localizedPath("/service-policy", locale),
       label: ui.footer.servicePolicy,

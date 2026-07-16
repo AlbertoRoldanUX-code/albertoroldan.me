@@ -21,7 +21,7 @@ export function LegalDocumentContent({ content }: LegalDocumentContentProps) {
           <p className="text-foreground/90">{content.intro}</p>
 
           {content.sections.map((section) => (
-            <section key={section.title} className="space-y-4">
+            <section key={section.title} className="space-y-4 pt-2 first:pt-0">
               <h2 className="font-serif text-xl font-semibold tracking-[-0.01em] text-foreground md:text-[1.35rem]">
                 {section.title}
               </h2>
