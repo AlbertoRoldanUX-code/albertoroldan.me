@@ -8,6 +8,7 @@ export const ui = {
   },
   footer: {
     privacy: "Privacidad",
+    servicePolicy: "Prestación del servicio",
   },
   language: {
     label: "Idioma",
@@ -122,6 +123,9 @@ export const ui = {
             text: "Personalizar el contenido y las ofertas que te muestro, a partir de respuestas opcionales a encuestas",
           },
           {
+            text: "Gestionar reservas de sesiones y confirmarlas tras recibir el pago",
+          },
+          {
             text: "Medir el uso agregado del Sitio y mejorar los Servicios",
           },
           {
@@ -158,7 +162,11 @@ export const ui = {
               },
               {
                 label: "Cal.com",
-                text: "— gestiona la reserva de horario de las sesiones de consultoría.",
+                text: "— gestiona la reserva de horario de las sesiones de consultoría. El pago se completa después en el Sitio (transferencia bancaria); la sesión solo se confirma cuando el pago ha sido recibido.",
+              },
+              {
+                label: "Wise (u otro proveedor de transferencia)",
+                text: "— puedes usar sus datos de pago publicados en el Sitio para abonar la sesión. El Sitio no procesa pagos con tarjeta.",
               },
             ],
             closingParagraphs: [
@@ -315,6 +323,75 @@ export const ui = {
           "Si tienes cualquier consulta relacionada con esta Política de privacidad o deseas ejercer alguno de tus derechos, puedes escribir a:",
           "Email: privacidad@albertoroldan.me",
           "Correo: Alberto Fernández Roldán, 47 Ketevan Tsamebuli Avenue 14, Tbilisi 0101, Georgia",
+        ],
+      },
+    ],
+  } as PrivacyContentData,
+
+  servicePolicy: {
+    title: "Política de prestación del servicio",
+    description:
+      "Condiciones de la sesión de consultoría: reserva, pago, reprogramación, cancelación y devoluciones.",
+    effectiveLabel: "Vigente",
+    updatedLabel: "Última actualización",
+    effectiveDate: "16 de julio de 2026",
+    updatedDate: "16 de julio de 2026",
+    intro:
+      "Esta política describe cómo se presta la sesión de consultoría ofrecida en albertoroldan.me. Al reservar y pagar, aceptas estas condiciones.",
+    sections: [
+      {
+        title: "1. Qué compras",
+        paragraphs: [
+          "Adquieres una sesión estratégica individual de hasta 60 minutos realizada por videollamada mediante Google Meet. El precio vigente aparece en la página de consultoría en el momento de la reserva.",
+        ],
+      },
+      {
+        title: "2. Proceso de reserva y confirmación",
+        paragraphs: [
+          "Eliges un horario disponible en el calendario. Después recibes la página de pago para completar la transferencia.",
+          "La reserva del horario no confirma la sesión. La sesión queda confirmada únicamente tras recibir el pago. Hasta entonces, el hueco puede quedar disponible para otra persona y la reserva puede cancelarse.",
+          "La sesión únicamente quedará confirmada una vez recibido el pago.",
+          "Cuando el pago se confirme, recibirás un email con la confirmación y los detalles de la llamada.",
+        ],
+      },
+      {
+        title: "3. Reprogramaciones",
+        paragraphs: [
+          "Puedes solicitar un cambio de fecha o de hora avisando con al menos 24 horas de antelación. La nueva fecha estará sujeta a disponibilidad.",
+        ],
+      },
+      {
+        title: "4. Cancelaciones y devoluciones",
+        bullets: [
+          {
+            text: "Si cancelas con más de 24 horas de antelación, puedes elegir entre reprogramar la sesión o solicitar el reembolso íntegro.",
+          },
+          {
+            text: "Si cancelas con menos de 24 horas de antelación, no hay devolución.",
+          },
+          {
+            text: "Si yo tengo que cancelar la sesión, puedes elegir otra fecha o el reembolso completo.",
+          },
+        ],
+      },
+      {
+        title: "5. No-show",
+        paragraphs: [
+          "Si no acudes a la llamada confirmada y han transcurrido 15 minutos desde la hora de inicio sin previo aviso, la sesión se considerará no presentada, se dará por realizada y no habrá devolución.",
+        ],
+      },
+      {
+        title: "6. Contacto",
+        paragraphs: [
+          "Para reprogramar, cancelar o cualquier consulta sobre esta política, escribe a:",
+          "Correo electrónico: alberto@iberiancaucasus.com",
+          "Intentaré responder en un plazo de dos días laborables.",
+        ],
+      },
+      {
+        title: "7. Actualizaciones",
+        paragraphs: [
+          "Esta política podrá actualizarse en cualquier momento. La versión publicada en esta página será la vigente.",
         ],
       },
     ],

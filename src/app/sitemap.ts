@@ -5,7 +5,14 @@ import { localizedPath } from "@/lib/i18n/paths";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://albertoroldan.me";
 
-const staticPaths = ["/", "/about", "/resources", "/consulting", "/privacy"];
+const staticPaths = [
+  "/",
+  "/about",
+  "/resources",
+  "/consulting",
+  "/privacy",
+  "/service-policy",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -15,13 +22,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteUrl}${path === "/" ? "" : path}`,
       lastModified,
       changeFrequency: path === "/" || path === "/resources" ? "weekly" : "monthly",
-      priority: path === "/" ? 1 : path === "/privacy" ? 0.3 : 0.8,
+      priority:
+        path === "/"
+          ? 1
+          : path === "/privacy" || path === "/service-policy"
+            ? 0.3
+            : 0.8,
     },
     {
       url: `${siteUrl}${localizedPath(path, "en")}`,
       lastModified,
       changeFrequency: path === "/" || path === "/resources" ? "weekly" : "monthly",
-      priority: path === "/" ? 1 : path === "/privacy" ? 0.3 : 0.8,
+      priority:
+        path === "/"
+          ? 1
+          : path === "/privacy" || path === "/service-policy"
+            ? 0.3
+            : 0.8,
     },
   ]);
 

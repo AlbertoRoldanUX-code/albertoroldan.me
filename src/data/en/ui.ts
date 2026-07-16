@@ -8,6 +8,7 @@ export const ui = {
   },
   footer: {
     privacy: "Privacy",
+    servicePolicy: "Service policy",
   },
   language: {
     label: "Language",
@@ -123,6 +124,9 @@ export const ui = {
             text: "To personalize the content and offers I show you, based on optional survey responses",
           },
           {
+            text: "To manage session bookings and confirm them after payment is received",
+          },
+          {
             text: "To measure aggregate site usage and improve the Services",
           },
           {
@@ -159,7 +163,11 @@ export const ui = {
               },
               {
                 label: "Cal.com",
-                text: "— manages scheduling for consulting sessions.",
+                text: "— manages scheduling for consulting sessions. Payment is completed afterward on the Site (bank transfer); the session is only confirmed once payment is received.",
+              },
+              {
+                label: "Wise (or another transfer provider)",
+                text: "— you may use the payment details published on the Site to pay for the session. The Site does not process card payments.",
               },
             ],
             closingParagraphs: [
@@ -316,6 +324,75 @@ export const ui = {
           "If you have any questions about this Privacy Policy or wish to exercise any of your rights, you can write to:",
           "Email: privacidad@albertoroldan.me",
           "Mail: Alberto Fernández Roldán, 47 Ketevan Tsamebuli Avenue 14, Tbilisi 0101, Georgia",
+        ],
+      },
+    ],
+  } as PrivacyContentData,
+
+  servicePolicy: {
+    title: "Service delivery policy",
+    description:
+      "Terms for the consulting session: booking, payment, rescheduling, cancellation, and refunds.",
+    effectiveLabel: "Effective",
+    updatedLabel: "Last updated",
+    effectiveDate: "July 16, 2026",
+    updatedDate: "July 16, 2026",
+    intro:
+      "This policy describes how the consulting session offered on albertoroldan.me is delivered. By booking and paying, you accept these terms.",
+    sections: [
+      {
+        title: "1. What you purchase",
+        paragraphs: [
+          "You purchase a one-to-one strategy session of up to 60 minutes held by video call on Google Meet. The current price is shown on the consulting page at the time of booking.",
+        ],
+      },
+      {
+        title: "2. Booking and confirmation",
+        paragraphs: [
+          "You choose an available time slot on the calendar. You then receive the payment page to complete the bank transfer.",
+          "Booking a time slot does not confirm the session. The session is confirmed only after payment is received. Until then, the slot may remain available to someone else and the reservation may be cancelled.",
+          "The session is confirmed only once payment has been received.",
+          "Once payment is confirmed, you will receive an email with the confirmation and call details.",
+        ],
+      },
+      {
+        title: "3. Rescheduling",
+        paragraphs: [
+          "You may request a change of date or time with at least 24 hours’ notice. The new date is subject to availability.",
+        ],
+      },
+      {
+        title: "4. Cancellations and refunds",
+        bullets: [
+          {
+            text: "If you cancel with more than 24 hours’ notice, you may choose to reschedule the session or request a full refund.",
+          },
+          {
+            text: "If you cancel with less than 24 hours’ notice, there is no refund.",
+          },
+          {
+            text: "If I have to cancel the session, you may choose another date or a full refund.",
+          },
+        ],
+      },
+      {
+        title: "5. No-show",
+        paragraphs: [
+          "If you do not join the confirmed call and 15 minutes have passed since the scheduled start time without prior notice, the session will be considered a no-show, deemed delivered, and no refund will be given.",
+        ],
+      },
+      {
+        title: "6. Contact",
+        paragraphs: [
+          "To reschedule, cancel, or ask about this policy, write to:",
+          "Email: alberto@iberiancaucasus.com",
+          "I will aim to reply within two business days.",
+        ],
+      },
+      {
+        title: "7. Updates",
+        paragraphs: [
+          "This policy may be updated at any time. The version published on this page will be in force.",
         ],
       },
     ],

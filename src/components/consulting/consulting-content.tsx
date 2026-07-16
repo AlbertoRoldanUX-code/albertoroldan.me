@@ -4,6 +4,7 @@ import { FadeIn } from "@/components/vault/fade-in";
 import { getConsultingContent } from "@/lib/i18n/content";
 import { getBookingUrl } from "@/lib/booking";
 import type { Locale } from "@/lib/i18n/config";
+import { localizedPath } from "@/lib/i18n/paths";
 import { cn } from "@/lib/utils";
 
 interface ConsultingContentProps {
@@ -104,6 +105,8 @@ export function ConsultingContent({
               bookingUrl={bookingUrl}
               title={content.cta}
               intro={content.bookingIntro}
+              locale={locale}
+              payHref={localizedPath("/consulting/pay", locale)}
             />
           </FadeIn>
         </div>

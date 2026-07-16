@@ -28,7 +28,9 @@ export function BookCallButton({
   className,
 }: BookCallButtonProps) {
   const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(emailSubject)}`;
-  const hasInlineEmbed = Boolean(bookingUrl && getCalEmbedUrl(bookingUrl));
+  const hasInlineEmbed = Boolean(
+    bookingUrl && getCalEmbedUrl(bookingUrl, locale),
+  );
 
   if (linkToConsultingPage && bookingUrl) {
     return (
