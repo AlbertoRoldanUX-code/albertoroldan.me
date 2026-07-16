@@ -53,7 +53,7 @@ export const ui = {
     effectiveLabel: "Effective",
     updatedLabel: "Last updated",
     effectiveDate: "July 15, 2026",
-    updatedDate: "July 15, 2026",
+    updatedDate: "July 16, 2026",
     intro:
       "This Privacy Policy describes how Alberto Fernández Roldán (“I,” “me,” or “my”) collects, uses, and shares personal information about you when you visit albertoroldan.me (the “Site”), subscribe to the newsletter, download a free guide, or otherwise interact with my services (collectively, the “Services”). This Privacy Policy explains what personal data I process, for what purpose, how long I retain it, with whom I may share it, and what rights you can exercise.",
     sections: [
@@ -62,7 +62,7 @@ export const ui = {
         paragraphs: [
           "The controller of personal information collected through the Services is Alberto Fernández Roldán, an Individual Entrepreneur registered in Georgia, Identification Code / Tax ID 304812022.",
           "Professional address: 47 Ketevan Tsamebuli Avenue 14, Tbilisi 0101, Georgia.",
-          "For any privacy-related inquiry you can write to: alberto@iberiancaucasus.com.",
+          "For any privacy-related inquiry you can write to: privacidad@albertoroldan.me.",
         ],
       },
       {
@@ -262,7 +262,7 @@ export const ui = {
           },
         ],
         closingParagraphs: [
-          "To exercise any of these rights you can write to: alberto@iberiancaucasus.com.",
+          "To exercise any of these rights you can write to: privacidad@albertoroldan.me.",
         ],
         subsections: [
           {
@@ -314,7 +314,7 @@ export const ui = {
         title: "13. Contact me",
         paragraphs: [
           "If you have any questions about this Privacy Policy or wish to exercise any of your rights, you can write to:",
-          "Email: alberto@iberiancaucasus.com",
+          "Email: privacidad@albertoroldan.me",
           "Mail: Alberto Fernández Roldán, 47 Ketevan Tsamebuli Avenue 14, Tbilisi 0101, Georgia",
         ],
       },

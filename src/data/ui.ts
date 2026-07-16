@@ -52,7 +52,7 @@ export const ui = {
     effectiveLabel: "Vigente",
     updatedLabel: "Última actualización",
     effectiveDate: "15 de julio de 2026",
-    updatedDate: "15 de julio de 2026",
+    updatedDate: "16 de julio de 2026",
     intro:
       "Esta Política de privacidad describe cómo Alberto Fernández Roldán (“yo”, “me” o “mi”) recopila, utiliza y comparte información personal sobre ti cuando visitas albertoroldan.me (el “Sitio”), te suscribes al newsletter, descargas una guía gratuita o interactúas de otro modo con mis servicios (conjuntamente, los “Servicios”). Esta Política de privacidad explica qué datos personales trato, con qué finalidad, durante cuánto tiempo los conservo, con quién puedo compartirlos y qué derechos puedes ejercer.",
     sections: [
@@ -61,7 +61,7 @@ export const ui = {
         paragraphs: [
           "El responsable del tratamiento de los datos personales recogidos a través de los Servicios es Alberto Fernández Roldán, Individual Entrepreneur registrado en Georgia, con Identification Code / Tax ID 304812022.",
           "Domicilio profesional: 47 Ketevan Tsamebuli Avenue 14, Tbilisi 0101, Georgia.",
-          "Para cualquier consulta relacionada con privacidad puedes escribir a: alberto@iberiancaucasus.com.",
+          "Para cualquier consulta relacionada con privacidad puedes escribir a: privacidad@albertoroldan.me.",
         ],
       },
       {
@@ -261,7 +261,7 @@ export const ui = {
           },
         ],
         closingParagraphs: [
-          "Para ejercer cualquiera de estos derechos puedes escribir a: alberto@iberiancaucasus.com.",
+          "Para ejercer cualquiera de estos derechos puedes escribir a: privacidad@albertoroldan.me.",
         ],
         subsections: [
           {
@@ -313,7 +313,7 @@ export const ui = {
         title: "13. Contacto",
         paragraphs: [
           "Si tienes cualquier consulta relacionada con esta Política de privacidad o deseas ejercer alguno de tus derechos, puedes escribir a:",
-          "Email: alberto@iberiancaucasus.com",
+          "Email: privacidad@albertoroldan.me",
           "Correo: Alberto Fernández Roldán, 47 Ketevan Tsamebuli Avenue 14, Tbilisi 0101, Georgia",
         ],
       },

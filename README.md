@@ -61,6 +61,12 @@ Añade un archivo, por ejemplo `mi-guia.json`, y estará disponible en `/guides/
 }
 ```
 
+## Correo del dominio (Cloudflare Email Routing)
+
+El dominio usa Cloudflare Email Routing (`route*.mx.cloudflare.net`).
+
+Regla activa: `privacidad@albertoroldan.me` → reenvío a la bandeja de destino verificada en Cloudflare. Es el contacto de la política de privacidad.
+
 ## Newsletter (Supabase)
 
 Los emails se guardan en Supabase (`newsletter_subscribers`).
