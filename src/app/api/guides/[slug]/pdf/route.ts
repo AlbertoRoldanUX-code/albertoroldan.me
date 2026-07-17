@@ -10,8 +10,8 @@ interface RouteContext {
 export async function GET(request: Request, context: RouteContext) {
   const { slug } = await context.params;
   const { searchParams } = new URL(request.url);
-  const localeParam = searchParams.get("locale") ?? "es";
-  const locale = isValidLocale(localeParam) ? localeParam : "es";
+  const localeParam = searchParams.get("locale") ?? "en";
+  const locale = isValidLocale(localeParam) ? localeParam : "en";
 
   const allowed = await hasGuideAccessFromRequest(request, slug);
   if (!allowed) {

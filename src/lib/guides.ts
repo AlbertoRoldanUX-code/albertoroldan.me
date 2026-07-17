@@ -8,7 +8,7 @@ const guidesByLocale: Record<Locale, Record<string, Guide>> = {
   en: { "field-manual": fieldManualGuideEn },
 };
 
-export function getGuide(slug: string, locale: Locale = "es"): Guide | undefined {
+export function getGuide(slug: string, locale: Locale = "en"): Guide | undefined {
   return guidesByLocale[locale]?.[slug];
 }
 

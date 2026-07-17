@@ -12,7 +12,7 @@ interface SiteLayoutProps {
 
 export function SiteLayout({
   children,
-  locale = "es",
+  locale = "en",
   minimal = false,
 }: SiteLayoutProps) {
   return (

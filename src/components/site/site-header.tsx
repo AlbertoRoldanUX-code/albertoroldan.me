@@ -17,7 +17,7 @@ interface SiteHeaderProps {
 
 export function SiteHeader({
   className,
-  locale = "es",
+  locale = "en",
   minimal = false,
 }: SiteHeaderProps) {
   const siteConfig = getSiteConfig(locale);

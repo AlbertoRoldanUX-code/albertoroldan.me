@@ -2,7 +2,7 @@ import { getSiteConfig } from "@/lib/i18n/content";
 import { absoluteUrl, siteUrl } from "@/lib/metadata";
 
 export function SiteStructuredData() {
-  const siteConfig = getSiteConfig("es");
+  const siteConfig = getSiteConfig("en");
 
   const person = {
     "@context": "https://schema.org",

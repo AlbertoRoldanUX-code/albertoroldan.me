@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/i18n/config";
+import { localizedPath } from "@/lib/i18n/paths";
 
 const STORAGE_KEY = "consulting_booking_access";
 const ACCESS_TTL_MS = 1000 * 60 * 60 * 48; // 48h
@@ -69,5 +70,5 @@ export function buildPayHrefWithAccess(
 }
 
 export function localizedConsultingBookPath(locale: Locale): string {
-  return locale === "en" ? "/en/consulting#book" : "/consulting#book";
+  return `${localizedPath("/consulting", locale)}#book`;
 }

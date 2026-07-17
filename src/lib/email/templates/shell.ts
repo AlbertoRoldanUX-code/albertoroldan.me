@@ -1,5 +1,6 @@
 import type { Locale } from "@/lib/i18n/config";
 import { getSiteConfig } from "@/lib/i18n/content";
+import { localizedPath } from "@/lib/i18n/paths";
 import { absoluteUrl } from "@/lib/metadata";
 
 export interface EmailShellInput {
@@ -26,7 +27,7 @@ export function renderEmailShell(input: EmailShellInput): {
   text: string;
 } {
   const site = getSiteConfig(input.locale);
-  const siteLink = absoluteUrl(input.locale === "en" ? "/en" : "/");
+  const siteLink = absoluteUrl(localizedPath("/", input.locale));
   const findMe =
     input.locale === "en" ? "Find me elsewhere" : "Encuéntrame también en";
   const receiving =

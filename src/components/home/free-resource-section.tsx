@@ -9,7 +9,7 @@ interface FreeResourceSectionProps {
   locale?: Locale;
 }
 
-export function FreeResourceSection({ locale = "es" }: FreeResourceSectionProps) {
+export function FreeResourceSection({ locale = "en" }: FreeResourceSectionProps) {
   const featuredGuide = getFeaturedGuide(locale);
   const guideHref = localizedPath(`/guides/${featuredGuide.slug}`, locale);
 

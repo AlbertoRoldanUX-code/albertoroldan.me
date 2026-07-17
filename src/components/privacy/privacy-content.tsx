@@ -7,7 +7,7 @@ interface PrivacyContentProps {
   locale?: Locale;
 }
 
-export function PrivacyContent({ locale = "es" }: PrivacyContentProps) {
+export function PrivacyContent({ locale = "en" }: PrivacyContentProps) {
   const privacy = getUi(locale).privacy as PrivacyContentData;
 
   return <LegalDocumentContent content={privacy} />;

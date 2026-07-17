@@ -5,16 +5,16 @@ import { getUi } from "@/lib/i18n/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: getUi("en").metadata.aboutTitle,
-  description: getUi("en").metadata.aboutDescription,
+  title: getUi("es").metadata.aboutTitle,
+  description: getUi("es").metadata.aboutDescription,
   path: "/about",
-  locale: "en",
+  locale: "es",
 });
 
-export default function EnAboutPage() {
+export default function AboutPage() {
   return (
-    <SiteLayout locale="en">
-      <AboutContent locale="en" />
+    <SiteLayout locale="es">
+      <AboutContent locale="es" />
     </SiteLayout>
   );
 }

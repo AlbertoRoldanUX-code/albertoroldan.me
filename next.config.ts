@@ -10,6 +10,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/en",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/en/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
+      {
         source: "/vault",
         destination: "/guides/field-manual",
         permanent: true,
@@ -30,8 +40,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/en/guides/:slug/guide",
-        destination: "/en/guides/:slug",
+        source: "/es/guides/:slug/guide",
+        destination: "/es/guides/:slug",
         permanent: true,
       },
     ];

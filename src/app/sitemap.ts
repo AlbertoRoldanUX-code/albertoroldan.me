@@ -26,7 +26,7 @@ function bilingualEntry(
   const languages = {
     es: absoluteUrl(localizedPath(path, "es")),
     en: absoluteUrl(localizedPath(path, "en")),
-    "x-default": absoluteUrl(localizedPath(path, "es")),
+    "x-default": absoluteUrl(localizedPath(path, "en")),
   };
 
   return [
@@ -72,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const essayPages = getEssays("es").flatMap((essay) =>
+  const essayPages = getEssays("en").flatMap((essay) =>
     bilingualEntry(`/essays/${essay.slug}`, {
       lastModified,
       changeFrequency: "monthly",

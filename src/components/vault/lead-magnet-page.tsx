@@ -12,7 +12,7 @@ interface LeadMagnetPageProps {
   locale?: Locale;
 }
 
-export function LeadMagnetPage({ data, locale = "es" }: LeadMagnetPageProps) {
+export function LeadMagnetPage({ data, locale = "en" }: LeadMagnetPageProps) {
   const ui = getUi(locale);
 
   return (

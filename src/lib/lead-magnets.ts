@@ -33,7 +33,7 @@ const leadMagnetsByLocale = loadAllLeadMagnets();
 
 export function getLeadMagnet(
   slug: string,
-  locale: Locale = "es",
+  locale: Locale = "en",
 ): LeadMagnet | undefined {
   return leadMagnetsByLocale[locale]?.[slug];
 }
@@ -42,7 +42,7 @@ export function getAllLeadMagnetSlugs(): string[] {
   return Object.keys(leadMagnetsByLocale.es);
 }
 
-export function getDefaultLeadMagnet(locale: Locale = "es"): LeadMagnet {
+export function getDefaultLeadMagnet(locale: Locale = "en"): LeadMagnet {
   const slugs = Object.keys(leadMagnetsByLocale[locale]);
   const first = slugs[0];
 

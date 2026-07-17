@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Alberto Roldán — trabajo, dinero y libertad";
+export const alt = "Alberto Roldán — work, money, and freedom";
 export const size = {
   width: 1200,
   height: 630,
@@ -46,7 +46,7 @@ export default function OpenGraphImage() {
               maxWidth: 920,
             }}
           >
-            Trabajo, dinero y libertad
+            Work, money, and freedom
           </div>
           <div
             style={{
@@ -57,8 +57,8 @@ export default function OpenGraphImage() {
               maxWidth: 820,
             }}
           >
-            Un ensayo semanal para construir una vida más libre sin esperar
-            permiso.
+            A weekly essay to build a freer life without waiting for
+            permission.
           </div>
         </div>
 

@@ -23,7 +23,7 @@ export function BookCallButton({
   label,
   emailSubject,
   bookingUrl,
-  locale = "es",
+  locale = "en",
   linkToConsultingPage = false,
   className,
 }: BookCallButtonProps) {

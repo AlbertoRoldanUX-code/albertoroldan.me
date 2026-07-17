@@ -11,14 +11,14 @@ interface EssayPageProps {
 }
 
 export function generateStaticParams() {
-  return getEssays("en").map((essay) => ({ slug: essay.slug }));
+  return getEssays("es").map((essay) => ({ slug: essay.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: EssayPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const essay = getEssay(slug, "en");
+  const essay = getEssay(slug, "es");
   if (!essay) {
     return {};
   }
@@ -27,22 +27,22 @@ export async function generateMetadata({
     title: essay.title,
     description: essay.teaser,
     path: `/essays/${slug}`,
-    locale: "en",
+    locale: "es",
     type: "article",
   });
 }
 
-export default async function EssayPageEn({ params }: EssayPageProps) {
+export default async function EssayPage({ params }: EssayPageProps) {
   const { slug } = await params;
-  const essay = getEssay(slug, "en");
+  const essay = getEssay(slug, "es");
   if (!essay) {
     notFound();
   }
 
   return (
-    <SiteLayout locale="en">
-      <EssayStructuredData essay={essay} locale="en" />
-      <EssayArticle essay={essay} locale="en" />
+    <SiteLayout locale="es">
+      <EssayStructuredData essay={essay} locale="es" />
+      <EssayArticle essay={essay} locale="es" />
     </SiteLayout>
   );
 }

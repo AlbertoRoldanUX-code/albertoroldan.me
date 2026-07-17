@@ -1,7 +1,7 @@
 import type { Essay } from "@/data/essays";
 
 /**
- * English evergreen essays for the post-subscribe drip and /en/essays/[slug].
+ * English evergreen essays for the post-subscribe drip and /essays/[slug].
  * Slugs match the Spanish set so locale switching stays stable.
  */
 export const essays: Essay[] = [

@@ -32,7 +32,7 @@ export function buildAlternates(path: string, locale: Locale) {
     languages: {
       es: esUrl,
       en: enUrl,
-      "x-default": esUrl,
+      "x-default": enUrl,
     },
   };
 }
@@ -71,7 +71,7 @@ export function buildPageMetadata({
   title,
   description,
   path,
-  locale = "es",
+  locale = "en",
   image,
   type = "website",
   robots = { index: true, follow: true },
@@ -107,7 +107,7 @@ export function buildPageMetadata({
 
 export function buildLeadMagnetMetadata(
   data: LeadMagnet,
-  locale: Locale = "es",
+  locale: Locale = "en",
 ): Metadata {
   const title = data.seo?.title ?? data.title;
   const description = data.seo?.description ?? data.subtitle;

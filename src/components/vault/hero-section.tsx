@@ -9,7 +9,7 @@ interface HeroSectionProps {
   locale?: Locale;
 }
 
-export function HeroSection({ data, locale = "es" }: HeroSectionProps) {
+export function HeroSection({ data, locale = "en" }: HeroSectionProps) {
   return (
     <section className="px-6 pt-8 pb-16 md:pt-10 md:pb-24">
       <div className="mx-auto max-w-[42rem] text-center">

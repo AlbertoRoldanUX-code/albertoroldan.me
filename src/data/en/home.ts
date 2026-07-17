@@ -33,7 +33,7 @@ export const aboutPreview = {
   title: "About Alberto",
   bio: "I went from manual labor jobs to self-taught programmer. Today I build businesses from Georgia and write about work, money, and freedom.",
   avatar: "/images/avatar.png",
-  href: "/en/about",
+  href: "/about",
 };
 
 export const footerCta = {

@@ -19,7 +19,7 @@ interface GuideReaderPageProps {
 
 export async function generateGuideMetadata(
   slug: string,
-  locale: Locale = "es",
+  locale: Locale = "en",
 ): Promise<Metadata> {
   const guide = getGuide(slug, locale);
   const leadMagnet = getLeadMagnet(slug, locale);
@@ -37,7 +37,7 @@ export async function generateGuideMetadata(
 
 export async function GuideReaderPage({
   params,
-  locale = "es",
+  locale = "en",
 }: GuideReaderPageProps) {
   const { slug } = await params;
   const guide = getGuide(slug, locale);

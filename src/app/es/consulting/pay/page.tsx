@@ -3,7 +3,7 @@ import { PaymentContent } from "@/components/consulting/payment-content";
 import { SiteLayout } from "@/components/site/site-layout";
 import { getConsultingContent } from "@/lib/i18n/content";
 
-const content = getConsultingContent("en").payment;
+const content = getConsultingContent("es").payment;
 
 export const metadata: Metadata = {
   title: content.metadata.title,
@@ -11,10 +11,10 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function ConsultingPayPageEn() {
+export default function ConsultingPayPage() {
   return (
-    <SiteLayout locale="en">
-      <PaymentContent locale="en" />
+    <SiteLayout locale="es">
+      <PaymentContent locale="es" />
     </SiteLayout>
   );
 }

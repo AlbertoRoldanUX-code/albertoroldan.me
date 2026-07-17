@@ -110,7 +110,7 @@ export function BookingCalendar({
   bookingUrl,
   title,
   intro,
-  locale = "es",
+  locale = "en",
   payHref,
 }: BookingCalendarProps) {
   const embedUrl = getCalEmbedUrl(bookingUrl, locale);

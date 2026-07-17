@@ -28,7 +28,7 @@ export function EmailForm({
   buttonText,
   disclaimer,
   downloadUrl,
-  locale = "es",
+  locale = "en",
   className,
 }: EmailFormProps) {
   const router = useRouter();

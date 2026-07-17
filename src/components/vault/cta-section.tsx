@@ -14,7 +14,7 @@ export function CtaSection({
   slug,
   cta,
   downloadUrl,
-  locale = "es",
+  locale = "en",
 }: CtaSectionProps) {
   return (
     <section className="px-6 py-16 pb-20 md:py-24 md:pb-28">

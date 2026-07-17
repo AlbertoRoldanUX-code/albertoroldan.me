@@ -4,19 +4,19 @@ import { SiteLayout } from "@/components/site/site-layout";
 import { getUi } from "@/lib/i18n/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
-const ui = getUi("es");
+const ui = getUi("en");
 
 export const metadata: Metadata = buildPageMetadata({
   title: ui.terms.title,
   description: ui.terms.description,
   path: "/terms",
-  locale: "es",
+  locale: "en",
 });
 
-export default function TermsPage() {
+export default function EnTermsPage() {
   return (
-    <SiteLayout locale="es">
-      <TermsContent locale="es" />
+    <SiteLayout locale="en">
+      <TermsContent locale="en" />
     </SiteLayout>
   );
 }

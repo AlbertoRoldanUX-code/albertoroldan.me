@@ -7,6 +7,8 @@
  * in client bundles.
  */
 
+import { localizedPath } from "@/lib/i18n/paths";
+
 export type PaymentDetails = {
   amountLabel: string;
   amountEuros: number;
@@ -58,7 +60,7 @@ export function getPaymentDetails(): PaymentDetails {
 }
 
 export function getPaymentSuccessPath(locale: "es" | "en"): string {
-  return locale === "en" ? "/en/consulting/pay" : "/consulting/pay";
+  return localizedPath("/consulting/pay", locale);
 }
 
 export function getPaymentSuccessUrl(locale: "es" | "en"): string | undefined {

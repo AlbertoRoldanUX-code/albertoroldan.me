@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { getLocaleFromPath } from "@/lib/i18n/paths";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const locale =
-    pathname === "/en" || pathname.startsWith("/en/") ? "en" : "es";
+  const locale = getLocaleFromPath(pathname);
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-locale", locale);

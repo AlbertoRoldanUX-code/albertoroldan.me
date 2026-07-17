@@ -8,23 +8,23 @@ import { SiteLayout } from "@/components/site/site-layout";
 import { getSiteConfig } from "@/lib/i18n/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
-const siteConfig = getSiteConfig("es");
+const siteConfig = getSiteConfig("en");
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Alberto Roldán - Trabajo, dinero y libertad",
+  title: "Alberto Roldán - Work, money, and freedom",
   description: siteConfig.subtagline,
   path: "/",
-  locale: "es",
+  locale: "en",
 });
 
 export default function HomePage() {
   return (
-    <SiteLayout locale="es">
-      <HomeHeroSection locale="es" />
-      <FreeResourceSection locale="es" />
-      <AboutPreviewSection locale="es" />
-      <ConsultingContent locale="es" asSection />
-      <NewsletterSection locale="es" />
+    <SiteLayout locale="en">
+      <HomeHeroSection locale="en" />
+      <FreeResourceSection locale="en" />
+      <AboutPreviewSection locale="en" />
+      <ConsultingContent locale="en" asSection />
+      <NewsletterSection locale="en" />
     </SiteLayout>
   );
 }

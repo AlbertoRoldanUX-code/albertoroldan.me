@@ -25,7 +25,7 @@ interface PaymentContentProps {
   locale?: Locale;
 }
 
-function PaymentContentInner({ locale = "es" }: PaymentContentProps) {
+function PaymentContentInner({ locale = "en" }: PaymentContentProps) {
   const content = getConsultingContent(locale).payment;
   const payment = getPaymentDetails();
   const searchParams = useSearchParams();
@@ -296,7 +296,7 @@ function PaymentContentInner({ locale = "es" }: PaymentContentProps) {
   );
 }
 
-export function PaymentContent({ locale = "es" }: PaymentContentProps) {
+export function PaymentContent({ locale = "en" }: PaymentContentProps) {
   return (
     <Suspense fallback={<PaymentContentFallback locale={locale} />}>
       <PaymentContentInner locale={locale} />

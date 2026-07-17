@@ -7,7 +7,7 @@ interface HomeHeroSectionProps {
   locale?: Locale;
 }
 
-export function HomeHeroSection({ locale = "es" }: HomeHeroSectionProps) {
+export function HomeHeroSection({ locale = "en" }: HomeHeroSectionProps) {
   const siteConfig = getSiteConfig(locale);
 
   return (

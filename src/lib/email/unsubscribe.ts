@@ -1,5 +1,6 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import type { Locale } from "@/lib/i18n/config";
+import { localizedPath } from "@/lib/i18n/paths";
 import { absoluteUrl } from "@/lib/metadata";
 
 function getSigningSecret(): string {
@@ -63,8 +64,8 @@ export function verifyUnsubscribeToken(token: string): string | null {
   }
 }
 
-export function createUnsubscribeUrl(email: string, locale: Locale = "es"): string {
+export function createUnsubscribeUrl(email: string, locale: Locale = "en"): string {
   const token = createUnsubscribeToken(email);
-  const path = locale === "en" ? "/en/unsubscribe" : "/unsubscribe";
+  const path = localizedPath("/unsubscribe", locale);
   return absoluteUrl(`${path}?token=${encodeURIComponent(token)}`);
 }

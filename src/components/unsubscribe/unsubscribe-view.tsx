@@ -37,7 +37,7 @@ const copy = {
   },
 } as const;
 
-export function UnsubscribeView({ locale = "es" }: UnsubscribeViewProps) {
+export function UnsubscribeView({ locale = "en" }: UnsubscribeViewProps) {
   const searchParams = useSearchParams();
   const token = searchParams.get("token") ?? "";
   const [status, setStatus] = useState<Status>("loading");

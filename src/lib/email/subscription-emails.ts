@@ -29,7 +29,7 @@ export async function sendSubscriptionEmails(
 ): Promise<SubscriptionEmailResult> {
   const unsubscribeUrl = createUnsubscribeUrl(input.email, input.locale);
   const token = createGuideAccessToken(input.leadMagnetSlug);
-  const localeQuery = input.locale === "en" ? "&locale=en" : "";
+  const localeQuery = `&locale=${input.locale}`;
   const downloadUrl = absoluteUrl(
     `/api/guides/${input.leadMagnetSlug}/pdf?token=${encodeURIComponent(token)}${localeQuery}`,
   );

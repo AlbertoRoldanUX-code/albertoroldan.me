@@ -4,19 +4,19 @@ import { SiteLayout } from "@/components/site/site-layout";
 import { getUi } from "@/lib/i18n/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
-const ui = getUi("es");
+const ui = getUi("en");
 
 export const metadata: Metadata = buildPageMetadata({
   title: ui.privacy.title,
   description: ui.privacy.description,
   path: "/privacy",
-  locale: "es",
+  locale: "en",
 });
 
-export default function PrivacyPage() {
+export default function EnPrivacyPage() {
   return (
-    <SiteLayout locale="es">
-      <PrivacyContent locale="es" />
+    <SiteLayout locale="en">
+      <PrivacyContent locale="en" />
     </SiteLayout>
   );
 }

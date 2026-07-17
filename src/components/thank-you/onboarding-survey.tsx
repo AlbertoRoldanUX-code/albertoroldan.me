@@ -15,7 +15,7 @@ interface OnboardingSurveyProps {
   locale?: Locale;
 }
 
-export function OnboardingSurvey({ locale = "es" }: OnboardingSurveyProps) {
+export function OnboardingSurvey({ locale = "en" }: OnboardingSurveyProps) {
   const surveyQuestions = getSurveyQuestions(locale);
   const surveyComplete = getSurveyComplete(locale);
   const ui = getUi(locale);

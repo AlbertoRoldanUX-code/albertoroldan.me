@@ -7,7 +7,7 @@ interface TermsContentProps {
   locale?: Locale;
 }
 
-export function TermsContent({ locale = "es" }: TermsContentProps) {
+export function TermsContent({ locale = "en" }: TermsContentProps) {
   const terms = getUi(locale).terms as PrivacyContentData;
 
   return <LegalDocumentContent content={terms} />;

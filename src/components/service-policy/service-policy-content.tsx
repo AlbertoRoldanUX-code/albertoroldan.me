@@ -8,7 +8,7 @@ interface ServicePolicyContentProps {
 }
 
 export function ServicePolicyContent({
-  locale = "es",
+  locale = "en",
 }: ServicePolicyContentProps) {
   const servicePolicy = getUi(locale).servicePolicy as PrivacyContentData;
 

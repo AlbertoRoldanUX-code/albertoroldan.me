@@ -7,7 +7,7 @@ interface AboutContentProps {
   locale?: Locale;
 }
 
-export function AboutContent({ locale = "es" }: AboutContentProps) {
+export function AboutContent({ locale = "en" }: AboutContentProps) {
   const { greeting, avatar, signature, intro, writingHelp } =
     getAboutContent(locale);
 

@@ -13,7 +13,7 @@ export function ThankYouMessage({
   guideTitle,
   downloadUrl,
   downloadFilename,
-  locale = "es",
+  locale = "en",
 }: ThankYouMessageProps) {
   const thankYouContent = getThankYouContent(locale);
   const siteConfig = getSiteConfig(locale);

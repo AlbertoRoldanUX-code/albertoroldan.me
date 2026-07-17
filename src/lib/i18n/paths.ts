@@ -1,16 +1,19 @@
 import { defaultLocale, type Locale } from "./config";
 
+const nonDefaultLocale: Locale = "es";
+const nonDefaultPrefix = `/${nonDefaultLocale}`;
+
 export function getLocaleFromPath(pathname: string): Locale {
-  if (pathname === "/en" || pathname.startsWith("/en/")) {
-    return "en";
+  if (pathname === nonDefaultPrefix || pathname.startsWith(`${nonDefaultPrefix}/`)) {
+    return nonDefaultLocale;
   }
   return defaultLocale;
 }
 
 export function stripLocalePrefix(pathname: string): string {
-  if (pathname === "/en") return "/";
-  if (pathname.startsWith("/en/")) {
-    return pathname.slice(3) || "/";
+  if (pathname === nonDefaultPrefix) return "/";
+  if (pathname.startsWith(`${nonDefaultPrefix}/`)) {
+    return pathname.slice(nonDefaultPrefix.length) || "/";
   }
   return pathname;
 }
@@ -18,8 +21,8 @@ export function stripLocalePrefix(pathname: string): string {
 export function localizedPath(path: string, locale: Locale): string {
   const normalized = path.startsWith("/") ? path : `/${path}`;
   if (locale === defaultLocale) return normalized;
-  if (normalized === "/") return "/en";
-  return `/en${normalized}`;
+  if (normalized === "/") return nonDefaultPrefix;
+  return `${nonDefaultPrefix}${normalized}`;
 }
 
 export function switchLocalePath(pathname: string, targetLocale: Locale): string {

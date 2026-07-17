@@ -4,19 +4,19 @@ import { SiteLayout } from "@/components/site/site-layout";
 import { getUi } from "@/lib/i18n/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
-const ui = getUi("en");
+const ui = getUi("es");
 
 export const metadata: Metadata = buildPageMetadata({
   title: ui.servicePolicy.title,
   description: ui.servicePolicy.description,
   path: "/service-policy",
-  locale: "en",
+  locale: "es",
 });
 
-export default function EnServicePolicyPage() {
+export default function ServicePolicyPage() {
   return (
-    <SiteLayout locale="en">
-      <ServicePolicyContent locale="en" />
+    <SiteLayout locale="es">
+      <ServicePolicyContent locale="es" />
     </SiteLayout>
   );
 }

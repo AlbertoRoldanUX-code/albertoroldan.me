@@ -4,8 +4,8 @@ interface GuideReaderPageProps {
   params: Promise<{ slug: string }>;
 }
 
-/** Full guide content is PDF-only after opt-in; no web reader. */
+/** El contenido completo solo se entrega por PDF tras el opt-in; no hay lector web. */
 export default async function Page({ params }: GuideReaderPageProps) {
   const { slug } = await params;
-  permanentRedirect(`/en/guides/${slug}`);
+  permanentRedirect(`/es/guides/${slug}`);
 }

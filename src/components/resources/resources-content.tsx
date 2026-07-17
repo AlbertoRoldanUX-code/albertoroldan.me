@@ -3,9 +3,14 @@ import Link from "next/link";
 import { getGuides, getUi } from "@/lib/i18n/content";
 import type { Resource } from "@/data/resources";
 import type { Locale } from "@/lib/i18n/config";
+import { localizedPath } from "@/lib/i18n/paths";
 
 interface ResourcesContentProps {
   locale?: Locale;
+}
+
+function withLocaleHref(guide: Resource, locale: Locale): Resource {
+  return { ...guide, href: localizedPath(guide.href, locale) };
 }
 
 function FeaturedGuide({
@@ -98,8 +103,8 @@ function GuideCard({ guide, cta }: { guide: Resource; cta: string }) {
   );
 }
 
-export function ResourcesContent({ locale = "es" }: ResourcesContentProps) {
-  const guides = getGuides(locale);
+export function ResourcesContent({ locale = "en" }: ResourcesContentProps) {
+  const guides = getGuides(locale).map((guide) => withLocaleHref(guide, locale));
   const ui = getUi(locale);
   const featured = guides.find((g) => g.featured);
   const otherGuides = guides.filter((g) => !g.featured);

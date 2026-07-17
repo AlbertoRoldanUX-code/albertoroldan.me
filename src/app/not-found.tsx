@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteLayout } from "@/components/site/site-layout";
 import { getUi } from "@/lib/i18n/content";
 
-const ui = getUi("es");
+const ui = getUi("en");
 
 export const metadata: Metadata = {
   title: ui.metadata.notFound,
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <SiteLayout locale="es">
+    <SiteLayout locale="en">
       <main className="flex min-h-[60vh] flex-col items-center justify-center px-6 py-24 text-center">
         <p className="font-serif text-6xl font-semibold tracking-tight text-foreground/25">
           404

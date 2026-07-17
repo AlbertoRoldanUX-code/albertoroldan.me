@@ -14,7 +14,7 @@ interface ConsultingContentProps {
 }
 
 export function ConsultingContent({
-  locale = "es",
+  locale = "en",
   asSection = false,
 }: ConsultingContentProps) {
   const content = getConsultingContent(locale);

@@ -3,12 +3,13 @@ import Link from "next/link";
 import { FadeIn } from "@/components/vault/fade-in";
 import { getAboutPreview, getUi } from "@/lib/i18n/content";
 import type { Locale } from "@/lib/i18n/config";
+import { localizedPath } from "@/lib/i18n/paths";
 
 interface AboutPreviewSectionProps {
   locale?: Locale;
 }
 
-export function AboutPreviewSection({ locale = "es" }: AboutPreviewSectionProps) {
+export function AboutPreviewSection({ locale = "en" }: AboutPreviewSectionProps) {
   const aboutPreview = getAboutPreview(locale);
   const ui = getUi(locale);
 
@@ -43,7 +44,7 @@ export function AboutPreviewSection({ locale = "es" }: AboutPreviewSectionProps)
 
             <FadeIn delay={0.15}>
               <Link
-                href={aboutPreview.href}
+                href={localizedPath(aboutPreview.href, locale)}
                 className="mt-6 inline-block font-serif text-base underline-offset-4 hover:underline md:text-lg"
               >
                 {ui.about.readMore}

@@ -7,7 +7,7 @@ interface NewsletterSectionProps {
   locale?: Locale;
 }
 
-export function NewsletterSection({ locale = "es" }: NewsletterSectionProps) {
+export function NewsletterSection({ locale = "en" }: NewsletterSectionProps) {
   const footerCta = getFooterCta(locale);
   const siteConfig = getSiteConfig(locale);
 

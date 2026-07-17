@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Essay } from "@/data/essays";
 import type { Locale } from "@/lib/i18n/config";
+import { localizedPath } from "@/lib/i18n/paths";
 
 interface EssayArticleProps {
   essay: Essay;
@@ -8,7 +9,7 @@ interface EssayArticleProps {
 }
 
 export function EssayArticle({ essay, locale }: EssayArticleProps) {
-  const backHref = locale === "en" ? "/en" : "/";
+  const backHref = localizedPath("/", locale);
   const backLabel = locale === "en" ? "← Home" : "← Inicio";
   const reading =
     locale === "en"

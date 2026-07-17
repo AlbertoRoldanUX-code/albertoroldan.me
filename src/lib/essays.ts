@@ -2,6 +2,7 @@ import { essays as essaysEs } from "@/data/essays";
 import { essays as essaysEn } from "@/data/en/essays";
 import type { Essay } from "@/data/essays";
 import type { Locale } from "@/lib/i18n/config";
+import { localizedPath } from "@/lib/i18n/paths";
 
 export function getEssays(locale: Locale): Essay[] {
   return locale === "en" ? essaysEn : essaysEs;
@@ -21,5 +22,5 @@ export function getBestEssays(locale: Locale): Essay[] {
 }
 
 export function essayPath(slug: string, locale: Locale): string {
-  return locale === "en" ? `/en/essays/${slug}` : `/essays/${slug}`;
+  return localizedPath(`/essays/${slug}`, locale);
 }

@@ -5,7 +5,7 @@ import {
   getGuideStaticParams,
 } from "@/components/vault/guide-slug-page";
 
-interface EnGuideSlugPageProps {
+interface GuideSlugPageProps {
   params: Promise<{ slug: string }>;
 }
 
@@ -15,11 +15,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: EnGuideSlugPageProps): Promise<Metadata> {
+}: GuideSlugPageProps): Promise<Metadata> {
   const { slug } = await params;
-  return generateGuideSlugMetadata(slug, "en");
+  return generateGuideSlugMetadata(slug, "es");
 }
 
-export default function Page({ params }: EnGuideSlugPageProps) {
-  return <GuideSlugPage params={params} locale="en" />;
+export default function Page({ params }: GuideSlugPageProps) {
+  return <GuideSlugPage params={params} locale="es" />;
 }

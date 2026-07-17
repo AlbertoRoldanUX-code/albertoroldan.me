@@ -28,7 +28,7 @@ export function getCalUiLocale(locale: Locale): string {
 
 export function getCalEmbedUrl(
   bookingUrl: string,
-  locale: Locale = "es",
+  locale: Locale = "en",
 ): string | undefined {
   const calLink = getCalLink(bookingUrl);
   if (!calLink) return undefined;

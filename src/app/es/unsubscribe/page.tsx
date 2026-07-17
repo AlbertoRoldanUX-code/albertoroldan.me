@@ -4,18 +4,18 @@ import { UnsubscribeView } from "@/components/unsubscribe/unsubscribe-view";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Unsubscribe",
-  description: "Unsubscribe from the weekly essay.",
+  title: "Darse de baja",
+  description: "Cancelar la suscripción al ensayo semanal.",
   path: "/unsubscribe",
-  locale: "en",
+  locale: "es",
   robots: { index: false, follow: false },
 });
 
-export default function UnsubscribePageEn() {
+export default function UnsubscribePage() {
   return (
-    <SiteLayout locale="en">
+    <SiteLayout locale="es">
       <Suspense fallback={null}>
-        <UnsubscribeView locale="en" />
+        <UnsubscribeView locale="es" />
       </Suspense>
     </SiteLayout>
   );

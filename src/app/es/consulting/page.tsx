@@ -5,20 +5,20 @@ import { SiteLayout } from "@/components/site/site-layout";
 import { getConsultingContent } from "@/lib/i18n/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
-const content = getConsultingContent("en");
+const content = getConsultingContent("es");
 
 export const metadata: Metadata = buildPageMetadata({
   title: content.metadata.title,
   description: content.metadata.description,
   path: "/consulting",
-  locale: "en",
+  locale: "es",
 });
 
-export default function ConsultingPageEn() {
+export default function ConsultingPage() {
   return (
-    <SiteLayout locale="en">
-      <ConsultingStructuredData locale="en" />
-      <ConsultingContent locale="en" />
+    <SiteLayout locale="es">
+      <ConsultingStructuredData locale="es" />
+      <ConsultingContent locale="es" />
     </SiteLayout>
   );
 }

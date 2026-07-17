@@ -10,7 +10,7 @@ export const guides: Resource[] = [
     description:
       "A field manual on the capacities you build when designing your own life, with real stories from Georgia, data-driven validation, and concrete exercises.",
     coverImage: "/images/guide-cover.svg",
-    href: "/en/guides/field-manual",
+    href: "/guides/field-manual",
     featured: true,
   },
 ];

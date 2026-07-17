@@ -30,24 +30,24 @@ export const metadata: Metadata = {
     template: "%s | albertoroldan.me",
   },
   description:
-    "Un ensayo semanal para personas que quieren construir una vida más libre sin esperar permiso.",
+    "A weekly essay for people who want to build a freer life without waiting for permission.",
   category: "Personal development",
   keywords: [
     "Alberto Roldan",
     "Alberto Roldán",
-    "trabajo independiente",
-    "libertad personal",
-    "negocios online",
-    "Georgia",
     "self employment",
+    "personal freedom",
+    "online business",
+    "Georgia",
     "work money freedom",
+    "trabajo independiente",
   ],
   openGraph: {
     siteName: "Alberto Roldán",
     type: "website",
     url: siteUrl,
-    locale: "es_ES",
-    alternateLocale: ["en_US"],
+    locale: "en_US",
+    alternateLocale: ["es_ES"],
   },
   twitter: {
     card: "summary_large_image",
@@ -73,7 +73,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const headersList = await headers();
-  const locale = headersList.get("x-locale") === "en" ? "en" : "es";
+  const locale = headersList.get("x-locale") === "es" ? "es" : "en";
 
   return (
     <html lang={locale} suppressHydrationWarning>

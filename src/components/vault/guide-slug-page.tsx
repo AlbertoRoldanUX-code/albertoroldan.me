@@ -14,7 +14,7 @@ interface GuideSlugPageProps {
 
 export async function generateGuideSlugMetadata(
   slug: string,
-  locale: Locale = "es",
+  locale: Locale = "en",
 ): Promise<Metadata> {
   const data = getLeadMagnet(slug, locale);
   const ui = getUi(locale);
@@ -28,7 +28,7 @@ export async function generateGuideSlugMetadata(
 
 export async function GuideSlugPage({
   params,
-  locale = "es",
+  locale = "en",
 }: GuideSlugPageProps) {
   const { slug } = await params;
   const data = getLeadMagnet(slug, locale);
