@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -99,9 +100,17 @@ export function EmailForm({
           type="submit"
           size="lg"
           disabled={status === "loading" || status === "success"}
+          aria-busy={status === "loading"}
           className="h-12 shrink-0 rounded-full px-7 text-[15px] font-medium"
         >
-          {status === "loading" ? ui.email.loading : buttonText}
+          {status === "loading" ? (
+            <>
+              <Loader2 className="size-4 animate-spin" aria-hidden="true" />
+              {ui.email.loading}
+            </>
+          ) : (
+            buttonText
+          )}
         </Button>
       </form>
 

@@ -71,6 +71,8 @@ Regla activa: `privacidad@albertoroldan.me` → reenvío a la bandeja de destino
 
 Los emails se guardan en Supabase (`newsletter_subscribers`).
 
+El formulario de suscripción (`EmailForm`) muestra un spinner en el botón mientras envía la petición.
+
 1. Crea un proyecto en [Supabase](https://supabase.com) (o usa uno existente).
 2. Añade en `.env.local` (y en Vercel):
 
