@@ -30,7 +30,7 @@ export function SiteHeader({
           className,
         )}
       >
-        <div className="mx-auto max-w-[52rem] px-6 py-4 text-center md:py-5">
+        <div className="mx-auto max-w-[72rem] px-6 py-4 text-center md:py-5">
           <span className="font-serif text-[15px] font-semibold tracking-tight md:text-base">
             {siteConfig.brand}
           </span>
@@ -46,7 +46,7 @@ export function SiteHeader({
         className,
       )}
     >
-      <div className="mx-auto flex max-w-[52rem] items-center justify-between px-6 py-4 md:py-5">
+      <div className="mx-auto flex max-w-[72rem] items-center justify-between px-6 py-4 md:py-5">
         <Link
           href={localizedPath("/", locale)}
           className="flex items-center gap-2.5 transition-opacity hover:opacity-80"

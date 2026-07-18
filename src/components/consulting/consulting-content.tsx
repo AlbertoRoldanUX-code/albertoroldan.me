@@ -1,6 +1,6 @@
-import { ExpertProfile } from "@/components/consulting/expert-profile";
 import { BookingCalendar } from "@/components/consulting/booking-calendar";
 import { ConsultingFaq } from "@/components/consulting/consulting-faq";
+import { HomeConsultingSection } from "@/components/home/home-consulting-section";
 import { FadeIn } from "@/components/vault/fade-in";
 import { getConsultingContent } from "@/lib/i18n/content";
 import { getBookingUrl } from "@/lib/booking";
@@ -20,37 +20,34 @@ export function ConsultingContent({
   const content = getConsultingContent(locale);
   const bookingUrl = getBookingUrl();
 
+  if (asSection) {
+    return <HomeConsultingSection locale={locale} />;
+  }
+
   return (
     <>
-      <ExpertProfile
-        content={content}
-        locale={locale}
-        bookingUrl={bookingUrl}
-        asSection={asSection}
-      />
+      <HomeConsultingSection locale={locale} onPage />
 
-      {!asSection ? (
-        <div className="border-t border-border/60 px-6 pb-20 md:pb-28">
-          <div className="mx-auto max-w-[45rem]">
-            {bookingUrl ? (
-              <FadeIn delay={0.05}>
-                <BookingCalendar
-                  bookingUrl={bookingUrl}
-                  title={content.cta}
-                  intro={content.bookingIntro}
-                  locale={locale}
-                  payHref={localizedPath("/consulting/pay", locale)}
-                />
-              </FadeIn>
-            ) : null}
+      <div className="border-t border-border/60 px-6 pb-20 md:pb-28">
+        <div className="mx-auto max-w-[45rem]">
+          {bookingUrl ? (
+            <FadeIn delay={0.05}>
+              <BookingCalendar
+                bookingUrl={bookingUrl}
+                title={content.cta}
+                intro={content.bookingIntro}
+                locale={locale}
+                payHref={localizedPath("/consulting/pay", locale)}
+              />
+            </FadeIn>
+          ) : null}
 
-            <ConsultingFaq
-              heading={content.faq.heading}
-              items={content.faq.items}
-            />
-          </div>
+          <ConsultingFaq
+            heading={content.faq.heading}
+            items={content.faq.items}
+          />
         </div>
-      ) : null}
+      </div>
     </>
   );
 }

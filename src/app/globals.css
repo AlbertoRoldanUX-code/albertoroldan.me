@@ -30,23 +30,23 @@
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: #faf9f6;
+  --radius: 0.5rem;
+  --background: #f7f6f2;
   --foreground: #111111;
   --card: #ffffff;
   --card-foreground: #111111;
   --popover: #ffffff;
   --popover-foreground: #111111;
   --primary: #111111;
-  --primary-foreground: #faf9f6;
-  --secondary: #f3f2ef;
+  --primary-foreground: #f7f6f2;
+  --secondary: #efece6;
   --secondary-foreground: #111111;
-  --muted: #f3f2ef;
-  --muted-foreground: #6b6b6b;
-  --accent: #f3f2ef;
+  --muted: #efece6;
+  --muted-foreground: #5c5c5c;
+  --accent: #e8e4dc;
   --accent-foreground: #111111;
   --destructive: #dc2626;
-  --border: rgba(17, 17, 17, 0.08);
+  --border: rgba(17, 17, 17, 0.09);
   --input: rgba(17, 17, 17, 0.12);
   --ring: rgba(17, 17, 17, 0.2);
 }
