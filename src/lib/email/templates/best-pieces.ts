@@ -6,6 +6,8 @@ import {
   link,
   paragraph,
   renderEmailShell,
+  signOff,
+  signOffText,
 } from "./shell";
 
 export interface BestPiecesEmailInput {
@@ -41,8 +43,6 @@ export function buildBestPiecesEmail(input: BestPiecesEmailInput): {
     ? "From here on, you’ll only hear from me on Saturdays. One essay. Coffee length. No noise."
     : "A partir de ahora, solo recibirás algo los sábados. Un ensayo. De longitud de café. Sin ruido.";
 
-  const cheers = isEn ? "Cheers," : "Un abrazo,";
-
   const listHtml = essays
     .map((essay, index) => {
       const url = absoluteUrl(essayPath(essay.slug, input.locale));
@@ -63,7 +63,7 @@ export function buildBestPiecesEmail(input: BestPiecesEmailInput): {
     paragraph(escapeHtml(intro)),
     listHtml,
     paragraph(escapeHtml(outro)),
-    paragraph(`${escapeHtml(cheers)}<br /><strong>Alberto Roldán</strong>`),
+    signOff(input.locale, true),
   ].join("\n");
 
   const bodyText = `${intro}
@@ -72,8 +72,7 @@ ${listText}
 
 ${outro}
 
-${cheers}
-Alberto Roldán`;
+${signOffText(input.locale, true)}`;
 
   const rendered = renderEmailShell({
     locale: input.locale,

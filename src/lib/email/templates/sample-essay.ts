@@ -6,6 +6,8 @@ import {
   link,
   paragraph,
   renderEmailShell,
+  signOff,
+  signOffText,
 } from "./shell";
 
 export interface SampleEssayEmailInput {
@@ -38,7 +40,6 @@ export function buildSampleEssayEmail(input: SampleEssayEmailInput): {
     : "Si te ha servido, responde y dime qué te ha llegado. Mañana te envío cinco de mis mejores piezas, y a partir de entonces solo recibirás algo los sábados.";
 
   const readOnline = isEn ? "Read on the web" : "Leer en la web";
-  const cheers = isEn ? "Cheers," : "Un abrazo,";
 
   const bodyHtml = [
     paragraph(escapeHtml(intro)),
@@ -46,7 +47,7 @@ export function buildSampleEssayEmail(input: SampleEssayEmailInput): {
     ...essay.paragraphs.map((p) => paragraph(escapeHtml(p))),
     paragraph(escapeHtml(outro)),
     paragraph(link(url, readOnline)),
-    paragraph(`${escapeHtml(cheers)}<br /><strong>Alberto Roldán</strong>`),
+    signOff(input.locale, true),
   ].join("\n");
 
   const bodyText = `${intro}
@@ -59,8 +60,7 @@ ${outro}
 
 ${readOnline}: ${url}
 
-${cheers}
-Alberto Roldán`;
+${signOffText(input.locale, true)}`;
 
   const rendered = renderEmailShell({
     locale: input.locale,

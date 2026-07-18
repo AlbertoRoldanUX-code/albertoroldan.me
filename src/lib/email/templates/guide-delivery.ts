@@ -5,6 +5,8 @@ import {
   link,
   paragraph,
   renderEmailShell,
+  signOff,
+  signOffText,
 } from "./shell";
 
 export interface GuideDeliveryEmailInput {
@@ -39,15 +41,13 @@ export function buildGuideDeliveryEmail(input: GuideDeliveryEmailInput): {
   const reply = isEn
     ? "Reply to this email if you find anything especially useful. Enjoy."
     : "Responde a este email si encuentras algo especialmente útil. Disfruta.";
-  const cheers = isEn ? "Cheers," : "Un abrazo,";
-
   const bodyHtml = [
     paragraph(
       `${escapeHtml(guideLabel)}: ${link(input.downloadUrl, magnet.title)}.`,
     ),
     paragraph(escapeHtml(inside)),
     paragraph(escapeHtml(reply)),
-    paragraph(`${escapeHtml(cheers)}<br /><strong>Alberto</strong>`),
+    signOff(input.locale),
   ].join("\n");
 
   const bodyText = `${guideLabel}: ${magnet.title}
@@ -57,8 +57,7 @@ ${inside}
 
 ${reply}
 
-${cheers}
-Alberto`;
+${signOffText(input.locale)}`;
 
   const rendered = renderEmailShell({
     locale: input.locale,

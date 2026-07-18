@@ -3,6 +3,8 @@ import {
   escapeHtml,
   paragraph,
   renderEmailShell,
+  signOff,
+  signOffText,
 } from "./shell";
 
 export interface WelcomeEmailInput {
@@ -46,15 +48,13 @@ export function buildWelcomeEmail(input: WelcomeEmailInput): {
     ? "I hope you enjoy the weekly essay."
     : "Espero que disfrutes el ensayo semanal.";
 
-  const cheers = isEn ? "Cheers," : "Un abrazo,";
-
   const bodyHtml = [
     paragraph(escapeHtml(p1)),
     paragraph(escapeHtml(p2)),
     paragraph(escapeHtml(p3)),
     paragraph(escapeHtml(p4)),
     paragraph(escapeHtml(p5)),
-    paragraph(`${escapeHtml(cheers)}<br /><strong>Alberto Roldán</strong>`),
+    signOff(input.locale, true),
   ].join("\n");
 
   const bodyText = `${p1}
@@ -67,8 +67,7 @@ ${p4}
 
 ${p5}
 
-${cheers}
-Alberto Roldán`;
+${signOffText(input.locale, true)}`;
 
   const rendered = renderEmailShell({
     locale: input.locale,
