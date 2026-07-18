@@ -1,6 +1,8 @@
 # albertoroldan.me
 
-Sitio personal con homepage, newsletter y landings de guías gratuitas. Inspirado en [justinwelsh.me](https://justinwelsh.me).
+Sitio personal de fundador: home, newsletter, guía gratuita, essays y consultoría.
+Posicionamiento: transformar *empleado → fundador independiente* (historia Georgia).
+Inspiración de craft: Brian Lovin / Linear / Vercel; de conversión: José Elías (sin copiar catálogo/store).
 
 ## Stack
 
@@ -10,6 +12,15 @@ Sitio personal con homepage, newsletter y landings de guías gratuitas. Inspirad
 - shadcn/ui
 - Framer Motion
 - next-themes (dark/light mode)
+
+## Changelog
+
+### 18 jul 2026 — Rediseño home
+
+- Hero de fundador (ya no “weekly essay”) + foto + 3 CTAs
+- Banda países/idiomas, timeline de historia, guía como producto (20 pág.), principios, consulting €250, footer de marca
+- Quitada la sección de métricas “Signal, not theater”
+- Regla de estado: `.cursor/rules/web.mdc`
 
 ## Getting started
 

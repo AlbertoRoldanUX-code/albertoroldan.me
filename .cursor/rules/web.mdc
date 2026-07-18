@@ -1,0 +1,46 @@
+---
+description: Estado y decisiones de albertoroldan.me (sitio personal)
+alwaysApply: true
+---
+
+# Web — albertoroldan.me
+
+**Snapshot:** 18 jul 2026
+
+## Decisión de posicionamiento
+
+- **No** copiar a José Elías (joseeliasnavarro.com). Inspiración de conversión/autoridad, no de catálogo/store.
+- Mezcla objetivo: autoridad + conversión (JEN) + estética premium (Brian Lovin / Sahil Bloom / Justin Welsh / Linear / Vercel).
+- La historia es el producto: *manual labor → programmer → founder viviendo en Georgia*.
+- Veredicto activo: la web es **superior** a la de José Elías en claridad, identidad y craft; él gana en volumen de ofertas y fotos.
+
+## Rediseño home — 18 jul 2026 (implementado)
+
+Home deja de ser landing de newsletter. Orden (EN `/` · ES `/es`):
+
+1. **Hero fundador** — headline de transformación + foto + 3 CTAs (guía / sesión / about). Ya no “A weekly essay…”.
+2. **Banda de autoridad** — países vividos + idiomas.
+3. **Story / timeline** — 6 hitos (manual labor → Georgia).
+4. **Portrait break** — bloque oscuro con foto.
+5. **Guía como producto** — mockup, **20 páginas** (no 24), qué aprenderás, CTA grande.
+6. **Principios** — 6 operating principles.
+7. **Consulting premium** — Ideal for / outcomes / proceso 3 pasos / €250.
+8. **Newsletter CTA** — bloque oscuro final.
+9. **Footer fundador** — foto, mini-bio, newsletter, links, redes.
+
+**Quitado el 18 jul 2026:** sección “Signal, not theater” / métricas (LinkedIn 1.332, países, idiomas, Tbilisi).
+
+## Copy activo (hero)
+
+- EN: *I help people build businesses they own.* / *From manual labor in Europe to programmer, founder, and creator living in Georgia.*
+- ES: *Ayudo a personas a construir negocios propios.* / *De trabajos manuales en Europa a programador, fundador y creador viviendo en Georgia.*
+
+## Fotos
+
+- Solo asset fuerte: `/images/avatar.png` (reutilizado a gran tamaño).
+- Gap vs JEN: faltan 3–5 fotos editoriales limpias (sin filtro vintage / borde distressed).
+- Foto candidata evaluada 18 jul: buena cara/luz; **no** usar con borde vintage/grano para hero premium.
+
+## Tech / IDE
+
+- Tailwind CSS v4: `@theme`, `@custom-variant`, `@apply` son válidos. El linter CSS del editor se silencia en `.vscode/settings.json` (`css.lint.unknownAtRules: ignore`).
