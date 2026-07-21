@@ -44,7 +44,8 @@ Home deja de ser landing de newsletter. Orden (solo EN `/`):
 - Asset activo (21 jul 2026): `/images/avatar.jpg` — headshot cuadrado fondo oscuro, camiseta negra. También en `/images/email-avatar.jpg`.
 - Hero: foto **contenida** (`max-w` ~14–16rem, `aspect-square`), no half-bleed.
 - Foto fondo blanco evaluada y descartada (21 jul): se ve peor en el layout actual.
-- Gap vs JEN: faltan 3–5 fotos editoriales limpias adicionales.
+- Lead magnet / PDF / emails de opt-in: **inglés** (forzado; ya no default `es`).
+- Aviso a Alberto por Resend en cada suscripción a la newsletter.
 
 ## Tech / IDE
 

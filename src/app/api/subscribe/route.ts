@@ -15,11 +15,10 @@ export async function POST(request: Request) {
       typeof body.leadMagnetSlug === "string" ? body.leadMagnetSlug : "";
     const downloadUrl =
       typeof body.downloadUrl === "string" ? body.downloadUrl : undefined;
-    const locale = typeof body.locale === "string" ? body.locale : undefined;
 
     if (!email || !leadMagnetSlug) {
       return NextResponse.json(
-        { success: false, message: "El correo y el lead magnet son obligatorios." },
+        { success: false, message: "Email and lead magnet are required." },
         { status: 400 },
       );
     }
@@ -28,7 +27,7 @@ export async function POST(request: Request) {
       email,
       leadMagnetSlug,
       downloadUrl,
-      locale,
+      locale: "en",
     });
 
     const response = NextResponse.json(result, {
@@ -46,7 +45,7 @@ export async function POST(request: Request) {
     return response;
   } catch {
     return NextResponse.json(
-      { success: false, message: "Algo salió mal." },
+      { success: false, message: "Something went wrong." },
       { status: 500 },
     );
   }

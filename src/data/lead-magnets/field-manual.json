@@ -1,58 +1,58 @@
 {
   "slug": "field-manual",
   "brand": "albertoroldán.",
-  "eyebrow": "Guía gratuita",
-  "title": "Las 7 capacidades que el colegio no te enseñó para construir algo propio",
-  "subtitle": "Lo que aprendí pasando de trabajos manuales a programador autodidacta y creador de negocios desde Georgia.",
+  "eyebrow": "Free guide",
+  "title": "The 7 capabilities school never taught you to build something of your own",
+  "subtitle": "What I learned going from manual jobs to self-taught programmer and business builder from Georgia.",
   "coverImage": "/images/guide-cover.svg",
-  "coverAlt": "Portada del manual",
-  "benefitsIntro": "Siete capacidades que he desarrollado a la fuerza mientras construía algo propio. Cada una incluye un ejercicio y un resultado claro.",
+  "coverAlt": "Guide cover",
+  "benefitsIntro": "Seven capabilities I've developed the hard way while building something of my own. Each one includes an exercise and a clear outcome.",
   "benefits": [
     {
-      "label": "Capacidad 1",
-      "title": "Moverse antes de sentirse preparado"
+      "label": "Capacity 1",
+      "title": "Move before you feel ready"
     },
     {
-      "label": "Capacidad 2",
-      "title": "Validar con datos, no con opiniones"
+      "label": "Capacity 2",
+      "title": "Validate with data, not opinions"
     },
     {
-      "label": "Capacidad 3",
-      "title": "Construir habilidades que nadie puede quitarte"
+      "label": "Capacity 3",
+      "title": "Build skills nobody can take from you"
     },
     {
-      "label": "Capacidad 4",
-      "title": "Crear antes de consumir"
+      "label": "Capacity 4",
+      "title": "Create before you consume"
     },
     {
-      "label": "Capacidad 5",
-      "title": "Convertir el contenido en un activo"
+      "label": "Capacity 5",
+      "title": "Turn content into an asset"
     },
     {
-      "label": "Capacidad 6",
-      "title": "Diseñar una vida antes que un negocio"
+      "label": "Capacity 6",
+      "title": "Design a life before a business"
     },
     {
-      "label": "Capacidad 7",
-      "title": "Pensar como quien construye"
+      "label": "Capacity 7",
+      "title": "Think like someone who builds"
     }
   ],
   "author": {
     "name": "Alberto",
-    "bio": "Construyo negocios desde Georgia. Escribo cada semana sobre lo que aprendo en el camino, sin permiso, sin momento perfecto y sin mapa.",
+    "bio": "I build businesses from Georgia. I write every week about what I learn along the way — without permission, without the perfect moment, and without a map.",
     "avatar": "/images/avatar.jpg",
     "signature": "Alberto Roldán",
-    "socialProof": "Escritor · Constructor · Georgia"
+    "socialProof": "Founder · Builder · Georgia"
   },
   "cta": {
-    "headline": "Consigue tu ejemplar gratuito.",
-    "buttonText": "Envíame la guía",
-    "placeholder": "nombre@email.com",
-    "disclaimer": "Te llegará directo a tu bandeja de entrada. También empezarás a recibir mi escritura semanal. Puedes darte de baja cuando quieras."
+    "headline": "Get your free copy.",
+    "buttonText": "Send me the guide",
+    "placeholder": "name@email.com",
+    "disclaimer": "It will land straight in your inbox. You'll also start receiving my weekly writing. You can unsubscribe anytime."
   },
-  "downloadUrl": "/api/guides/field-manual/pdf",
+  "downloadUrl": "/api/guides/field-manual/pdf?locale=en",
   "seo": {
-    "title": "Guía gratuita: 7 capacidades que el colegio no te enseñó",
-    "description": "Un manual de campo sobre las capacidades que se acumulan cuando construyes algo propio, con historias reales desde Georgia, validación con datos y ejercicios concretos."
+    "title": "Free guide: 7 capabilities school never taught you",
+    "description": "A field manual on the capabilities that compound when you build something of your own — with real stories from Georgia, data-driven validation, and concrete exercises."
   }
 }

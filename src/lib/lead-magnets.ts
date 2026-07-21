@@ -23,10 +23,14 @@ function loadLeadMagnetsFromDir(dir: string): Record<string, LeadMagnet> {
 }
 
 function loadAllLeadMagnets(): Record<Locale, Record<string, LeadMagnet>> {
-  return {
-    es: loadLeadMagnetsFromDir(LEAD_MAGNETS_BASE),
-    en: loadLeadMagnetsFromDir(join(LEAD_MAGNETS_BASE, "en")),
-  };
+  const en = loadLeadMagnetsFromDir(join(LEAD_MAGNETS_BASE, "en"));
+  // Site is English-only: ES mirror uses the same EN magnets.
+  const es = { ...en, ...loadLeadMagnetsFromDir(LEAD_MAGNETS_BASE) };
+  // Prefer EN copies when both exist under the same slug.
+  for (const slug of Object.keys(en)) {
+    es[slug] = en[slug];
+  }
+  return { es, en };
 }
 
 const leadMagnetsByLocale = loadAllLeadMagnets();
@@ -35,24 +39,20 @@ export function getLeadMagnet(
   slug: string,
   locale: Locale = "en",
 ): LeadMagnet | undefined {
-  return leadMagnetsByLocale[locale]?.[slug];
+  return leadMagnetsByLocale[locale]?.[slug] ?? leadMagnetsByLocale.en?.[slug];
 }
 
 export function getAllLeadMagnetSlugs(): string[] {
-  return Object.keys(leadMagnetsByLocale.es);
+  return Object.keys(leadMagnetsByLocale.en);
 }
 
 export function getDefaultLeadMagnet(locale: Locale = "en"): LeadMagnet {
-  const slugs = Object.keys(leadMagnetsByLocale[locale]);
-  const first = slugs[0];
+  const magnets = leadMagnetsByLocale[locale] ?? leadMagnetsByLocale.en;
+  const first = Object.keys(magnets)[0];
 
   if (!first) {
-    const fallback = Object.keys(leadMagnetsByLocale.es)[0];
-    if (!fallback) {
-      throw new Error("No lead magnets found in src/data/lead-magnets/");
-    }
-    return leadMagnetsByLocale.es[fallback];
+    throw new Error("No lead magnets found in src/data/lead-magnets/");
   }
 
-  return leadMagnetsByLocale[locale][first];
+  return magnets[first];
 }

@@ -3,8 +3,8 @@ import type {
   EmailSubscribePayload,
   EmailSubscribeResult,
 } from "../types";
+import { notifyAdminOfSubscription } from "../subscribe-admin-notice";
 import { sendSubscriptionEmails } from "../subscription-emails";
-import { isValidLocale } from "@/lib/i18n/config";
 import { createServiceSupabaseClient } from "@/lib/supabase/server";
 
 /**
@@ -21,10 +21,8 @@ export class SupabaseEmailProvider implements EmailProvider {
     }
 
     const email = payload.email.trim().toLowerCase();
-    const locale =
-      typeof payload.locale === "string" && isValidLocale(payload.locale)
-        ? payload.locale
-        : "es";
+    // Site is English-only: always store and deliver in EN.
+    const locale = "en" as const;
 
     const { data: existing, error: selectError } = await supabase
       .from("newsletter_subscribers")
@@ -36,7 +34,7 @@ export class SupabaseEmailProvider implements EmailProvider {
       console.error("[SupabaseEmailProvider]", selectError.message);
       return {
         success: false,
-        message: "No se pudo completar la suscripción. Inténtalo de nuevo.",
+        message: "Could not complete the subscription. Please try again.",
       };
     }
 
@@ -70,7 +68,7 @@ export class SupabaseEmailProvider implements EmailProvider {
       console.error("[SupabaseEmailProvider]", error.message);
       return {
         success: false,
-        message: "No se pudo completar la suscripción. Inténtalo de nuevo.",
+        message: "Could not complete the subscription. Please try again.",
       };
     }
 
@@ -95,9 +93,16 @@ export class SupabaseEmailProvider implements EmailProvider {
       }
     }
 
+    await notifyAdminOfSubscription({
+      email,
+      leadMagnetSlug: payload.leadMagnetSlug,
+      isNew,
+      wasUnsubscribed,
+    });
+
     return {
       success: true,
-      message: "Suscripción confirmada. Te escribo cada semana.",
+      message: "You're in. I'll write to you every week.",
     };
   }
 }
