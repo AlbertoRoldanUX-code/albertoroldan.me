@@ -1,0 +1,19 @@
+---
+description: Briefing diario de Alberto — rutina + agenda (citas, quedadas, clases, deadlines con hora).
+alwaysApply: true
+---
+
+# Briefing diario — personal
+
+Cuando Alberto pregunte qué hacer hoy, qué le falta, rutina, pendientes o “resumen del día”:
+
+1. **Agenda primero** — Revisar `private/personal.md` → sección **Agenda / citas** (filas de hoy y próximas 48 h).
+2. **Quedadas / dating** — Revisar índice y pendientes en `private/datos-para-mujeres.md`.
+3. **Clases gimnasio** — Tabla horario en `private/personal.md` (Tbilisi); marcar conflicto si hay cita a la misma hora.
+4. **Deadlines con hora** — Entrevistas (p. ej. Hireflix/Flosum), citas médicas, vuelos, check-ins; buscar en `private/negocios/candidaturas-linkedin.md` y notas relacionadas si aplica.
+5. **Rutina manual** — Checklist mañana/tarde en `private/personal.md` (orden: jobs ×15 → LI → X → TikTok → cuerpo → aprendizaje → gimnasio) + fila de cumplimiento del día.
+6. **Urgente fuera de rutina** — Follow-ups comerciales, DMs, etc. solo si siguen abiertos (las candidaturas ya van en la rutina).
+
+**Formato de respuesta:** separar claramente **Citas / quedadas** y **Rutina / tareas**. No listar solo el checklist repetitivo si hay algo en agenda ese día.
+
+**Al fijar una cita nueva:** añadir fila en `private/personal.md` → Agenda / citas (fecha, hora si la hay, lugar, enlace a nota detallada).
