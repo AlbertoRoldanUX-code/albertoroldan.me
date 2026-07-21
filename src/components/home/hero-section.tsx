@@ -15,7 +15,7 @@ export function HomeHeroSection({ locale = "en" }: HomeHeroSectionProps) {
 
   return (
     <section className="relative overflow-hidden px-6 pt-12 pb-16 md:pt-16 md:pb-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(17,17,17,0.04),transparent_55%)] dark:bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.05),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(17,17,17,0.04),transparent_55%)]" />
 
       <div className="relative mx-auto grid max-w-[72rem] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div>
@@ -59,17 +59,16 @@ export function HomeHeroSection({ locale = "en" }: HomeHeroSectionProps) {
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.12} className="relative mx-auto w-full max-w-[28rem] lg:max-w-none">
-          <div className="relative aspect-[4/5] overflow-hidden bg-muted">
+        <FadeIn delay={0.12} className="relative mx-auto w-full max-w-[14rem] sm:max-w-[16rem] lg:mx-0 lg:justify-self-end">
+          <div className="relative aspect-square overflow-hidden bg-muted">
             <Image
               src={siteConfig.avatar}
               alt={hero.photoAlt}
               fill
               priority
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 448px, 520px"
+              className="object-cover object-center"
+              sizes="(max-width: 640px) 224px, 256px"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/25 via-transparent to-transparent" />
           </div>
         </FadeIn>
       </div>

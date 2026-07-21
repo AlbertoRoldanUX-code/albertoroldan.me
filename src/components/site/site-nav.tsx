@@ -12,6 +12,7 @@ export function SiteNav() {
   const locale = useLocale();
   const ui = getUi(locale);
 
+  const homePath = localizedPath("/", locale);
   const navLinks = [
     { href: localizedPath("/about", locale), label: ui.nav.about },
     { href: localizedPath("/resources", locale), label: ui.nav.resources },
@@ -19,12 +20,13 @@ export function SiteNav() {
       href: localizedPath("/consulting", locale),
       label: ui.nav.consulting,
     },
+    { href: `${homePath}#contact`, label: ui.nav.contact, hash: true },
   ];
 
   return (
     <div className="flex items-center gap-3 sm:gap-5">
       {navLinks.map((link) => {
-        const isActive = pathname === link.href;
+        const isActive = !("hash" in link && link.hash) && pathname === link.href;
 
         return (
           <Link

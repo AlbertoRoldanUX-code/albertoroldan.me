@@ -9,13 +9,9 @@ export default function robots(): MetadataRoute.Robots {
       disallow: [
         "/api/",
         "/thank-you",
-        "/es/thank-you",
         "/unsubscribe",
-        "/es/unsubscribe",
         "/consulting/pay",
-        "/es/consulting/pay",
         "/guides/*/guide",
-        "/es/guides/*/guide",
       ],
     },
     sitemap: `${siteUrl}/sitemap.xml`,

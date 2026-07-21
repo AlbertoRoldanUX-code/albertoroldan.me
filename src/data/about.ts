@@ -6,7 +6,7 @@ export interface WritingBenefit {
 
 export const aboutContent = {
   greeting: "Hola, soy Alberto Roldán.",
-  avatar: "/images/avatar.png",
+  avatar: "/images/avatar.jpg",
   signature: "Alberto Roldán",
   intro: [
     "Construyo negocios desde Georgia y escribo cada semana sobre lo que aprendo en el camino, sin permiso, sin momento perfecto y sin mapa.",

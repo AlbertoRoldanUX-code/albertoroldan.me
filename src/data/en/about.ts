@@ -2,7 +2,7 @@ import type { WritingBenefit } from "@/data/about";
 
 export const aboutContent = {
   greeting: "Hi, I'm Alberto Roldán.",
-  avatar: "/images/avatar.png",
+  avatar: "/images/avatar.jpg",
   signature: "Alberto Roldán",
   intro: [
     "I build businesses from Georgia and write every week about what I learn along the way — without permission, without a perfect moment, and without a map.",

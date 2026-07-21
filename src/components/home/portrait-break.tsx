@@ -11,14 +11,14 @@ export function PortraitBreak({ locale = "en" }: PortraitBreakProps) {
   const siteConfig = getSiteConfig(locale);
 
   return (
-    <section className="bg-[#111111] px-6 py-16 text-[#f5f5f4] md:py-24 dark:bg-[#f5f5f4] dark:text-[#111111]">
+    <section className="bg-[#111111] px-6 py-16 text-[#f5f5f4] md:py-24">
       <div className="mx-auto grid max-w-[72rem] items-end gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <FadeIn className="relative aspect-[16/10] overflow-hidden md:aspect-[21/10]">
           <Image
             src={siteConfig.avatar}
             alt={siteConfig.name}
             fill
-            className="object-cover object-[center_20%] grayscale"
+            className="object-cover object-center grayscale"
             sizes="(max-width: 1024px) 100vw, 720px"
           />
         </FadeIn>

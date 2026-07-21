@@ -9,6 +9,7 @@ import {
   storySection as storySectionEs,
   principlesSection as principlesSectionEs,
   homeConsulting as homeConsultingEs,
+  contactSection as contactSectionEs,
   footerContent as footerContentEs,
 } from "@/data/home";
 import { guides as guidesEs } from "@/data/resources";
@@ -25,6 +26,7 @@ import {
   storySection as storySectionEn,
   principlesSection as principlesSectionEn,
   homeConsulting as homeConsultingEn,
+  contactSection as contactSectionEn,
   footerContent as footerContentEn,
 } from "@/data/en/home";
 import { guides as guidesEn } from "@/data/en/resources";
@@ -66,6 +68,10 @@ export function getPrinciplesSection(locale: Locale) {
 
 export function getHomeConsulting(locale: Locale) {
   return pick(locale, homeConsultingEs, homeConsultingEn);
+}
+
+export function getContactSection(locale: Locale) {
+  return pick(locale, contactSectionEs, contactSectionEn);
 }
 
 export function getFooterContent(locale: Locale) {

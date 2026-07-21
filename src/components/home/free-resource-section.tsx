@@ -81,8 +81,8 @@ export function FreeResourceSection({ locale = "en" }: FreeResourceSectionProps)
               href={guideHref}
               className="group relative block w-full max-w-[22rem] transition-transform duration-500 hover:-translate-y-1 md:max-w-[26rem]"
             >
-              <div className="absolute -inset-6 -z-10 rounded-full bg-foreground/[0.03] blur-2xl dark:bg-foreground/[0.06]" />
-              <div className="overflow-hidden border border-border/60 bg-card shadow-[0_40px_100px_-40px_rgba(0,0,0,0.35)] dark:shadow-[0_40px_100px_-40px_rgba(0,0,0,0.75)]">
+              <div className="absolute -inset-6 -z-10 rounded-full bg-foreground/[0.03] blur-2xl" />
+              <div className="overflow-hidden border border-border/60 bg-card shadow-[0_40px_100px_-40px_rgba(0,0,0,0.35)]">
                 <div className="relative aspect-[3/4] w-full">
                   <Image
                     src={guide.coverImage}

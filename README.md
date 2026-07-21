@@ -11,7 +11,6 @@ Inspiración de craft: Brian Lovin / Linear / Vercel; de conversión: José Elí
 - Tailwind CSS v4
 - shadcn/ui
 - Framer Motion
-- next-themes (dark/light mode)
 
 ## Changelog
 

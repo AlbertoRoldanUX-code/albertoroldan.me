@@ -5,6 +5,8 @@ export interface SendEmailInput {
   subject: string;
   html: string;
   text: string;
+  /** Optional reply-to address (e.g. contact form sender). */
+  replyTo?: string;
   /** Optional tags for Resend analytics. */
   tags?: Array<{ name: string; value: string }>;
 }
@@ -39,6 +41,7 @@ export async function sendEmail(
       subject: input.subject,
       html: input.html,
       text: input.text,
+      replyTo: input.replyTo,
       tags: input.tags,
     });
 

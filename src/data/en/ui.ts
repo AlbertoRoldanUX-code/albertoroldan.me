@@ -5,6 +5,7 @@ export const ui = {
     about: "About",
     resources: "Resources",
     consulting: "Consulting",
+    contact: "Contact",
   },
   footer: {
     privacy: "Privacy",
@@ -82,6 +83,10 @@ export const ui = {
                 text: "when you subscribe to the newsletter, request a free guide, or contact me directly.",
               },
               {
+                label: "Name and message",
+                text: "when you submit the contact form on the Site. I use these only to reply to your inquiry.",
+              },
+              {
                 label: "Survey responses",
                 text: "when you choose to answer the optional survey after subscribing (for example, whether you work independently, your current goal, or topics you’re interested in). These are used to tailor the content and offers I send you.",
               },
@@ -96,7 +101,7 @@ export const ui = {
               },
               {
                 label: "Local browser storage.",
-                text: "The Site remembers your light/dark theme preference using your browser’s localStorage. This data stays on your device and is not transmitted to me. After you subscribe, your email may be stored temporarily in sessionStorage to associate the optional onboarding survey.",
+                text: "After you subscribe, your email may be stored temporarily in sessionStorage to associate the optional onboarding survey. This data stays on your device and is not transmitted to me beyond what is needed for that survey.",
               },
               {
                 label: "Technical guide_access cookie.",
@@ -196,9 +201,6 @@ export const ui = {
           "The Site itself does not set marketing or advertising cookies. I use only what is necessary for the Site to function:",
         ],
         bullets: [
-          {
-            text: "localStorage for your theme preference. This stays on your device.",
-          },
           {
             text: "sessionStorage temporarily to link the optional survey after subscription.",
           },

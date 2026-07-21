@@ -33,7 +33,7 @@ export function ThankYouMessage({
         <p>
           {ui.thankYou.emailPrefix(thankYouContent.emailArrival)}{" "}
           <em>{guideTitle}</em> {ui.thankYou.emailSuffix}{" "}
-          <mark className="rounded-sm bg-[#f5efd6] px-1 py-0.5 text-foreground dark:bg-amber-900/45 dark:text-foreground">
+          <mark className="rounded-sm bg-[#f5efd6] px-1 py-0.5 text-foreground">
             {thankYouContent.highlight}
           </mark>
         </p>

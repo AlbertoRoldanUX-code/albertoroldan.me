@@ -1,13 +1,19 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { getLocaleFromPath } from "@/lib/i18n/paths";
+import { stripLocalePrefix } from "@/lib/i18n/paths";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const locale = getLocaleFromPath(pathname);
+
+  // Site is English-only: redirect legacy /es paths to the EN equivalent.
+  if (pathname === "/es" || pathname.startsWith("/es/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = stripLocalePrefix(pathname);
+    return NextResponse.redirect(url, 308);
+  }
 
   const requestHeaders = new Headers(request.headers);
-  requestHeaders.set("x-locale", locale);
+  requestHeaders.set("x-locale", "en");
 
   return NextResponse.next({
     request: {

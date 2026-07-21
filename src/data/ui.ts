@@ -5,6 +5,7 @@ export const ui = {
     about: "Sobre mí",
     resources: "Recursos",
     consulting: "Consultoría",
+    contact: "Contacto",
   },
   footer: {
     privacy: "Privacidad",
@@ -81,6 +82,10 @@ export const ui = {
                 text: "cuando te suscribes al newsletter, solicitas una guía gratuita o te pones en contacto conmigo.",
               },
               {
+                label: "Nombre y mensaje",
+                text: "cuando envías el formulario de contacto del Sitio. Solo los uso para responder a tu consulta.",
+              },
+              {
                 label: "Respuestas a encuestas",
                 text: "cuando decides responder la encuesta opcional tras suscribirte (por ejemplo, si trabajas de forma independiente, tu objetivo actual o los temas que te interesan). Se usan para adaptar el contenido y las ofertas que te envío.",
               },
@@ -95,7 +100,7 @@ export const ui = {
               },
               {
                 label: "Almacenamiento local del navegador.",
-                text: "El Sitio recuerda tu preferencia de tema claro/oscuro mediante localStorage. Estos datos permanecen en tu dispositivo y no se me transmiten. Tras suscribirte, el email puede guardarse temporalmente en sessionStorage para asociar la encuesta opcional de onboarding.",
+                text: "Tras suscribirte, el email puede guardarse temporalmente en sessionStorage para asociar la encuesta opcional de onboarding. Estos datos permanecen en tu dispositivo y no se me transmiten más allá de lo necesario para esa encuesta.",
               },
               {
                 label: "Cookie técnica guide_access.",
@@ -195,9 +200,6 @@ export const ui = {
           "El Sitio no establece cookies de marketing o publicidad. Solo uso lo necesario para que el Sitio funcione:",
         ],
         bullets: [
-          {
-            text: "localStorage para tu preferencia de tema. Permanece en tu dispositivo.",
-          },
           {
             text: "sessionStorage de forma temporal para enlazar la encuesta opcional tras la suscripción.",
           },

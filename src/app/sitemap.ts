@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getEssays } from "@/lib/essays";
 import { getAllLeadMagnetSlugs } from "@/lib/lead-magnets";
-import { localizedPath } from "@/lib/i18n/paths";
 import { absoluteUrl } from "@/lib/metadata";
 
 const staticPaths = [
@@ -14,44 +13,27 @@ const staticPaths = [
   "/service-policy",
 ];
 
-function bilingualEntry(
+function entry(
   path: string,
   options: {
     changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
     priority: number;
     lastModified: Date;
   },
-): MetadataRoute.Sitemap {
-  const { changeFrequency, priority, lastModified } = options;
-  const languages = {
-    es: absoluteUrl(localizedPath(path, "es")),
-    en: absoluteUrl(localizedPath(path, "en")),
-    "x-default": absoluteUrl(localizedPath(path, "en")),
+): MetadataRoute.Sitemap[number] {
+  return {
+    url: absoluteUrl(path),
+    lastModified: options.lastModified,
+    changeFrequency: options.changeFrequency,
+    priority: options.priority,
   };
-
-  return [
-    {
-      url: languages.es,
-      lastModified,
-      changeFrequency,
-      priority,
-      alternates: { languages },
-    },
-    {
-      url: languages.en,
-      lastModified,
-      changeFrequency,
-      priority,
-      alternates: { languages },
-    },
-  ];
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  const staticPages = staticPaths.flatMap((path) =>
-    bilingualEntry(path, {
+  const staticPages = staticPaths.map((path) =>
+    entry(path, {
       lastModified,
       changeFrequency:
         path === "/" || path === "/resources" ? "weekly" : "monthly",
@@ -64,16 +46,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const guideLandingPages = getAllLeadMagnetSlugs().flatMap((slug) =>
-    bilingualEntry(`/guides/${slug}`, {
+  const guideLandingPages = getAllLeadMagnetSlugs().map((slug) =>
+    entry(`/guides/${slug}`, {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     }),
   );
 
-  const essayPages = getEssays("en").flatMap((essay) =>
-    bilingualEntry(`/essays/${essay.slug}`, {
+  const essayPages = getEssays("en").map((essay) =>
+    entry(`/essays/${essay.slug}`, {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,

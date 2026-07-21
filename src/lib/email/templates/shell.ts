@@ -39,7 +39,7 @@ export function renderEmailShell(input: EmailShellInput): {
   const consultingLink = absoluteUrl(
     localizedPath("/consulting", input.locale),
   );
-  const avatarUrl = absoluteUrl("/images/email-avatar.png");
+  const avatarUrl = absoluteUrl("/images/email-avatar.jpg");
   const findMe =
     input.locale === "en" ? "FIND ME ELSEWHERE" : "ENCUÉNTRAME TAMBIÉN EN";
   const callLabel = input.locale === "en" ? "1:1 call" : "Llamada 1:1";

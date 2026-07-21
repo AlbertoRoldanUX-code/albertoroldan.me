@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AuthorityBand } from "@/components/home/authority-band";
+import { ContactSection } from "@/components/home/contact-section";
 import { FreeResourceSection } from "@/components/home/free-resource-section";
 import { HomeConsultingSection } from "@/components/home/home-consulting-section";
 import { HomeHeroSection } from "@/components/home/hero-section";
@@ -30,6 +31,7 @@ export default function EsHomePage() {
       <FreeResourceSection locale="es" />
       <PrinciplesSection locale="es" />
       <HomeConsultingSection locale="es" />
+      <ContactSection locale="es" />
       <NewsletterSection locale="es" />
     </SiteLayout>
   );

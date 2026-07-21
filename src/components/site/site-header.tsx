@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiteNav } from "@/components/site/site-nav";
-import { LanguageSwitcher } from "@/components/site/language-switcher";
-import { ThemeToggle } from "@/components/vault/theme-toggle";
 import { getSiteConfig } from "@/lib/i18n/content";
 import type { Locale } from "@/lib/i18n/config";
 import { localizedPath } from "@/lib/i18n/paths";
@@ -67,8 +65,6 @@ export function SiteHeader({
 
         <nav className="flex items-center gap-1 md:gap-2">
           <SiteNav />
-          <LanguageSwitcher />
-          <ThemeToggle className="ml-1 md:ml-2" />
         </nav>
       </div>
     </header>

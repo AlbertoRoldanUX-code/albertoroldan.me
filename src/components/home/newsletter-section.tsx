@@ -12,7 +12,7 @@ export function NewsletterSection({ locale = "en" }: NewsletterSectionProps) {
   const siteConfig = getSiteConfig(locale);
 
   return (
-    <section className="bg-[#111111] px-6 py-20 text-[#f5f5f4] md:py-28 dark:bg-muted dark:text-foreground">
+    <section className="bg-[#111111] px-6 py-20 text-[#f5f5f4] md:py-28">
       <div className="mx-auto max-w-[42rem] text-center">
         <FadeIn>
           <h2 className="font-serif text-[2.25rem] leading-[1.1] tracking-[-0.03em] md:text-[3.25rem]">
@@ -21,7 +21,7 @@ export function NewsletterSection({ locale = "en" }: NewsletterSectionProps) {
         </FadeIn>
 
         <FadeIn delay={0.08}>
-          <p className="mx-auto mt-5 max-w-[30rem] font-sans text-base text-white/65 md:text-lg dark:text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-[30rem] font-sans text-base text-white/65 md:text-lg">
             {footerCta.subheadline}
           </p>
         </FadeIn>

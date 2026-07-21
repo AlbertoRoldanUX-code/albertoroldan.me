@@ -7,5 +7,3 @@ export { GuideCover } from "./guide-cover";
 export { HeroSection } from "./hero-section";
 export { LeadMagnetPage } from "./lead-magnet-page";
 export { SectionDivider } from "./section-divider";
-export { ThemeProvider } from "./theme-provider";
-export { ThemeToggle } from "./theme-toggle";

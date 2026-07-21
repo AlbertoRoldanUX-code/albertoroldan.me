@@ -1,7 +1,7 @@
 export const siteConfig = {
   brand: "albertoroldán.",
   name: "Alberto Roldán",
-  avatar: "/images/avatar.png",
+  avatar: "/images/avatar.jpg",
   tagline: "I help people build businesses they own.",
   subtagline:
     "From manual labor in Europe to programmer, founder, and creator living in Georgia.",
@@ -143,10 +143,28 @@ export const homeConsulting = {
   secondaryCta: "See full details",
 };
 
+export const contactSection = {
+  eyebrow: "Contact",
+  title: "Get in touch.",
+  lead: "A question, a project, or something you want to build. Write me — I read every message.",
+  form: {
+    nameLabel: "Name",
+    namePlaceholder: "Your name",
+    emailLabel: "Email",
+    emailPlaceholder: "name@email.com",
+    messageLabel: "Message",
+    messagePlaceholder: "What are you working on?",
+    submit: "Send message",
+    loading: "Sending…",
+    success: "Message sent. I'll get back to you soon.",
+    error: "Something went wrong. Try again in a moment.",
+  },
+};
+
 export const aboutPreview = {
   title: "About Alberto",
   bio: "I went from manual labor jobs to self-taught programmer. Today I build businesses from Georgia and write about work, money, and freedom.",
-  avatar: "/images/avatar.png",
+  avatar: "/images/avatar.jpg",
   href: "/about",
 };
 

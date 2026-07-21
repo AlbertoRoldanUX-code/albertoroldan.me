@@ -3,7 +3,6 @@ import { headers } from "next/headers";
 import { Newsreader, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SiteStructuredData } from "@/components/site/site-structured-data";
-import { ThemeProvider } from "@/components/vault/theme-provider";
 import { siteUrl } from "@/lib/metadata";
 import "./globals.css";
 
@@ -76,9 +75,9 @@ export default async function RootLayout({
   const locale = headersList.get("x-locale") === "es" ? "es" : "en";
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale}>
       <body className={`${newsreader.variable} ${inter.variable} font-sans`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        {children}
         <SiteStructuredData />
         <Analytics />
       </body>
