@@ -25,26 +25,8 @@ export const siteConfig = {
 };
 
 export const authorityBand = {
-  builtFromLabel: "Built from",
-  places: [
-    { flag: "🇪🇸", name: "Spain" },
-    { flag: "🇧🇪", name: "Belgium" },
-    { flag: "🇭🇰", name: "Hong Kong" },
-    { flag: "🇩🇪", name: "Germany" },
-    { flag: "🇨🇭", name: "Switzerland" },
-    { flag: "🇦🇷", name: "Argentina" },
-    { flag: "🇬🇪", name: "Georgia" },
-  ],
-  languagesLabel: "Languages",
-  languages: [
-    "Spanish",
-    "English",
-    "German",
-    "French",
-    "Italian",
-    "Portuguese",
-    "Russian (learning)",
-  ],
+  builtFromLabel: "Currently in",
+  places: [{ flag: "🇬🇪", name: "Tbilisi, Georgia" }],
 };
 
 export const storySection = {

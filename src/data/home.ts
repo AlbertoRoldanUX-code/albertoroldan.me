@@ -25,26 +25,8 @@ export const siteConfig = {
 };
 
 export const authorityBand = {
-  builtFromLabel: "Construido desde",
-  places: [
-    { flag: "🇪🇸", name: "España" },
-    { flag: "🇧🇪", name: "Bélgica" },
-    { flag: "🇭🇰", name: "Hong Kong" },
-    { flag: "🇩🇪", name: "Alemania" },
-    { flag: "🇨🇭", name: "Suiza" },
-    { flag: "🇦🇷", name: "Argentina" },
-    { flag: "🇬🇪", name: "Georgia" },
-  ],
-  languagesLabel: "Idiomas",
-  languages: [
-    "Español",
-    "Inglés",
-    "Alemán",
-    "Francés",
-    "Italiano",
-    "Portugués",
-    "Ruso (aprendiendo)",
-  ],
+  builtFromLabel: "Actualmente en",
+  places: [{ flag: "🇬🇪", name: "Tiflis, Georgia" }],
 };
 
 export const storySection = {

@@ -15,23 +15,24 @@ alwaysApply: true
 - Veredicto activo: la web es **superior** a la de José Elías en claridad, identidad y craft; él gana en volumen de ofertas y fotos.
 - **Idioma del sitio:** solo inglés. `/es/*` redirige a EN (308). Sin language switcher.
 
-## Rediseño home — 18 jul 2026 (implementado)
+## Rediseño home — 18 jul 2026 (implementado) · actualizado 21 jul
 
-Home deja de ser landing de newsletter. Orden (EN `/` · ES `/es`):
+Home deja de ser landing de newsletter. Orden (solo EN `/`):
 
-1. **Hero fundador** — headline de transformación + foto + 3 CTAs (guía / sesión / about). Ya no “A weekly essay…”.
-2. **Banda de autoridad** — países vividos + idiomas.
+1. **Hero fundador** — headline + foto contenida (cuadrada, ~14–16rem) + 3 CTAs.
+2. **Authority band** — franja compacta: *Currently in · 🇬🇪 Tbilisi, Georgia* (sin Languages).
 3. **Story / timeline** — 6 hitos (manual labor → Georgia).
 4. **Portrait break** — bloque oscuro con foto.
 5. **Guía como producto** — mockup, **20 páginas** (no 24), qué aprenderás, CTA grande.
 6. **Principios** — 6 operating principles.
 7. **Consulting premium** — Ideal for / outcomes / proceso 3 pasos / €250.
-8. **Contacto** — formulario (nombre / email / mensaje) → `/api/contact` (Resend).
+8. **Contacto** — formulario → `/api/contact` (Resend).
 9. **Newsletter CTA** — bloque oscuro final.
 10. **Footer fundador** — foto, mini-bio, newsletter, links, redes.
 
-**Quitado el 18 jul 2026:** sección “Signal, not theater” / métricas (LinkedIn 1.332, países, idiomas, Tbilisi).
-**Quitado el 21 jul 2026:** dark mode (`next-themes`, toggle, clases `dark:`).
+**Quitado el 18 jul 2026:** sección “Signal, not theater” / métricas.
+**Quitado el 21 jul 2026:** dark mode; language switcher; lista Built from / Languages.
+**Nota privada viva:** `private/negocios/web.md`.
 
 ## Copy activo (hero)
 
@@ -40,8 +41,9 @@ Home deja de ser landing de newsletter. Orden (EN `/` · ES `/es`):
 
 ## Fotos
 
-- Asset activo (21 jul 2026): `/images/avatar.jpg` — headshot cuadrado (fondo oscuro, camiseta negra). También en `/images/email-avatar.jpg`.
-- Hero: foto **contenida** (`max-w` ~14–16rem, `aspect-square`), no half-bleed 4:5.
+- Asset activo (21 jul 2026): `/images/avatar.jpg` — headshot cuadrado fondo oscuro, camiseta negra. También en `/images/email-avatar.jpg`.
+- Hero: foto **contenida** (`max-w` ~14–16rem, `aspect-square`), no half-bleed.
+- Foto fondo blanco evaluada y descartada (21 jul): se ve peor en el layout actual.
 - Gap vs JEN: faltan 3–5 fotos editoriales limpias adicionales.
 
 ## Tech / IDE
