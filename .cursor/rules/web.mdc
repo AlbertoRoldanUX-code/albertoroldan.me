@@ -41,7 +41,7 @@ Home deja de ser landing de newsletter. Orden (solo EN `/`):
 
 ## Fotos
 
-- Asset activo (21 jul 2026): `/images/avatar.jpg` — headshot cuadrado fondo oscuro, camiseta negra. También en `/images/email-avatar.jpg`.
+- Asset activo (21 jul 2026): `/images/avatar.jpg` — headshot cuadrado fondo oscuro, camiseta negra. También en `/images/email-avatar.jpg`. **23 jul:** misma foto puesta como avatar del canal YouTube.
 - Hero: foto **contenida** (`max-w` ~14–16rem, `aspect-square`), no half-bleed.
 - Foto fondo blanco evaluada y descartada (21 jul): se ve peor en el layout actual.
 - Lead magnet / PDF / emails de opt-in: **inglés** (forzado; ya no default `es`).
