@@ -7,14 +7,14 @@ alwaysApply: true
 
 Cuando Alberto pregunte qué hacer hoy, qué le falta, rutina, pendientes o “resumen del día”:
 
-1. **Agenda primero** — Revisar `private/personal.md` → sección **Agenda / citas** (filas de hoy y próximas 48 h).
+1. **Agenda primero** — Revisar `private/personal.md` → sección **Agenda / citas** (filas de hoy y próximas 48 h). Si pregunta planes sociales / “qué hay esta noche”, incluir también **§ Eventos sociales Tbilisi** (Meetup + Tea House jueves 19h).
 2. **Quedadas / dating** — Revisar índice y pendientes en `private/datos-para-mujeres.md`.
 3. **Clases gimnasio** — Tabla horario en `private/personal.md` (Tbilisi); marcar conflicto si hay cita a la misma hora.
 4. **Deadlines con hora** — Entrevistas (p. ej. Hireflix/Flosum), citas médicas, vuelos, check-ins; buscar en `private/negocios/candidaturas-linkedin.md` y notas relacionadas si aplica.
-5. **Rutina manual** — Checklist mañana/tarde en `private/personal.md` (orden: jobs ×15 → limpiar 10 emails (inbox general) → **bares vino ×15** → LI comentarios/conexiones → **FB amistad ×10** → X → **métricas TT/Shorts ayer → TikTok+Shorts → IG 10 últimas fotos** → cuerpo → aprendizaje [Duolingo / Adrián / **1 transcript Shorts growth → chat**] → gimnasio) + fila de cumplimiento del día. Ideas/negocios: **solo datos/veredictos**, sin empujar enfoque. Vino: recordar cortes @50 y @100 emails (ver `negocios/vino.md`).
+5. **Rutina manual** — Checklist en `private/personal.md`. Prioridad **80% empleo · 15% marca (TT+LI) · 5% vino**. Orden: jobs ×15 → emails ≤5 min → **bares vino ×15** (experimento → ~23.08) → LI comentarios/conexiones → **FB amistad ×10** → X → **métricas TT/Shorts ayer → TikTok+Shorts ×1 → IG 10 fotos** → cuerpo → aprendizaje (secundario) → gimnasio. Domingo: dashboard semanal. Ideas/negocios: **solo datos/veredictos**, sin empujar enfoque.
 6. **Urgente fuera de rutina** — Follow-ups comerciales, DMs, etc. solo si siguen abiertos (las candidaturas ya van en la rutina). Incluye filas de agenda tipo **Bocanariz** en la fecha indicada.
 
-**Formato de respuesta:** separar claramente **Citas / quedadas** y **Rutina / tareas**. No listar solo el checklist repetitivo si hay algo en agenda ese día.
+**Formato de respuesta:** separar claramente **Citas / quedadas** y **Rutina / tareas**. No listar solo el checklist repetitivo si hay algo en agenda ese día. Si pregunta “qué sigue” mid-rutina, decir el **siguiente paso concreto**, no solo el veredicto.
 
 **Al fijar una cita nueva:** añadir fila en `private/personal.md` → Agenda / citas (fecha, hora si la hay, lugar, enlace a nota detallada).
 
